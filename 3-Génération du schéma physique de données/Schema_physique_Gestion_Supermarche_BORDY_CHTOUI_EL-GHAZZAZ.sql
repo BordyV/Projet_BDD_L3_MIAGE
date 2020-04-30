@@ -212,10 +212,11 @@ create table CLIENT
    IDCARTEFIDELITE      NUMBER(6),
    NOM                  VARCHAR2(25)         not null,
    PRENOM               VARCHAR2(25)         not null,
-   MAIL                 VARCHAR2(50)         not null unique,
+   MAIL                 VARCHAR2(50)         not null,
    TELEPHONE            VARCHAR2(10),
    MOTDEPASSE           VARCHAR2(25)         check (MOTDEPASSE > 8),
    GENRE                VARCHAR2(5),
+   constraint MAIL_UNIQUE(MAIL),
    constraint CLIENT_GENRE_CHECK check (GENRE IN('Homme','Femme','Autre')),
    constraint PK_CLIENT primary key (IDCLIENT)
 );
