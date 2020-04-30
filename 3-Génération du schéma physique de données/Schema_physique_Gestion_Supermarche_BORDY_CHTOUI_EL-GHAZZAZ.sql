@@ -156,12 +156,12 @@ CACHE 10;
 /*==============================================================*/
 create table ADRESSE 
 (
-   IDADRESSE            NUMBER(6)            not null,
-   LIGNEADRESSE1        CHAR(10)             not null,
-   LIGNEADRESSE2        CHAR(10),
-   VILLE                CHAR(10)             not null,
-   CODEPOSTAL           CHAR(10)             not null,
-   PAYS                 CHAR(10),
+   IDADRESSE            INTEGER           not null,
+   LIGNEADRESSE1        VARCHAR2(50)        not null,
+   LIGNEADRESSE2        VARCHAR2(50),
+   VILLE                VARCHAR2(20)        not null,
+   CODEPOSTAL           INTEGER             not null,
+   PAYS                 VARCHAR2(20),
    constraint PK_ADRESSE primary key (IDADRESSE)
 );
 
@@ -170,8 +170,8 @@ create table ADRESSE
 /*==============================================================*/
 create table CARTEFIDELITE 
 (
-   IDCARTEFIDELITE      NUMBER(6)            not null,
-   IDCLIENT             NUMBER(6)            not null,
+   IDCARTEFIDELITE      INTEGER            not null,
+   IDCLIENT             INTEGER            not null,
    NBPOINTSFIDELITE     INTEGER              not null,
    constraint PK_CARTEFIDELITE primary key (IDCARTEFIDELITE)
 );
@@ -188,8 +188,8 @@ create index DETENIR2_FK on CARTEFIDELITE (
 /*==============================================================*/
 create table CATEGORIEPRODUIT 
 (
-   IDCATEGORIE          NUMBER(6)            not null,
-   IDRAYON              NUMBER(6),
+   IDCATEGORIE          INTEGER            not null,
+   IDRAYON              INTEGER,
    NOMCATEGORIE         VARCHAR2(25)         not null,
    DESCRIPTIONCATEGORIE VARCHAR2(75)         not null,
    constraint PK_CATEGORIEPRODUIT primary key (IDCATEGORIE)
@@ -207,9 +207,9 @@ create index POSSEDER_FK on CATEGORIEPRODUIT (
 /*==============================================================*/
 create table CLIENT 
 (
-   IDCLIENT             NUMBER(6)            not null,
-   IDADRESSE            NUMBER(6),
-   IDCARTEFIDELITE      NUMBER(6),
+   IDCLIENT             INTEGER              not null,
+   IDADRESSE            INTEGER,
+   IDCARTEFIDELITE      INTEGER,
    NOM                  VARCHAR2(25)         not null,
    PRENOM               VARCHAR2(25)         not null,
    MAIL                 VARCHAR2(50)         not null,
@@ -242,9 +242,9 @@ create index DETENIR_FK on CLIENT (
 /*==============================================================*/
 create table COMMANDE 
 (
-   IDCOMMANDE           NUMBER(6)            not null,
-   IDEMPLOYE            NUMBER(6)            not null,
-   IDCLIENT             NUMBER(6)            not null,
+   IDCOMMANDE           INTEGER            not null,
+   IDEMPLOYE            INTEGER            not null,
+   IDCLIENT             INTEGER            not null,
    DATECOMMANDE         DATE                 not null,
    STATUTCOMMANDE       VARCHAR2(30),
    constraint STATUTCOMMANDE_CHECK check (STATUTCOMMANDE in ('En attente de traitement','En cours de traitement','En attente de recuperation','Livré','Annulé')),
@@ -271,8 +271,8 @@ create index ATTRIBUER_FK on COMMANDE (
 
 create table EMPLOYE 
 (
-   IDEMPLOYE            NUMBER(6)            not null,
-   IDADRESSE            NUMBER(6),
+   IDEMPLOYE            INTEGER              not null,
+   IDADRESSE            INTEGER,
    NOM                  VARCHAR2(25)         not null,
    PRENOM               VARCHAR2(25)         not null,
    MAIL                 VARCHAR2(50)         not null,
@@ -298,9 +298,9 @@ create index LOGER_FK on EMPLOYE (
 /*==============================================================*/
 create table FOURNISSEUR 
 (
-   IDFOURNISSEUR        CHAR(10)             not null,
-   IDADRESSE            NUMBER(6),
-   NOMFOURNISSEUR       CHAR(10)             not null,
+   IDFOURNISSEUR        INTEGER            not null,
+   IDADRESSE            INTEGER,
+   NOMFOURNISSEUR       VARCHAR2(25)             not null,
    MAIL                 VARCHAR2(50)         not null,
    TELEPHONE            VARCHAR2(10),
    DESCRIPTIONFOURNISSEUR VARCHAR2(75),
@@ -321,9 +321,9 @@ create index LOCALISER_FK on FOURNISSEUR (
 /*==============================================================*/
 create table LIGNECOMMANDE 
 (
-   IDPRODUIT            NUMBER(6)            not null,
-   IDCOMMANDE           NUMBER(6)            not null,
-   QUANTITE             INTEGER              not null,
+   IDPRODUIT            INTEGER             not null,
+   IDCOMMANDE           INTEGER             not null,
+   QUANTITE             INTEGER             not null,
    PRIXVENTE            NUMBER(10,2),
    constraint PK_LIGNECOMMANDE primary key (IDPRODUIT, IDCOMMANDE)
 );
@@ -347,9 +347,9 @@ create index LIGNECOMMANDE2_FK on LIGNECOMMANDE (
 /*==============================================================*/
 create table PRODUIT 
 (
-   IDPRODUIT            NUMBER(6)            not null,
-   IDFOURNISSEUR        CHAR(10),
-   IDCATEGORIE          NUMBER(6),
+   IDPRODUIT            INTEGER              not null,
+   IDFOURNISSEUR        INTEGER,
+   IDCATEGORIE          INTEGER,
    NOMPRODUIT           VARCHAR2(25)         not null,
    POIDSPRODUIT         NUMBER(6,2),
    DESCRIPTIONPRODUIT   VARCHAR2(75),
@@ -382,7 +382,7 @@ create index VENDRE_FK on PRODUIT (
 /*==============================================================*/
 create table RAYON 
 (
-   IDRAYON              NUMBER(6)            not null,
+   IDRAYON              INTEGER              not null,
    NOMRAYON             VARCHAR2(25)         not null,
    DESCRIPTIONRAYON     VARCHAR2(75),
    constraint PK_RAYON primary key (IDRAYON)
