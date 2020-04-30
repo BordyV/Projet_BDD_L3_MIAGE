@@ -214,9 +214,11 @@ create table CLIENT
    PRENOM               VARCHAR2(25)         not null,
    MAIL                 VARCHAR2(50)         not null,
    TELEPHONE            VARCHAR2(10),
-   MOTDEPASSE           VARCHAR2(25)         check (MOTDEPASSE > 8),
-   GENRE                VARCHAR2(5),
-   constraint MAIL_UNIQUE(MAIL),
+   MOTDEPASSE           VARCHAR2(25)         not null,
+   GENRE                VARCHAR2(5)          not null,
+   constraint CLIENT_MOTDEPASSE check (LENGTH(MOTDEPASSE) > 8),
+   constraint CLIENT_TELEPHONE check (LENGTH(TELEPHONE) = 10),
+   constraint CLIENT_MAIL_UNIQUE UNIQUE(MAIL),
    constraint CLIENT_GENRE_CHECK check (GENRE IN('Homme','Femme','Autre')),
    constraint PK_CLIENT primary key (IDCLIENT)
 );
@@ -276,8 +278,10 @@ create table EMPLOYE
    MAIL                 VARCHAR2(50)         not null,
    TELEPHONE            VARCHAR2(10),
    SALAIRE              NUMBER(15,2),
-   GENRE                VARCHAR2(5),
+   GENRE                VARCHAR2(5)          not null,
    DATENAISSANCE        DATE,
+   constraint EMPLOYE_TELEPHONE check (LENGTH(TELEPHONE) = 10),
+   constraint EMPLOYE_MAIL_UNIQUE UNIQUE(MAIL),
    constraint EMPLOYE_GENRE_CHECK check (GENRE IN('Homme','Femme','Autre')),
    constraint PK_EMPLOYE primary key (IDEMPLOYE)
 );
@@ -300,6 +304,8 @@ create table FOURNISSEUR
    MAIL                 VARCHAR2(50)         not null,
    TELEPHONE            VARCHAR2(10),
    DESCRIPTIONFOURNISSEUR VARCHAR2(75),
+   constraint FOURNISSEUR_TELEPHONE check (LENGTH(TELEPHONE) = 10),
+   constraint FOURNISSEUR_MAIL_UNIQUE UNIQUE(MAIL),
    constraint PK_FOURNISSEUR primary key (IDFOURNISSEUR)
 );
 
@@ -429,6 +435,8 @@ alter table PRODUIT
 alter table PRODUIT
    add constraint FK_PRODUIT_VENDRE_FOURNISS foreign key (IDFOURNISSEUR)
       references FOURNISSEUR (IDFOURNISSEUR);
+      
+
 
 
 
