@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?PowerDesigner AppLocale="UTF16" ID="{B15CBB68-071F-4058-B8B2-CBAF55713761}" Label="" LastModificationDate="1588250087" Name="Modèle_Logique_Donnee_BDD_Supermarche" Objects="159" Symbols="22" Target="Sybase SQL Anywhere 11" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" signature="PDM_DATA_MODEL_XML" version="15.1.0.2850"?>
+<?PowerDesigner AppLocale="UTF16" ID="{A0906DB9-814E-4811-920A-6061BF594BE0}" Label="" LastModificationDate="1588252875" Name="Modèle_Logique_Association_BDD_Supermarche" Objects="167" Symbols="22" Target="ORACLE Version 11g" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" signature="PDM_DATA_MODEL_XML" version="15.1.0.2850"?>
 <!-- Veuillez ne pas modifier ce fichier -->
 
 <Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
@@ -7,15 +7,16 @@
 <o:RootObject Id="o1">
 <c:Children>
 <o:Model Id="o2">
-<a:ObjectID>B15CBB68-071F-4058-B8B2-CBAF55713761</a:ObjectID>
-<a:Name>Modèle_Logique_Donnee_BDD_Supermarche</a:Name>
-<a:Code>MODELE_LOGIQUE_DONNEE_BDD_SUPERMARCHE</a:Code>
-<a:CreationDate>1588250039</a:CreationDate>
+<a:ObjectID>A0906DB9-814E-4811-920A-6061BF594BE0</a:ObjectID>
+<a:Name>Modèle_Logique_Association_BDD_Supermarche</a:Name>
+<a:Code>MODELE_LOGIQUE_ASSOCIATION_BDD_SUPERMARCHE</a:Code>
+<a:CreationDate>1588252758</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252875</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {61E75397-CA78-49FE-8B72-6D828623A65C}
-DAT 1588250054</a:History>
+DAT 1588252864
+ATT FOPT</a:History>
 <a:PackageOptionsText>[FolderOptions]
 
 [FolderOptions\Physical Objects]
@@ -103,7 +104,7 @@ GenSyncRmg=0
 [FolderOptions\Physical Objects\Database Generation\Format]
 GenScriptTitle=Yes
 GenScriptNamLabl=No
-GenScriptQDtbs=Yes
+GenScriptQDtbs=No
 GenScriptQOwnr=Yes
 GenScriptCase=0
 GenScriptEncoding=ANSI
@@ -211,7 +212,7 @@ Footer=Yes
 Constraint declaration=No
 
 [FolderOptions\Physical Objects\Database Generation\Table&amp;&amp;Column\Column]
-User datatype=Yes
+User datatype=No
 Default value=Yes
 Check=Yes
 Physical Options=Yes
@@ -258,9 +259,9 @@ Constraint declaration=Yes
 Physical Options=Yes
 
 [FolderOptions\Physical Objects\Database Generation\Table&amp;&amp;Column\Index\Filter]
-Primary key=Yes
+Primary key=No
 Foreign key=Yes
-Alternate key=Yes
+Alternate key=No
 Cluster=Yes
 Other=Yes
 
@@ -370,10 +371,23 @@ GenKeepBackTabl=1
 GenTmpTablDrop=No
 GenKeepTablOpts=No
 
-[FolderOptions\Physical Objects\Database Generation\ExtendedObject &lt;&lt;Event&gt;&gt;]
+[FolderOptions\Physical Objects\Database Generation\ExtendedObject &lt;&lt;Cluster&gt;&gt;]
 Create=Yes
 Drop=Yes
-Comment=Yes
+
+[FolderOptions\Physical Objects\Database Generation\ExtendedObject &lt;&lt;Cluster&gt;&gt;\ExtendedSubObject &lt;&lt;ClusterColumn&gt;&gt;]
+Create=Yes
+
+[FolderOptions\Physical Objects\Database Generation\ExtendedObject &lt;&lt;Cluster&gt;&gt;\ExtendedSubObject &lt;&lt;ClusterIndex&gt;&gt;]
+Create=Yes
+Drop=Yes
+
+[FolderOptions\Physical Objects\Database Generation\ExtendedObject &lt;&lt;DatabaseLink&gt;&gt;]
+Create=Yes
+Drop=Yes
+
+[FolderOptions\Physical Objects\Database Generation\ExtendedObject &lt;&lt;MaterializedViewLog&gt;&gt;]
+Create=Yes
 
 [FolderOptions\Physical Objects\Test Data]
 GenDataPathName=
@@ -410,8 +424,8 @@ IndxFK=Yes
 IndxAK=Yes
 IndxPKName=%TABLE%_PK
 IndxFKName=%REFR%_FK
-IndxAKName=%AKEY%_AK
-IndxPreserve=No
+IndxAKName=%TABLE%_AK
+IndxPreserve=Yes
 IndxThreshold=0
 IndxStats=No
 RefrPreserve=No
@@ -437,7 +451,1363 @@ CubeScriptDeli=&quot;
 DfltDomnName=D_%.U:VALUE%
 DfltColnName=D_%.U:VALUE%
 DfltReuse=Yes
-DfltDrop=Yes</a:PackageOptionsText>
+DfltDrop=Yes
+
+[FolderOptions\CheckModel]
+
+[FolderOptions\CheckModel\Package]
+
+[FolderOptions\CheckModel\Package\CircularReference]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Package\ConstraintName]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Package\CnstMaxLen]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Package\CircularDependency]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Package\ShortcutUniqCode]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=No
+
+[FolderOptions\CheckModel\Table]
+
+[FolderOptions\CheckModel\Table\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table\UniqIndex]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table\MaxLen - NAME]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table\MaxLen - CODE]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table\EmptyColl - COLNCOL]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table\EmptyColl - INDXCOL]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table\EmptyColl - KEYCOL]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table\SerialColumnNumber]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table\EmptyCollYesYes]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table\TableIndexes]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table\Mapping]
+CheckSeverity=No
+FixRequested=Yes
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table\MappingSFMap]
+CheckSeverity=No
+FixRequested=Yes
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table\EmptyColl - PERMCOL]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=No
+
+[FolderOptions\CheckModel\Table\CheckTablePartitionKey]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table\CheckTableStartDate]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table.Colonne]
+
+[FolderOptions\CheckModel\Table.Colonne\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table.Colonne\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table.Colonne\MaxLen - CODE]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table.Colonne\DomainDivergence]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table.Colonne\ColumnMandatory]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table.Colonne\CheckNumParam]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table.Colonne\CheckPrecSupLng]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table.Colonne\CheckUndefDttp]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table.Colonne\FkeyDttpDivergence]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table.Colonne\FkeyCheckDivergence]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table.Colonne\ColnSqncNoKey]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table.Colonne\ColnSqncDttp]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table.Colonne\SerialColumnFK]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table.Colonne\ColumnCompExpr]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table.Index]
+
+[FolderOptions\CheckModel\Table.Index\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table.Index\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table.Index\MaxLen - CODE]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table.Index\EmptyColl - CIDXCOL]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table.Index\UndefIndexType]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table.Index\IndexColumnCount]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table.Index\IQIndxHNGUniq]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table.Index\CheckIncludeColl - Tabl]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table.Index\ORA11GR1_Index_V_rification_de_l_expression_de_colonne]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table.Index\ORA11GR1_Index_V_rification_du_cryptage_de_colonne]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table.Clé]
+
+[FolderOptions\CheckModel\Table.Clé\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table.Clé\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table.Clé\MaxLen - CODE]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table.Clé\EmptyColl - COLNCOL]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table.Clé\CheckIncludeColl - Tabl]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table.Clé\MultiKeySqnc]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table.Trigger]
+
+[FolderOptions\CheckModel\Table.Trigger\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table.Trigger\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Table.Trigger\MaxLen - CODE]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Join index]
+
+[FolderOptions\CheckModel\Join index\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Join index\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Join index\EmptyColl - JIDXTABL]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Join index\JidxRefr]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Join index\IQJoinIndexRelationships]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Join index\IQJoinIndexDuplicates]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Join index\ORA11GR1_JoinIndex_Espace_de_noms_du_join_index]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=No
+
+[FolderOptions\CheckModel\Vue]
+
+[FolderOptions\CheckModel\Vue\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Vue\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Vue\MaxLen - CODE]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Vue\EmptyColl - PERMCOL]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=No
+
+[FolderOptions\CheckModel\Vue.Index de vue]
+
+[FolderOptions\CheckModel\Vue.Index de vue\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Vue.Index de vue\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Vue.Index de vue\MaxLen - CODE]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Vue.Index de vue\EmptyColl - CIDXCOL]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Vue.Index de vue\IndexColumnCount]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Vue.Index de vue\CheckIncludeColl - Tabl]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Référence]
+
+[FolderOptions\CheckModel\Référence\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Référence\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Référence\Reflexive]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Référence\EmptyColl - RFJNCOL]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Référence\MaxLen - CODE]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Référence\IncompleteJoin]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Référence\JoinOrder]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Référence\ORA11GR1_Reference_R_f_rence_Rely_sur_une_cl__primaire_Rely]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Référence de vue]
+
+[FolderOptions\CheckModel\Référence de vue\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Référence de vue\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Référence de vue\EmptyColl - VRFJNCOL]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Domaine]
+
+[FolderOptions\CheckModel\Domaine\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Domaine\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Domaine\MaxLen - CODE]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Domaine\CheckNumParam]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Domaine\CheckPrecSupLng]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Domaine\CheckUndefDttp]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Défaut]
+
+[FolderOptions\CheckModel\Défaut\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Défaut\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Défaut\MaxLen - CODE]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Défaut\DfltValeEmpty]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Défaut\DfltSameVale]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Utilisateur]
+
+[FolderOptions\CheckModel\Utilisateur\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Utilisateur\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Utilisateur\MaxLen - CODE]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Utilisateur\UniqueMot de passe]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=No
+
+[FolderOptions\CheckModel\Groupe]
+
+[FolderOptions\CheckModel\Groupe\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Groupe\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Groupe\MaxLen - CODE]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Groupe\EmptyColl - USERCOL]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Groupe\UniqueMot de passe]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=No
+
+[FolderOptions\CheckModel\Rôle]
+
+[FolderOptions\CheckModel\Rôle\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Rôle\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Rôle\MaxLen - CODE]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Rôle\EmptyColl - USERCOL]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Procédure]
+
+[FolderOptions\CheckModel\Procédure\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Procédure\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Procédure\MaxLen - CODE]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Procédure\ProcBodyEmpty]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Procédure\EmptyColl - PERMCOL]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=No
+
+[FolderOptions\CheckModel\Trigger de SGBD]
+
+[FolderOptions\CheckModel\Trigger de SGBD\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Trigger de SGBD\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Trigger de SGBD\MaxLen - CODE]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Trigger de SGBD\DbmsTriggerEvent]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Trigger de SGBD\ORA11GR1_DBMSTrigger_Ev_nement_de_trigger_avec_un_moment_inappropri_]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Source de données]
+
+[FolderOptions\CheckModel\Source de données\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Source de données\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Source de données\EmptyColl - MODLSRC]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Source de données\DtscTargets]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Partitionnement horizontal]
+
+[FolderOptions\CheckModel\Partitionnement horizontal\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Partitionnement horizontal\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Partitionnement horizontal\EmptyColl - PARTCOL]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Partitionnement horizontal\TargetTables]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Partitionnement vertical]
+
+[FolderOptions\CheckModel\Partitionnement vertical\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Partitionnement vertical\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Partitionnement vertical\EmptyColl - PARTCOL]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Partitionnement vertical\TargetTables]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Fusion de tables]
+
+[FolderOptions\CheckModel\Fusion de tables\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Fusion de tables\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Fusion de tables\EmptyColl - TargetTable]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Fusion de tables\TargetTables]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Cube]
+
+[FolderOptions\CheckModel\Cube\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Cube\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Cube\EmptyColl - ALLOLINKCOL]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Cube\EmptyColl - Facts]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Cube\CubeDupAssociation]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Fait]
+
+[FolderOptions\CheckModel\Fait\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Fait\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Fait\EmptyColl - MEASCOL]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Fait\Mapping]
+CheckSeverity=No
+FixRequested=Yes
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Fait\MappingSFMap]
+CheckSeverity=No
+FixRequested=Yes
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Dimension]
+
+[FolderOptions\CheckModel\Dimension\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Dimension\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Dimension\EmptyColl - DATTRCOL]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Dimension\EmptyColl - HIERCOL]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Dimension\DimnDupHierarchy]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Dimension\DimnDefHierarchy]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Dimension\Mapping]
+CheckSeverity=No
+FixRequested=Yes
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Dimension\MappingSFMap]
+CheckSeverity=No
+FixRequested=Yes
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Dimension\SerialColumnNumber]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Association]
+
+[FolderOptions\CheckModel\Association\EmptyColl - Hierarchy]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Dimension.Attribut]
+
+[FolderOptions\CheckModel\Dimension.Attribut\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Dimension.Attribut\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Fait.Mesure]
+
+[FolderOptions\CheckModel\Fait.Mesure\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Fait.Mesure\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Dimension.Hiérarchie]
+
+[FolderOptions\CheckModel\Dimension.Hiérarchie\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Dimension.Hiérarchie\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Dimension.Hiérarchie\ORA11GR1_DimensionHierarchy_Nombre_minimum_d_attributs]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Synonyme]
+
+[FolderOptions\CheckModel\Synonyme\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Synonyme\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Synonyme\MaxLen - NAME]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Synonyme\MaxLen - CODE]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Synonyme\EmptyColl - BASEOBJ]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Type de données abstrait]
+
+[FolderOptions\CheckModel\Type de données abstrait\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Type de données abstrait\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Type de données abstrait\MaxLen - CODE]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Type de données abstrait\AdtInstantiable]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Type de données abstrait\AdtAbstractUsed]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Type de données abstrait.Procédure de type de données abstrait]
+
+[FolderOptions\CheckModel\Type de données abstrait.Procédure de type de données abstrait\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Type de données abstrait.Procédure de type de données abstrait\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Type de données abstrait.Procédure de type de données abstrait\MaxLen - CODE]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Type de données abstrait.Procédure de type de données abstrait\AdtProcUniqName]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Type de données abstrait.Procédure de type de données abstrait\UniqueDéfinition]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Type de données abstrait.Procédure de type de données abstrait\ReturnDataType]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Package de base de données]
+
+[FolderOptions\CheckModel\Package de base de données\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Package de base de données\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Package de base de données\MaxLen - NAME]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Package de base de données\MaxLen - CODE]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Package de base de données\EmptyColl - PROCOL]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Package de base de données\EmptyColl - CURCOL]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=No
+
+[FolderOptions\CheckModel\Package de base de données\EmptyColl - VARCOL]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=No
+
+[FolderOptions\CheckModel\Package de base de données\EmptyColl - TYPCOL]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=No
+
+[FolderOptions\CheckModel\Package de base de données\EmptyColl - EXCCOL]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=No
+
+[FolderOptions\CheckModel\Package de base de données.Procédure de package]
+
+[FolderOptions\CheckModel\Package de base de données.Procédure de package\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Package de base de données.Procédure de package\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Package de base de données.Procédure de package\UniqueDéfinition]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Package de base de données.Procédure de package\EmptyColl - PARM]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=No
+
+[FolderOptions\CheckModel\Package de base de données.Procédure de package\ReturnDataType]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Séquence]
+
+[FolderOptions\CheckModel\Séquence\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Séquence\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Séquence\MaxLen - CODE]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Package de base de données.Curseur de package]
+
+[FolderOptions\CheckModel\Package de base de données.Curseur de package\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Package de base de données.Curseur de package\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Package de base de données.Curseur de package\UniqueDéfinition]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Package de base de données.Curseur de package\ReturnDataType]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Package de base de données.Curseur de package\EmptyColl - PARM]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=No
+
+[FolderOptions\CheckModel\Package de base de données.Variable de package]
+
+[FolderOptions\CheckModel\Package de base de données.Variable de package\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Package de base de données.Variable de package\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Package de base de données.Variable de package\CheckUndefDttp]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Package de base de données.Type de package]
+
+[FolderOptions\CheckModel\Package de base de données.Type de package\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Package de base de données.Type de package\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Package de base de données.Type de package\UniqueDéfinition]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Package de base de données.Exception de package]
+
+[FolderOptions\CheckModel\Package de base de données.Exception de package\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Package de base de données.Exception de package\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Tablespace]
+
+[FolderOptions\CheckModel\Tablespace\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Tablespace\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Tablespace\MaxLen - CODE]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Tablespace\IsObjectUsed]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Tablespace\ORA11GR1_Tablespace_Tablespace_Undo_et_Temporary]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Storage]
+
+[FolderOptions\CheckModel\Storage\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Storage\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Storage\MaxLen - CODE]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Storage\IsObjectUsed]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Base de données]
+
+[FolderOptions\CheckModel\Base de données\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Base de données\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Base de données\MaxLen - CODE]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Base de données\IsObjectUsed]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Service Web]
+
+[FolderOptions\CheckModel\Service Web\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Service Web\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Service Web\MaxLen - CODE]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Service Web.Opération Web]
+
+[FolderOptions\CheckModel\Service Web.Opération Web\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Service Web.Opération Web\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Service Web.Opération Web\MaxLen - CODE]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Cycle de vie]
+
+[FolderOptions\CheckModel\Cycle de vie\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Cycle de vie\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Cycle de vie\CheckLifecyclePhase]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Cycle de vie\CheckLifecycleRetention]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Cycle de vie\CheckPartitionRange]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Cycle de vie.Phase]
+
+[FolderOptions\CheckModel\Cycle de vie.Phase\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Cycle de vie.Phase\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Cycle de vie.Phase\CheckPhaseTbspace]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Cycle de vie.Phase\CheckPhaseIQTbspace]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Cycle de vie.Phase\CheckPhaseDuplicateTbspace]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Cycle de vie.Phase\CheckPhaseTbspaceCurrency]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Cycle de vie.Phase\CheckPhaseRetention]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Réplication]
+
+[FolderOptions\CheckModel\Réplication\PartialReplication]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Règle de gestion]
+
+[FolderOptions\CheckModel\Règle de gestion\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Règle de gestion\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Règle de gestion\EmptyColl - OBJCOL]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Objet étendu]
+
+[FolderOptions\CheckModel\Objet étendu\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Objet étendu\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Objet étendu\ORA11GR1_ExtendedObject_Cluster_Index_de_cluster_hash]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Lien étendu]
+
+[FolderOptions\CheckModel\Lien étendu\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Lien étendu\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Fichier]
+
+[FolderOptions\CheckModel\Fichier\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Fichier\CheckPathExists]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Modèle Physique de Données]
+
+[FolderOptions\CheckModel\Modèle Physique de Données\UniqueNom]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Modèle Physique de Données\UniqueCode]
+CheckSeverity=No
+FixRequested=No
+CheckRequested=Yes
+
+[FolderOptions\CheckModel\Modèle Physique de Données\ORA11GR1_Model_Existence_de_mot_de_passe_crypt_]
+CheckSeverity=Yes
+FixRequested=No
+CheckRequested=Yes</a:PackageOptionsText>
 <a:ModelOptionsText>[ModelOptions]
 
 [ModelOptions\Physical Objects]
@@ -1147,15 +2517,30 @@ PhysOpts=
 PhysOpts=
 
 [ModelOptions\Default Opts\JIDX]
+PhysOpts=
+
+[ModelOptions\Default Opts\FRMEOBJ&lt;&lt;Cluster&gt;&gt;]
+PhysOpts=
+
+[ModelOptions\Default Opts\FRMEOBJ&lt;&lt;MaterializedViewLog&gt;&gt;]
+PhysOpts=
+
+[ModelOptions\Default Opts\FRMESOB&lt;&lt;Cluster&gt;&gt;]
+PhysOpts=
+
+[ModelOptions\Default Opts\FRMESOB&lt;&lt;MaterializedViewLog&gt;&gt;]
+PhysOpts=
+
+[ModelOptions\Default Opts\FRMESOB&lt;&lt;ClusterIndex&gt;&gt;]
 PhysOpts=</a:ModelOptionsText>
 <c:GenerationOrigins>
 <o:Shortcut Id="o3">
-<a:ObjectID>083C5E37-F7F1-4499-88A1-E2C98EBD7961</a:ObjectID>
+<a:ObjectID>C837497C-57BD-4471-9163-60B157D98D2F</a:ObjectID>
 <a:Name>Modèle_Entité_Association_BDD_Supermarche</a:Name>
 <a:Code>MODELE_ENTITE_ASSOCIATION_BDD_SUPERMARCHE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252864</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252864</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:TargetStereotype/>
 <a:TargetID>61E75397-CA78-49FE-8B72-6D828623A65C</a:TargetID>
@@ -1164,29 +2549,29 @@ PhysOpts=</a:ModelOptionsText>
 </c:GenerationOrigins>
 <c:DBMS>
 <o:Shortcut Id="o4">
-<a:ObjectID>0D529E42-AB01-4032-ADEA-FC18E1100030</a:ObjectID>
-<a:Name>Sybase SQL Anywhere 11</a:Name>
-<a:Code>SYASA11</a:Code>
-<a:CreationDate>1588250039</a:CreationDate>
+<a:ObjectID>8759D730-BFAD-4360-AA4D-AD123F73DD4F</a:ObjectID>
+<a:Name>ORACLE Version 11g</a:Name>
+<a:Code>ORA11GR1</a:Code>
+<a:CreationDate>1588252758</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250039</a:ModificationDate>
+<a:ModificationDate>1588252758</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:TargetStereotype/>
-<a:TargetID>9C2029CC-5AF2-4828-AA6C-11C184EF93D8</a:TargetID>
+<a:TargetID>BAE632F3-AC04-4059-9893-259ABA89351C</a:TargetID>
 <a:TargetClassID>4BA9F647-DAB1-11D1-9944-006097355D9B</a:TargetClassID>
 </o:Shortcut>
 </c:DBMS>
 <c:PhysicalDiagrams>
 <o:PhysicalDiagram Id="o5">
-<a:ObjectID>FD8510A1-295E-40CE-9B72-6F3291496B35</a:ObjectID>
+<a:ObjectID>7CC0A94B-45AA-44D9-98CE-9798FF3154F2</a:ObjectID>
 <a:Name>Diagramme_1</a:Name>
 <a:Code>DIAGRAMME_1</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {3FADB443-3E35-46E5-9470-DDEBA7EA1B6F}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 <a:DisplayPreferences>[DisplayPreferences]
 
 [DisplayPreferences\PDM]
@@ -1787,8 +3172,9 @@ Shadow=0
 <a:PaperSource>15</a:PaperSource>
 <c:Symbols>
 <o:ReferenceSymbol Id="o6">
+<a:ModificationDate>1588252864</a:ModificationDate>
 <a:Rect>((-17718,11050), (4561,12088))</a:Rect>
-<a:ListOfPoints>((-17718,11050),(-6559,11050),(-6559,12088),(4561,12088))</a:ListOfPoints>
+<a:ListOfPoints>((-17718,11050),(-6733,11050),(-6733,12088),(4561,12088))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>16744576</a:LineColor>
@@ -1807,8 +3193,9 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o10">
+<a:ModificationDate>1588252864</a:ModificationDate>
 <a:Rect>((-46949,11200), (-17568,13938))</a:Rect>
-<a:ListOfPoints>((-17568,11200),(-32044,11200),(-32044,13938),(-46949,13938))</a:ListOfPoints>
+<a:ListOfPoints>((-17568,11200),(-32043,11200),(-32043,13938),(-46949,13938))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>16744576</a:LineColor>
@@ -1827,8 +3214,9 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o13">
+<a:ModificationDate>1588252864</a:ModificationDate>
 <a:Rect>((-16383,33914), (16035,36699))</a:Rect>
-<a:ListOfPoints>((-16383,33914),(-97,33914),(-97,36699),(16035,36699))</a:ListOfPoints>
+<a:ListOfPoints>((-16383,33914),(19,33914),(19,36699),(16035,36699))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>16744576</a:LineColor>
@@ -1847,6 +3235,7 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o17">
+<a:ModificationDate>1588252864</a:ModificationDate>
 <a:Rect>((4711,4882), (24362,12238))</a:Rect>
 <a:ListOfPoints>((4711,12238),(4711,4882),(24362,4882))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
@@ -1867,6 +3256,7 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o20">
+<a:ModificationDate>1588252864</a:ModificationDate>
 <a:Rect>((-35069,25631), (-16233,34064))</a:Rect>
 <a:ListOfPoints>((-16233,34064),(-16233,25631),(-35069,25631))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
@@ -1887,6 +3277,7 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o23">
+<a:ModificationDate>1588252864</a:ModificationDate>
 <a:Rect>((-23338,36849), (16185,43021))</a:Rect>
 <a:ListOfPoints>((16185,36849),(16185,43021),(-23338,43021))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
@@ -1907,6 +3298,7 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o26">
+<a:ModificationDate>1588252864</a:ModificationDate>
 <a:Rect>((-34919,25781), (-23338,43021))</a:Rect>
 <a:ListOfPoints>((-34919,25781),(-23338,25781),(-23338,43021))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
@@ -1927,6 +3319,7 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o28">
+<a:ModificationDate>1588252864</a:ModificationDate>
 <a:Rect>((-46799,14088), (-23338,43021))</a:Rect>
 <a:ListOfPoints>((-46799,14088),(-23338,14088),(-23338,43021))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
@@ -1947,8 +3340,9 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o30">
-<a:Rect>((-11399,16369), (-7818,24451))</a:Rect>
-<a:ListOfPoints>((-7818,24451),(-7818,19942),(-11399,19942),(-11399,16369))</a:ListOfPoints>
+<a:ModificationDate>1588252864</a:ModificationDate>
+<a:Rect>((-11399,16369), (-7438,24451))</a:Rect>
+<a:ListOfPoints>((-7438,24451),(-7438,19942),(-11399,19942),(-11399,16369))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>16744576</a:LineColor>
@@ -1967,8 +3361,9 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o33">
-<a:Rect>((-13288,24601), (-7668,34918))</a:Rect>
-<a:ListOfPoints>((-7668,24601),(-7668,28939),(-13288,28939),(-13288,34918))</a:ListOfPoints>
+<a:ModificationDate>1588252864</a:ModificationDate>
+<a:Rect>((-13288,24601), (-7288,34918))</a:Rect>
+<a:ListOfPoints>((-7288,24601),(-7288,28939),(-13288,28939),(-13288,34918))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>16744576</a:LineColor>
@@ -1987,6 +3382,7 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o35">
+<a:ModificationDate>1588252864</a:ModificationDate>
 <a:Rect>((16035,20113), (20011,36699))</a:Rect>
 <a:ListOfPoints>((20011,20113),(20011,26961),(16035,26961),(16035,36699))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
@@ -2007,6 +3403,7 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o38">
+<a:ModificationDate>1588252864</a:ModificationDate>
 <a:Rect>((11602,20632), (19016,38818))</a:Rect>
 <a:ListOfPoints>((11602,38818),(11602,30470),(19016,30470),(19016,20632))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
@@ -2027,8 +3424,9 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:TableSymbol Id="o7">
+<a:ModificationDate>1588252864</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
-<a:Rect>((-25185,4420), (-10251,17680))</a:Rect>
+<a:Rect>((-25609,4420), (-9827,17680))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
 <a:FillColor>16777136</a:FillColor>
 <a:ShadowColor>12632256</a:ShadowColor>
@@ -2050,8 +3448,9 @@ LABL 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:TableSymbol>
 <o:TableSymbol Id="o18">
+<a:ModificationDate>1588252864</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
-<a:Rect>((17552,2635), (31172,7130))</a:Rect>
+<a:Rect>((16780,2635), (31944,7130))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
 <a:FillColor>16777136</a:FillColor>
 <a:ShadowColor>12632256</a:ShadowColor>
@@ -2073,8 +3472,9 @@ LABL 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:TableSymbol>
 <o:TableSymbol Id="o21">
+<a:ModificationDate>1588252864</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
-<a:Rect>((-41879,20462), (-28259,30801))</a:Rect>
+<a:Rect>((-42149,20462), (-27989,30801))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
 <a:FillColor>16777136</a:FillColor>
 <a:ShadowColor>12632256</a:ShadowColor>
@@ -2096,8 +3496,9 @@ LABL 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:TableSymbol>
 <o:TableSymbol Id="o15">
+<a:ModificationDate>1588252864</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
-<a:Rect>((9302,31043), (22768,42355))</a:Rect>
+<a:Rect>((8762,31043), (23308,42355))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
 <a:FillColor>16777136</a:FillColor>
 <a:ShadowColor>12632256</a:ShadowColor>
@@ -2119,8 +3520,9 @@ LABL 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:TableSymbol>
 <o:TableSymbol Id="o8">
+<a:ModificationDate>1588252864</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
-<a:Rect>((-2867,9354), (11989,14823))</a:Rect>
+<a:Rect>((-3639,9354), (12761,14823))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
 <a:FillColor>16777136</a:FillColor>
 <a:ShadowColor>12632256</a:ShadowColor>
@@ -2142,8 +3544,9 @@ LABL 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:TableSymbol>
 <o:TableSymbol Id="o11">
+<a:ModificationDate>1588252864</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
-<a:Rect>((-54995,10230), (-38903,17647))</a:Rect>
+<a:Rect>((-55420,10230), (-38478,17647))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
 <a:FillColor>16777136</a:FillColor>
 <a:ShadowColor>12632256</a:ShadowColor>
@@ -2165,8 +3568,9 @@ LABL 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:TableSymbol>
 <o:TableSymbol Id="o14">
+<a:ModificationDate>1588252864</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
-<a:Rect>((-23270,30693), (-9496,37135))</a:Rect>
+<a:Rect>((-24043,30693), (-8723,37135))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
 <a:FillColor>16777136</a:FillColor>
 <a:ShadowColor>12632256</a:ShadowColor>
@@ -2188,8 +3592,9 @@ LABL 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:TableSymbol>
 <o:TableSymbol Id="o31">
+<a:ModificationDate>1588252864</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
-<a:Rect>((-15094,21717), (-548,27185))</a:Rect>
+<a:Rect>((-14947,21717), (63,27185))</a:Rect>
 <a:AutoAdjustToText>0</a:AutoAdjustToText>
 <a:LineColor>16744576</a:LineColor>
 <a:FillColor>16765136</a:FillColor>
@@ -2212,6 +3617,7 @@ LABL 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:TableSymbol>
 <o:TableSymbol Id="o24">
+<a:ModificationDate>1588252864</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
 <a:Rect>((-29916,39313), (-16760,46730))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
@@ -2235,8 +3641,9 @@ LABL 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:TableSymbol>
 <o:TableSymbol Id="o36">
+<a:ModificationDate>1588252864</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
-<a:Rect>((13094,18385), (24938,22880))</a:Rect>
+<a:Rect>((12206,18385), (25826,22880))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
 <a:FillColor>16777136</a:FillColor>
 <a:ShadowColor>12632256</a:ShadowColor>
@@ -2262,15 +3669,15 @@ LABL 0 Arial,8,N</a:FontList>
 </c:PhysicalDiagrams>
 <c:BusinessRules>
 <o:BusinessRule Id="o50">
-<a:ObjectID>C472D06A-36E7-4193-BDF0-E24E145AD435</a:ObjectID>
+<a:ObjectID>DFC19334-9CC5-4022-BA7E-93E4C09D318E</a:ObjectID>
 <a:Name>Regle_1</a:Name>
 <a:Code>REGLE_1</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {650FD913-4127-44CC-9A9D-E00F108E284F}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 </o:BusinessRule>
 </c:BusinessRules>
 <c:DefaultDiagram>
@@ -2278,213 +3685,217 @@ DAT 1588250054</a:History>
 </c:DefaultDiagram>
 <c:Tables>
 <o:Table Id="o40">
-<a:ObjectID>7CBAF5B6-EADE-4C23-868C-0B408E9AF4CC</a:ObjectID>
+<a:ObjectID>59B8CCF7-13CA-46A9-B90E-D1DE031205C5</a:ObjectID>
 <a:Name>Produit</a:Name>
 <a:Code>PRODUIT</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {B36525AE-D0E7-4FBC-A9A4-32CA2BBC2F57}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 <a:TotalSavingCurrency/>
 <c:Columns>
 <o:Column Id="o51">
-<a:ObjectID>2568C914-C56E-43C1-9098-5C9148FC48D4</a:ObjectID>
+<a:ObjectID>91780999-2498-45FC-A82D-6BECC1EC67F5</a:ObjectID>
 <a:Name>idProduit</a:Name>
 <a:Code>IDPRODUIT</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {5EDEF0F1-85AB-4DE2-9B6E-ABE2AA7859D7}
-DAT 1588250054</a:History>
-<a:DefaultValue>autoincrement</a:DefaultValue>
-<a:DataType>integer</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>NUMBER(6)</a:DataType>
+<a:Length>6</a:Length>
 <a:Mandatory>1</a:Mandatory>
-</o:Column>
-<o:Column Id="o52">
-<a:ObjectID>590CF6BF-53E9-476D-805C-840330A26C89</a:ObjectID>
-<a:Name>idFournisseur</a:Name>
-<a:Code>IDFOURNISSEUR</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
-<a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
-<a:Modifier>bordy</a:Modifier>
-<a:History>ORG {12BA471B-5D33-4D9E-8241-C818725E852E},{0FB24434-E679-428B-839C-F70D185B8B80}
-DAT 1588250054</a:History>
+<c:Sequence>
+<o:Sequence Ref="o52"/>
+</c:Sequence>
 </o:Column>
 <o:Column Id="o53">
-<a:ObjectID>A7B866C3-E258-42C4-8DFC-99B49466E2B6</a:ObjectID>
-<a:Name>idCategorie</a:Name>
-<a:Code>IDCATEGORIE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:ObjectID>23722AE8-9394-4ACC-BD62-CF9861C8CC53</a:ObjectID>
+<a:Name>idFournisseur</a:Name>
+<a:Code>IDFOURNISSEUR</a:Code>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
-<a:History>ORG {CCCAEEF3-DEEA-4435-853D-CEB57AF690BD},{E89BFE46-2317-41CF-AD04-D0DE38FD6886}
-DAT 1588250054</a:History>
-<a:DataType>integer</a:DataType>
+<a:History>ORG {12BA471B-5D33-4D9E-8241-C818725E852E},{0FB24434-E679-428B-839C-F70D185B8B80}
+DAT 1588252769</a:History>
 </o:Column>
 <o:Column Id="o54">
-<a:ObjectID>0E5B27B6-9958-4682-99B5-67FBBEB57EFC</a:ObjectID>
+<a:ObjectID>D1B8DA18-5A1C-45B3-BC27-58D2599BCA68</a:ObjectID>
+<a:Name>idCategorie</a:Name>
+<a:Code>IDCATEGORIE</a:Code>
+<a:CreationDate>1588252769</a:CreationDate>
+<a:Creator>bordy</a:Creator>
+<a:ModificationDate>1588252769</a:ModificationDate>
+<a:Modifier>bordy</a:Modifier>
+<a:History>ORG {CCCAEEF3-DEEA-4435-853D-CEB57AF690BD},{E89BFE46-2317-41CF-AD04-D0DE38FD6886}
+DAT 1588252769</a:History>
+<a:DataType>NUMBER(6)</a:DataType>
+<a:Length>6</a:Length>
+</o:Column>
+<o:Column Id="o55">
+<a:ObjectID>1ECA5B5D-1DE4-4DB0-8CFA-C952C3D1E66B</a:ObjectID>
 <a:Name>nomProduit</a:Name>
 <a:Code>NOMPRODUIT</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {D2744271-6720-4A6D-9C8D-A5C6CE8F7067}
-DAT 1588250054</a:History>
-<a:DataType>varchar(25)</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>VARCHAR2(25)</a:DataType>
 <a:Length>25</a:Length>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o55">
-<a:ObjectID>E513F120-F973-472D-90AC-9F08CFE8EF88</a:ObjectID>
+<o:Column Id="o56">
+<a:ObjectID>16BE8650-0CCB-484B-AF33-5622CF719B3F</a:ObjectID>
 <a:Name>poidsProduit</a:Name>
 <a:Code>POIDSPRODUIT</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {B6E1C464-3A2E-455D-A49D-DC4A78F03770}
-DAT 1588250054</a:History>
-<a:DataType>decimal(6,2)</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>NUMBER(6,2)</a:DataType>
 <a:Length>6</a:Length>
 <a:Precision>2</a:Precision>
 </o:Column>
-<o:Column Id="o56">
-<a:ObjectID>519A936D-C3FB-4D4F-B077-A275D2779194</a:ObjectID>
+<o:Column Id="o57">
+<a:ObjectID>9263EB37-C36C-484D-83E2-167D142E4979</a:ObjectID>
 <a:Name>DescriptionProduit</a:Name>
 <a:Code>DESCRIPTIONPRODUIT</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {7050D964-9B46-498B-83FA-7F7826B971E1}
-DAT 1588250054</a:History>
-<a:DataType>varchar(75)</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>VARCHAR2(75)</a:DataType>
 <a:Length>75</a:Length>
 </o:Column>
-<o:Column Id="o57">
-<a:ObjectID>B66C01B6-1704-4975-A886-F020B458E76E</a:ObjectID>
+<o:Column Id="o58">
+<a:ObjectID>684D58F9-53C5-4599-A3E3-263669DD06BF</a:ObjectID>
 <a:Name>prixHT</a:Name>
 <a:Code>PRIXHT</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {1FB9E977-D837-44D5-8FD7-1578625E2A94}
-DAT 1588250054</a:History>
-<a:DataType>decimal(5,2)</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>NUMBER(5,2)</a:DataType>
 <a:Length>5</a:Length>
 <a:Precision>2</a:Precision>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o58">
-<a:ObjectID>66D2425E-BBC2-498F-BD19-1EC16CC19B5B</a:ObjectID>
+<o:Column Id="o59">
+<a:ObjectID>0166F0DB-7065-45CD-ABD5-4ACE81E23818</a:ObjectID>
 <a:Name>tauxTVA</a:Name>
 <a:Code>TAUXTVA</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {BEB11B71-D660-497E-B4F6-71EC64954148}
-DAT 1588250054</a:History>
-<a:DataType>decimal(1,3)</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>NUMBER(1,3)</a:DataType>
 <a:Length>1</a:Length>
 <a:Precision>3</a:Precision>
 </o:Column>
-<o:Column Id="o59">
-<a:ObjectID>9E8A2204-BAC2-4C57-B158-CCF105300918</a:ObjectID>
+<o:Column Id="o60">
+<a:ObjectID>2C4ED56A-A0D7-4309-AF80-07F6260A68A7</a:ObjectID>
 <a:Name>prixTTC</a:Name>
 <a:Code>PRIXTTC</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {E92F1AB1-D6F7-4CC3-A52D-0CB1639ED56C}
-DAT 1588250054</a:History>
-<a:DataType>decimal(5,2)</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>NUMBER(5,2)</a:DataType>
 <a:Length>5</a:Length>
 <a:Precision>2</a:Precision>
 </o:Column>
-<o:Column Id="o60">
-<a:ObjectID>FF1FAB38-E314-4B1C-8509-9A4CF07403D3</a:ObjectID>
+<o:Column Id="o61">
+<a:ObjectID>8BDBC366-B298-423F-97DE-DDC089880F55</a:ObjectID>
 <a:Name>stock</a:Name>
 <a:Code>STOCK</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {99F01810-652E-4E05-A655-18CC87D21A86}
-DAT 1588250054</a:History>
-<a:DataType>integer</a:DataType>
-<a:Mandatory>1</a:Mandatory>
-</o:Column>
-<o:Column Id="o61">
-<a:ObjectID>E67B9A8B-2D1D-4884-B7E6-4AD9390A6261</a:ObjectID>
-<a:Name>stockMini</a:Name>
-<a:Code>STOCKMINI</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
-<a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
-<a:Modifier>bordy</a:Modifier>
-<a:History>ORG {3504D729-EFCA-47FA-8F21-307229D2370E}
-DAT 1588250054</a:History>
-<a:DataType>integer</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>INTEGER</a:DataType>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
 <o:Column Id="o62">
-<a:ObjectID>49BF7E42-D2CB-480D-AA86-7841B8B4FB02</a:ObjectID>
+<a:ObjectID>C7D8E386-31C3-44FB-8B36-185096E8D89B</a:ObjectID>
+<a:Name>stockMini</a:Name>
+<a:Code>STOCKMINI</a:Code>
+<a:CreationDate>1588252769</a:CreationDate>
+<a:Creator>bordy</a:Creator>
+<a:ModificationDate>1588252769</a:ModificationDate>
+<a:Modifier>bordy</a:Modifier>
+<a:History>ORG {3504D729-EFCA-47FA-8F21-307229D2370E}
+DAT 1588252769</a:History>
+<a:DataType>INTEGER</a:DataType>
+<a:Mandatory>1</a:Mandatory>
+</o:Column>
+<o:Column Id="o63">
+<a:ObjectID>BF9820C7-65D2-48D0-B71F-2DAC8F43504E</a:ObjectID>
 <a:Name>stockMax</a:Name>
 <a:Code>STOCKMAX</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {190B140D-444E-4CAE-AA29-0AB59C1B4DB2}
-DAT 1588250054</a:History>
-<a:DataType>integer</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>INTEGER</a:DataType>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
 </c:Columns>
 <c:Keys>
-<o:Key Id="o63">
-<a:ObjectID>60404496-BE5F-4DD4-B6FC-D96B2DE2531E</a:ObjectID>
+<o:Key Id="o64">
+<a:ObjectID>2483DE8C-F429-42E5-8056-7427CB41D65F</a:ObjectID>
 <a:Name>PK_PRODUIT</a:Name>
 <a:Code>PK_PRODUIT</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {747BDE34-6274-47D7-98AF-D0DAE42FA0E0}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 <c:Key.Columns>
 <o:Column Ref="o51"/>
 </c:Key.Columns>
 </o:Key>
 </c:Keys>
 <c:Indexes>
-<o:Index Id="o64">
-<a:ObjectID>DB929A28-171A-4128-AA5E-3AE39A512D62</a:ObjectID>
+<o:Index Id="o65">
+<a:ObjectID>E5F60D82-F813-4FE0-B534-EDE797A22CC2</a:ObjectID>
 <a:Name>PRODUIT_PK</a:Name>
 <a:Code>PRODUIT_PK</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:Unique>1</a:Unique>
 <c:LinkedObject>
-<o:Key Ref="o63"/>
+<o:Key Ref="o64"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o65">
-<a:ObjectID>09F7951C-6DE1-442E-A244-B98C856CD5FA</a:ObjectID>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:IndexColumn Id="o66">
+<a:ObjectID>58E0ABAD-3AC3-44EF-ABCD-D982508CFCD1</a:ObjectID>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:Column>
 <o:Column Ref="o51"/>
@@ -2492,23 +3903,47 @@ DAT 1588250054</a:History>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
-<o:Index Id="o66">
-<a:ObjectID>35D6116C-8692-4685-ABEC-418BF4248876</a:ObjectID>
-<a:Name>ASSOCIATION_6_FK</a:Name>
-<a:Code>ASSOCIATION_6_FK</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:Index Id="o67">
+<a:ObjectID>00D4B553-95C5-45CB-B553-D6DF4C49F9C9</a:ObjectID>
+<a:Name>CONTENIR_FK</a:Name>
+<a:Code>CONTENIR_FK</a:Code>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:LinkedObject>
 <o:Reference Ref="o9"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o67">
-<a:ObjectID>CD446C79-2D63-451C-B024-A5FAC0DBC85B</a:ObjectID>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:IndexColumn Id="o68">
+<a:ObjectID>10FFF0AA-EC01-4F88-AE20-1C4B94BEC454</a:ObjectID>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
+<a:Modifier>bordy</a:Modifier>
+<c:Column>
+<o:Column Ref="o54"/>
+</c:Column>
+</o:IndexColumn>
+</c:IndexColumns>
+</o:Index>
+<o:Index Id="o69">
+<a:ObjectID>1DA1ABEE-98DA-4BC7-9289-36899557E7E3</a:ObjectID>
+<a:Name>VENDRE_FK</a:Name>
+<a:Code>VENDRE_FK</a:Code>
+<a:CreationDate>1588252769</a:CreationDate>
+<a:Creator>bordy</a:Creator>
+<a:ModificationDate>1588252769</a:ModificationDate>
+<a:Modifier>bordy</a:Modifier>
+<c:LinkedObject>
+<o:Reference Ref="o12"/>
+</c:LinkedObject>
+<c:IndexColumns>
+<o:IndexColumn Id="o70">
+<a:ObjectID>83818E0B-21A6-4BDF-87EF-2E440F8F37DC</a:ObjectID>
+<a:CreationDate>1588252769</a:CreationDate>
+<a:Creator>bordy</a:Creator>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:Column>
 <o:Column Ref="o53"/>
@@ -2516,1495 +3951,1501 @@ DAT 1588250054</a:History>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
-<o:Index Id="o68">
-<a:ObjectID>0136DF5C-8661-4000-BA0D-E368B03A8A3C</a:ObjectID>
-<a:Name>ASSOCIATION_7_FK</a:Name>
-<a:Code>ASSOCIATION_7_FK</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
-<a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
-<a:Modifier>bordy</a:Modifier>
-<c:LinkedObject>
-<o:Reference Ref="o12"/>
-</c:LinkedObject>
-<c:IndexColumns>
-<o:IndexColumn Id="o69">
-<a:ObjectID>E8A1E6C5-1129-4C4C-BA0B-324824FD092E</a:ObjectID>
-<a:CreationDate>1588250054</a:CreationDate>
-<a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
-<a:Modifier>bordy</a:Modifier>
-<c:Column>
-<o:Column Ref="o52"/>
-</c:Column>
-</o:IndexColumn>
-</c:IndexColumns>
-</o:Index>
 </c:Indexes>
 <c:PrimaryKey>
-<o:Key Ref="o63"/>
+<o:Key Ref="o64"/>
 </c:PrimaryKey>
 </o:Table>
 <o:Table Id="o41">
-<a:ObjectID>197164BF-8EDB-4B80-8148-3E9704B08EB9</a:ObjectID>
+<a:ObjectID>722AB711-4CAC-49F1-9F5C-7598E2A683BB</a:ObjectID>
 <a:Name>Rayon</a:Name>
 <a:Code>RAYON</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {979A3737-4701-4F6D-96F8-5D4EDC83A0E7}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 <a:TotalSavingCurrency/>
 <c:Columns>
-<o:Column Id="o70">
-<a:ObjectID>2DF2822C-0032-46C4-A7C6-DCAF616527CD</a:ObjectID>
+<o:Column Id="o71">
+<a:ObjectID>F670F54B-577B-4F2F-95B4-82AD32167192</a:ObjectID>
 <a:Name>idRayon</a:Name>
 <a:Code>IDRAYON</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {AE83F9B6-92AF-4B90-9C95-D0E19CBD0539}
-DAT 1588250054</a:History>
-<a:DefaultValue>autoincrement</a:DefaultValue>
-<a:DataType>integer</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>NUMBER(6)</a:DataType>
+<a:Length>6</a:Length>
 <a:Mandatory>1</a:Mandatory>
+<c:Sequence>
+<o:Sequence Ref="o72"/>
+</c:Sequence>
 </o:Column>
-<o:Column Id="o71">
-<a:ObjectID>15BAFD98-0A7A-4FBC-A25E-712190F8FD98</a:ObjectID>
+<o:Column Id="o73">
+<a:ObjectID>BF00D958-DFF5-42CD-AD65-CA6B9FB3C43E</a:ObjectID>
 <a:Name>nomRayon</a:Name>
 <a:Code>NOMRAYON</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {4D90EC6A-8CB6-4EAB-9C34-8BEA0CD1ACAF}
-DAT 1588250054</a:History>
-<a:DataType>varchar(25)</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>VARCHAR2(25)</a:DataType>
 <a:Length>25</a:Length>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o72">
-<a:ObjectID>4DE1F8C9-2694-464C-9184-1301585C4926</a:ObjectID>
+<o:Column Id="o74">
+<a:ObjectID>68FA80C6-57E7-4AF5-81BD-FF39D51D9D0B</a:ObjectID>
 <a:Name>descriptionRayon</a:Name>
 <a:Code>DESCRIPTIONRAYON</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {2066F1DF-DFCB-43F2-9B6F-49DFBCAA8BDD}
-DAT 1588250054</a:History>
-<a:DataType>varchar(75)</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>VARCHAR2(75)</a:DataType>
 <a:Length>75</a:Length>
 </o:Column>
 </c:Columns>
 <c:Keys>
-<o:Key Id="o73">
-<a:ObjectID>169DDEE7-4F4B-4D1F-A7AC-CE7595D0D643</a:ObjectID>
+<o:Key Id="o75">
+<a:ObjectID>80DDFA53-D5B5-4016-86F2-311D92AB31D5</a:ObjectID>
 <a:Name>PK_RAYON</a:Name>
 <a:Code>PK_RAYON</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {52E8747E-FF94-4AC3-B8B8-F13B0A0E7C99}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 <c:Key.Columns>
-<o:Column Ref="o70"/>
+<o:Column Ref="o71"/>
 </c:Key.Columns>
 </o:Key>
 </c:Keys>
 <c:Indexes>
-<o:Index Id="o74">
-<a:ObjectID>AA7578CA-6735-4D82-8AEB-FA91A08B77AB</a:ObjectID>
+<o:Index Id="o76">
+<a:ObjectID>20F88183-B567-4A52-8125-BD673898FDF3</a:ObjectID>
 <a:Name>RAYON_PK</a:Name>
 <a:Code>RAYON_PK</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:Unique>1</a:Unique>
 <c:LinkedObject>
-<o:Key Ref="o73"/>
+<o:Key Ref="o75"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o75">
-<a:ObjectID>02F7AD4C-156D-4F98-A181-EE972DC7A7F2</a:ObjectID>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:IndexColumn Id="o77">
+<a:ObjectID>F75A75D9-9694-400A-BDD7-7DE7A8F55384</a:ObjectID>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:Column>
-<o:Column Ref="o70"/>
+<o:Column Ref="o71"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
 </c:Indexes>
 <c:PrimaryKey>
-<o:Key Ref="o73"/>
+<o:Key Ref="o75"/>
 </c:PrimaryKey>
 </o:Table>
 <o:Table Id="o42">
-<a:ObjectID>FEF62C2C-BDF1-4D98-9779-E19CA0F38F55</a:ObjectID>
+<a:ObjectID>93E287A9-036C-4FCF-943E-C2F7A4D4284A</a:ObjectID>
 <a:Name>Employe</a:Name>
 <a:Code>EMPLOYE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {08AB1D2C-E0B1-41A2-9C1C-662ED844A07D}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 <a:TotalSavingCurrency/>
 <c:Columns>
-<o:Column Id="o76">
-<a:ObjectID>379E9339-48CA-4887-85BF-34C1C2832D06</a:ObjectID>
+<o:Column Id="o78">
+<a:ObjectID>8E8118F6-04DF-4A03-B896-FE490680029B</a:ObjectID>
 <a:Name>idEmploye</a:Name>
 <a:Code>IDEMPLOYE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {038CC2D5-5B93-4BE1-93C6-920F65975B32}
-DAT 1588250054</a:History>
-<a:DefaultValue>autoincrement</a:DefaultValue>
-<a:DataType>integer</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>NUMBER(6)</a:DataType>
+<a:Length>6</a:Length>
 <a:Mandatory>1</a:Mandatory>
-</o:Column>
-<o:Column Id="o77">
-<a:ObjectID>9CCA2DB3-2688-47B9-BB40-075FAFAEF844</a:ObjectID>
-<a:Name>idAdresse</a:Name>
-<a:Code>IDADRESSE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
-<a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
-<a:Modifier>bordy</a:Modifier>
-<a:History>ORG {0C3F5E37-81C4-4B40-AEEA-CD63B30CAB66},{A8E02EEE-9645-48FD-BD9B-57EF43B6A663}
-DAT 1588250054</a:History>
-<a:DataType>integer</a:DataType>
-</o:Column>
-<o:Column Id="o78">
-<a:ObjectID>E6422975-32DA-4D6A-96DF-46195351BC29</a:ObjectID>
-<a:Name>nom</a:Name>
-<a:Code>NOM</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
-<a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
-<a:Modifier>bordy</a:Modifier>
-<a:History>ORG {9BA24A40-EC83-4F88-B5E6-40784F0B524A}
-DAT 1588250054</a:History>
-<a:DataType>varchar(25)</a:DataType>
-<a:Length>25</a:Length>
-<a:Mandatory>1</a:Mandatory>
-</o:Column>
-<o:Column Id="o79">
-<a:ObjectID>E6ACA897-F5E0-435D-BD48-07E80F114FFA</a:ObjectID>
-<a:Name>prenom</a:Name>
-<a:Code>PRENOM</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
-<a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
-<a:Modifier>bordy</a:Modifier>
-<a:History>ORG {5080AD2C-8FE7-4B95-8B3C-CA6F2CEB5F38}
-DAT 1588250054</a:History>
-<a:DataType>varchar(25)</a:DataType>
-<a:Length>25</a:Length>
-<a:Mandatory>1</a:Mandatory>
+<c:Sequence>
+<o:Sequence Ref="o79"/>
+</c:Sequence>
 </o:Column>
 <o:Column Id="o80">
-<a:ObjectID>62BCE2EA-B0A7-4DC0-A790-379D2778A695</a:ObjectID>
+<a:ObjectID>3F43D63B-68FE-4E37-9325-22C990F11F2B</a:ObjectID>
+<a:Name>idAdresse</a:Name>
+<a:Code>IDADRESSE</a:Code>
+<a:CreationDate>1588252769</a:CreationDate>
+<a:Creator>bordy</a:Creator>
+<a:ModificationDate>1588252769</a:ModificationDate>
+<a:Modifier>bordy</a:Modifier>
+<a:History>ORG {0C3F5E37-81C4-4B40-AEEA-CD63B30CAB66},{A8E02EEE-9645-48FD-BD9B-57EF43B6A663}
+DAT 1588252769</a:History>
+<a:DataType>NUMBER(6)</a:DataType>
+<a:Length>6</a:Length>
+</o:Column>
+<o:Column Id="o81">
+<a:ObjectID>9F726C78-BD77-4FAA-95A5-3278BF7BD2D1</a:ObjectID>
+<a:Name>nom</a:Name>
+<a:Code>NOM</a:Code>
+<a:CreationDate>1588252769</a:CreationDate>
+<a:Creator>bordy</a:Creator>
+<a:ModificationDate>1588252769</a:ModificationDate>
+<a:Modifier>bordy</a:Modifier>
+<a:History>ORG {9BA24A40-EC83-4F88-B5E6-40784F0B524A}
+DAT 1588252769</a:History>
+<a:DataType>VARCHAR2(25)</a:DataType>
+<a:Length>25</a:Length>
+<a:Mandatory>1</a:Mandatory>
+</o:Column>
+<o:Column Id="o82">
+<a:ObjectID>B39ADB47-5983-4827-80F4-FBDEA4B4FA0F</a:ObjectID>
+<a:Name>prenom</a:Name>
+<a:Code>PRENOM</a:Code>
+<a:CreationDate>1588252769</a:CreationDate>
+<a:Creator>bordy</a:Creator>
+<a:ModificationDate>1588252769</a:ModificationDate>
+<a:Modifier>bordy</a:Modifier>
+<a:History>ORG {5080AD2C-8FE7-4B95-8B3C-CA6F2CEB5F38}
+DAT 1588252769</a:History>
+<a:DataType>VARCHAR2(25)</a:DataType>
+<a:Length>25</a:Length>
+<a:Mandatory>1</a:Mandatory>
+</o:Column>
+<o:Column Id="o83">
+<a:ObjectID>46552E81-D213-490D-99A8-410F93CE33A6</a:ObjectID>
 <a:Name>mail</a:Name>
 <a:Code>MAIL</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {B116A3C4-4288-4A9C-83FF-527040161C01}
-DAT 1588250054</a:History>
-<a:DataType>varchar(50)</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>VARCHAR2(50)</a:DataType>
 <a:Length>50</a:Length>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o81">
-<a:ObjectID>34C5951E-3DAD-4D64-8760-BFD63358DFDE</a:ObjectID>
+<o:Column Id="o84">
+<a:ObjectID>3B03BF69-DAB4-424B-8CA2-48BC634D7483</a:ObjectID>
 <a:Name>telephone</a:Name>
 <a:Code>TELEPHONE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {440425B0-EAA6-4265-8679-0B5972BE4367}
-DAT 1588250054</a:History>
-<a:DataType>varchar(10)</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>VARCHAR2(10)</a:DataType>
 <a:Length>10</a:Length>
 </o:Column>
-<o:Column Id="o82">
-<a:ObjectID>B573BD13-1581-474C-980C-20DF5AB47A86</a:ObjectID>
+<o:Column Id="o85">
+<a:ObjectID>9307526A-A374-483B-A4E9-73521CB4A092</a:ObjectID>
 <a:Name>salaire</a:Name>
 <a:Code>SALAIRE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {C6E9D15B-3C63-4AF2-9D2C-2E7A9AEF144B}
-DAT 1588250054</a:History>
-<a:DataType>decimal(15,2)</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>NUMBER(15,2)</a:DataType>
 <a:Length>15</a:Length>
 <a:Precision>2</a:Precision>
 </o:Column>
-<o:Column Id="o83">
-<a:ObjectID>C5DFF1BC-0255-4A7F-AC75-887F4BC14923</a:ObjectID>
+<o:Column Id="o86">
+<a:ObjectID>043744F3-F725-431A-9C91-CB4AE079F331</a:ObjectID>
 <a:Name>genre</a:Name>
 <a:Code>GENRE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252864</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {C50E29ED-E511-4479-B937-6B3A3C7AAC51}
-DAT 1588250054</a:History>
-<a:DataType>long varchar</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>VARCHAR2(5)</a:DataType>
+<a:Length>5</a:Length>
 </o:Column>
-<o:Column Id="o84">
-<a:ObjectID>F6B30714-99B5-45B7-8CEF-D45A1AD20AA8</a:ObjectID>
+<o:Column Id="o87">
+<a:ObjectID>6DE7A78F-872D-4289-B943-443C4CB85F0A</a:ObjectID>
 <a:Name>dateNaissance</a:Name>
 <a:Code>DATENAISSANCE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {A41073DF-EE24-4EAD-A9FB-AF516BA205C2}
-DAT 1588250054</a:History>
-<a:DataType>date</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>DATE</a:DataType>
 </o:Column>
 </c:Columns>
 <c:Keys>
-<o:Key Id="o85">
-<a:ObjectID>25F7D757-9B4B-4FC4-9E9B-501922AF5E76</a:ObjectID>
+<o:Key Id="o88">
+<a:ObjectID>BE292B7F-20C1-475F-926B-22F071FEAA90</a:ObjectID>
 <a:Name>PK_EMPLOYE</a:Name>
 <a:Code>PK_EMPLOYE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {952356E6-CE62-4BB5-B369-BD7EC0E37116}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 <c:Key.Columns>
-<o:Column Ref="o76"/>
+<o:Column Ref="o78"/>
 </c:Key.Columns>
 </o:Key>
 </c:Keys>
 <c:Indexes>
-<o:Index Id="o86">
-<a:ObjectID>91FDC1AD-3846-497B-A46C-88388A3EB34B</a:ObjectID>
+<o:Index Id="o89">
+<a:ObjectID>1AAF3E00-D5A3-4768-B4F1-107F186816E4</a:ObjectID>
 <a:Name>EMPLOYE_PK</a:Name>
 <a:Code>EMPLOYE_PK</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:Unique>1</a:Unique>
 <c:LinkedObject>
-<o:Key Ref="o85"/>
+<o:Key Ref="o88"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o87">
-<a:ObjectID>6C885D1E-02A9-4661-9EEE-2CC53AC21965</a:ObjectID>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:IndexColumn Id="o90">
+<a:ObjectID>D6BD8BBB-6A10-4302-920A-AA14FCBB5336</a:ObjectID>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:Column>
-<o:Column Ref="o76"/>
+<o:Column Ref="o78"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
-<o:Index Id="o88">
-<a:ObjectID>9C5077AF-926C-436F-B2F4-2192A52AA7A6</a:ObjectID>
-<a:Name>ASSOCIATION_14_FK</a:Name>
-<a:Code>ASSOCIATION_14_FK</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:Index Id="o91">
+<a:ObjectID>404A488D-503B-440A-B01D-D349F2B872E7</a:ObjectID>
+<a:Name>LOGER_FK</a:Name>
+<a:Code>LOGER_FK</a:Code>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:LinkedObject>
 <o:Reference Ref="o27"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o89">
-<a:ObjectID>F2AEC94B-D9B5-493C-A7A6-C3592D33F2EC</a:ObjectID>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:IndexColumn Id="o92">
+<a:ObjectID>CD612769-35B1-4AAA-9A54-AEFA902DF435</a:ObjectID>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:Column>
-<o:Column Ref="o77"/>
+<o:Column Ref="o80"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
 </c:Indexes>
 <c:PrimaryKey>
-<o:Key Ref="o85"/>
+<o:Key Ref="o88"/>
 </c:PrimaryKey>
 </o:Table>
 <o:Table Id="o43">
-<a:ObjectID>38855103-E28C-494F-9A42-E9FFBD52F876</a:ObjectID>
+<a:ObjectID>E1C01133-78AC-4A26-8F0C-58016BEEDD87</a:ObjectID>
 <a:Name>Client</a:Name>
 <a:Code>CLIENT</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {5F6B62CD-509F-459F-93F8-06B6A635E315}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 <a:TotalSavingCurrency/>
 <c:AttachedRules>
 <o:BusinessRule Ref="o50"/>
 </c:AttachedRules>
 <c:Columns>
-<o:Column Id="o90">
-<a:ObjectID>BB8FA211-D3DB-4270-8A20-1583EB111E32</a:ObjectID>
+<o:Column Id="o93">
+<a:ObjectID>D244C9BB-90AE-4D8F-B816-D6A0F1D312C4</a:ObjectID>
 <a:Name>idClient</a:Name>
 <a:Code>IDCLIENT</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {90E6C179-4443-4C1A-990A-DA97CD3F44F1}
-DAT 1588250054</a:History>
-<a:DefaultValue>autoincrement</a:DefaultValue>
-<a:DataType>integer</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>NUMBER(6)</a:DataType>
+<a:Length>6</a:Length>
 <a:Mandatory>1</a:Mandatory>
-</o:Column>
-<o:Column Id="o91">
-<a:ObjectID>6FA96780-540F-4A7F-8279-A937977E304A</a:ObjectID>
-<a:Name>idAdresse</a:Name>
-<a:Code>IDADRESSE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
-<a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
-<a:Modifier>bordy</a:Modifier>
-<a:History>ORG {0C3F5E37-81C4-4B40-AEEA-CD63B30CAB66},{40ACC08D-790E-491B-A6AC-89C130342B1D}
-DAT 1588250054</a:History>
-<a:DataType>integer</a:DataType>
-</o:Column>
-<o:Column Id="o92">
-<a:ObjectID>631C375D-3B96-4EC2-850B-06887CDDF39E</a:ObjectID>
-<a:Name>idCarteFidelite</a:Name>
-<a:Code>IDCARTEFIDELITE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
-<a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
-<a:Modifier>bordy</a:Modifier>
-<a:History>ORG {47600DAF-9B47-41CB-BB9B-CF855DB9D10F},{7ACD9ED7-0C4B-4EF9-945F-B681452C318A}
-DAT 1588250054</a:History>
-<a:DataType>integer</a:DataType>
-</o:Column>
-<o:Column Id="o93">
-<a:ObjectID>F3B463C2-46DF-4942-A814-FD4F0FB3186E</a:ObjectID>
-<a:Name>nom</a:Name>
-<a:Code>NOM</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
-<a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
-<a:Modifier>bordy</a:Modifier>
-<a:History>ORG {7D938FB5-8BCC-4290-BBCC-4201F26893B1}
-DAT 1588250054</a:History>
-<a:DataType>varchar(25)</a:DataType>
-<a:Length>25</a:Length>
-<a:Mandatory>1</a:Mandatory>
-</o:Column>
-<o:Column Id="o94">
-<a:ObjectID>14B68499-8AB5-4EA0-9335-B4E26E9102FF</a:ObjectID>
-<a:Name>prenom</a:Name>
-<a:Code>PRENOM</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
-<a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
-<a:Modifier>bordy</a:Modifier>
-<a:History>ORG {0C5F71B3-7877-44E9-880F-57263DB039A2}
-DAT 1588250054</a:History>
-<a:DataType>varchar(25)</a:DataType>
-<a:Length>25</a:Length>
-<a:Mandatory>1</a:Mandatory>
+<c:Sequence>
+<o:Sequence Ref="o94"/>
+</c:Sequence>
 </o:Column>
 <o:Column Id="o95">
-<a:ObjectID>FE48D1F8-D612-4420-A25E-54485DD723B2</a:ObjectID>
+<a:ObjectID>F4620DF2-9CD7-425B-AA2E-FBE85521CAE5</a:ObjectID>
+<a:Name>idAdresse</a:Name>
+<a:Code>IDADRESSE</a:Code>
+<a:CreationDate>1588252769</a:CreationDate>
+<a:Creator>bordy</a:Creator>
+<a:ModificationDate>1588252769</a:ModificationDate>
+<a:Modifier>bordy</a:Modifier>
+<a:History>ORG {0C3F5E37-81C4-4B40-AEEA-CD63B30CAB66},{40ACC08D-790E-491B-A6AC-89C130342B1D}
+DAT 1588252769</a:History>
+<a:DataType>NUMBER(6)</a:DataType>
+<a:Length>6</a:Length>
+</o:Column>
+<o:Column Id="o96">
+<a:ObjectID>A840EFCB-DDF1-4FEB-B600-CE0D4EE2C7E6</a:ObjectID>
+<a:Name>idCarteFidelite</a:Name>
+<a:Code>IDCARTEFIDELITE</a:Code>
+<a:CreationDate>1588252769</a:CreationDate>
+<a:Creator>bordy</a:Creator>
+<a:ModificationDate>1588252769</a:ModificationDate>
+<a:Modifier>bordy</a:Modifier>
+<a:History>ORG {47600DAF-9B47-41CB-BB9B-CF855DB9D10F},{7ACD9ED7-0C4B-4EF9-945F-B681452C318A}
+DAT 1588252769</a:History>
+<a:DataType>NUMBER(6)</a:DataType>
+<a:Length>6</a:Length>
+</o:Column>
+<o:Column Id="o97">
+<a:ObjectID>B43944ED-8A16-40E4-9352-F3C49AD93C91</a:ObjectID>
+<a:Name>nom</a:Name>
+<a:Code>NOM</a:Code>
+<a:CreationDate>1588252769</a:CreationDate>
+<a:Creator>bordy</a:Creator>
+<a:ModificationDate>1588252769</a:ModificationDate>
+<a:Modifier>bordy</a:Modifier>
+<a:History>ORG {7D938FB5-8BCC-4290-BBCC-4201F26893B1}
+DAT 1588252769</a:History>
+<a:DataType>VARCHAR2(25)</a:DataType>
+<a:Length>25</a:Length>
+<a:Mandatory>1</a:Mandatory>
+</o:Column>
+<o:Column Id="o98">
+<a:ObjectID>D98CD5BF-BE98-4163-8F2C-3540916AD86A</a:ObjectID>
+<a:Name>prenom</a:Name>
+<a:Code>PRENOM</a:Code>
+<a:CreationDate>1588252769</a:CreationDate>
+<a:Creator>bordy</a:Creator>
+<a:ModificationDate>1588252769</a:ModificationDate>
+<a:Modifier>bordy</a:Modifier>
+<a:History>ORG {0C5F71B3-7877-44E9-880F-57263DB039A2}
+DAT 1588252769</a:History>
+<a:DataType>VARCHAR2(25)</a:DataType>
+<a:Length>25</a:Length>
+<a:Mandatory>1</a:Mandatory>
+</o:Column>
+<o:Column Id="o99">
+<a:ObjectID>B33C8B26-0DC1-4144-88AE-87D2C4EF48F1</a:ObjectID>
 <a:Name>mail</a:Name>
 <a:Code>MAIL</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {8960DF8F-AB6C-49D9-AC54-E41BDE6C523E}
-DAT 1588250054</a:History>
-<a:DataType>varchar(50)</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>VARCHAR2(50)</a:DataType>
 <a:Length>50</a:Length>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o96">
-<a:ObjectID>B06E5ADA-306E-49D1-AD9D-B5D65BDF42EE</a:ObjectID>
+<o:Column Id="o100">
+<a:ObjectID>733EF36B-F7FF-4CBC-9D50-13F4CA6B4246</a:ObjectID>
 <a:Name>telephone</a:Name>
 <a:Code>TELEPHONE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {6598933A-2F7E-4C13-B122-62F269B928DC}
-DAT 1588250054</a:History>
-<a:DataType>varchar(10)</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>VARCHAR2(10)</a:DataType>
 <a:Length>10</a:Length>
 </o:Column>
-<o:Column Id="o97">
-<a:ObjectID>48DEA549-CB3B-447B-BF1F-BFE7D26A2F2F</a:ObjectID>
+<o:Column Id="o101">
+<a:ObjectID>DAE2BAA2-563F-4B9B-BFEF-A94CD6B15419</a:ObjectID>
 <a:Name>motDePasse</a:Name>
 <a:Code>MOTDEPASSE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {9FA1B71A-8184-4D22-A8E9-769D0EC91E3A}
-DAT 1588250054</a:History>
-<a:DataType>varchar(25)</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>VARCHAR2(25)</a:DataType>
 <a:Length>25</a:Length>
 </o:Column>
-<o:Column Id="o98">
-<a:ObjectID>CC17EBC7-E219-425D-8C90-603A129B9C28</a:ObjectID>
+<o:Column Id="o102">
+<a:ObjectID>7210CA67-725F-4266-A4DA-AE98B55B9703</a:ObjectID>
 <a:Name>genre</a:Name>
 <a:Code>GENRE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252864</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {D738168E-6255-4C00-ACE6-BF668FF80A19}
-DAT 1588250054</a:History>
-<a:DataType>long varchar</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>VARCHAR2(5)</a:DataType>
+<a:Length>5</a:Length>
 </o:Column>
-<o:Column Id="o99">
-<a:ObjectID>C005757E-B241-443A-82CF-F21AE01E7254</a:ObjectID>
+<o:Column Id="o103">
+<a:ObjectID>77095CB4-56E7-4977-B65C-8A3CB7DBE819</a:ObjectID>
 <a:Name>dateNaissance</a:Name>
 <a:Code>DATENAISSANCE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {7316F070-7E09-4A4E-8C9F-B02EF2670969}
-DAT 1588250054</a:History>
-<a:DataType>date</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>DATE</a:DataType>
 </o:Column>
 </c:Columns>
 <c:Keys>
-<o:Key Id="o100">
-<a:ObjectID>2D8FB7BA-82E0-43F1-9F67-382D81E13911</a:ObjectID>
+<o:Key Id="o104">
+<a:ObjectID>C4E302A9-D138-4719-A156-157306BB67CD</a:ObjectID>
 <a:Name>PK_CLIENT</a:Name>
 <a:Code>PK_CLIENT</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {FBF14CBD-B823-4E7E-8764-34069FB02A53}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 <c:Key.Columns>
-<o:Column Ref="o90"/>
+<o:Column Ref="o93"/>
 </c:Key.Columns>
 </o:Key>
 </c:Keys>
 <c:Indexes>
-<o:Index Id="o101">
-<a:ObjectID>1452B5C7-FAEA-489C-BD9F-8876A0DA41C2</a:ObjectID>
+<o:Index Id="o105">
+<a:ObjectID>EDC8C0E0-EF4A-4910-85A7-1668AD15610C</a:ObjectID>
 <a:Name>CLIENT_PK</a:Name>
 <a:Code>CLIENT_PK</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:Unique>1</a:Unique>
 <c:LinkedObject>
-<o:Key Ref="o100"/>
+<o:Key Ref="o104"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o102">
-<a:ObjectID>EADBC51C-E8D4-4049-9845-37DF68F3BCA1</a:ObjectID>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:IndexColumn Id="o106">
+<a:ObjectID>9179BF3A-904E-4573-84B2-4593387D15C2</a:ObjectID>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:Column>
-<o:Column Ref="o90"/>
+<o:Column Ref="o93"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
-<o:Index Id="o103">
-<a:ObjectID>CEC8172A-A14A-4DA4-9F7F-C1F76FC0A914</a:ObjectID>
-<a:Name>ASSOCIATION_11_FK</a:Name>
-<a:Code>ASSOCIATION_11_FK</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:Index Id="o107">
+<a:ObjectID>A32CBA7D-303B-42AB-87FE-EBD612C74037</a:ObjectID>
+<a:Name>HABITER_FK</a:Name>
+<a:Code>HABITER_FK</a:Code>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:LinkedObject>
 <o:Reference Ref="o25"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o104">
-<a:ObjectID>D9DEBE6C-3CAD-4339-BE77-C2443D311207</a:ObjectID>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:IndexColumn Id="o108">
+<a:ObjectID>C58976C6-1AE9-459B-84CE-A56ECCBD8B4E</a:ObjectID>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:Column>
-<o:Column Ref="o91"/>
+<o:Column Ref="o95"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
-<o:Index Id="o105">
-<a:ObjectID>CB3C9D2D-7D96-4313-A906-911DB9379767</a:ObjectID>
-<a:Name>ASSOCIATION_12_FK</a:Name>
-<a:Code>ASSOCIATION_12_FK</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:Index Id="o109">
+<a:ObjectID>F5DED2B7-03C9-4F4E-A618-90390629001A</a:ObjectID>
+<a:Name>DETENIR_FK</a:Name>
+<a:Code>DETENIR_FK</a:Code>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:LinkedObject>
 <o:Reference Ref="o39"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o106">
-<a:ObjectID>7E54B11B-3C8F-4259-9392-0762735CEED7</a:ObjectID>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:IndexColumn Id="o110">
+<a:ObjectID>8A48A5D1-BBF0-40A9-8F1B-C42490F5376D</a:ObjectID>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:Column>
-<o:Column Ref="o92"/>
+<o:Column Ref="o96"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
 </c:Indexes>
 <c:PrimaryKey>
-<o:Key Ref="o100"/>
+<o:Key Ref="o104"/>
 </c:PrimaryKey>
 </o:Table>
 <o:Table Id="o44">
-<a:ObjectID>1AFEBCB5-E37E-4077-B70F-A0C34000BB1D</a:ObjectID>
+<a:ObjectID>E436A890-8037-475C-9000-8D9C5F9DAC49</a:ObjectID>
 <a:Name>CategorieProduit</a:Name>
 <a:Code>CATEGORIEPRODUIT</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {3C5B6877-B559-44A4-AFEB-015AF550CDE7}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 <a:TotalSavingCurrency/>
 <c:Columns>
-<o:Column Id="o107">
-<a:ObjectID>BB5E3F6B-35A9-4F16-930E-A2CB5994680C</a:ObjectID>
+<o:Column Id="o111">
+<a:ObjectID>9474D90B-B697-409B-970E-4BE9003FCF0B</a:ObjectID>
 <a:Name>idCategorie</a:Name>
 <a:Code>IDCATEGORIE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {CCCAEEF3-DEEA-4435-853D-CEB57AF690BD}
-DAT 1588250054</a:History>
-<a:DefaultValue>autoincrement</a:DefaultValue>
-<a:DataType>integer</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>NUMBER(6)</a:DataType>
+<a:Length>6</a:Length>
 <a:Mandatory>1</a:Mandatory>
+<c:Sequence>
+<o:Sequence Ref="o112"/>
+</c:Sequence>
 </o:Column>
-<o:Column Id="o108">
-<a:ObjectID>D7276995-2A51-4790-A2E5-2BAA6C5B8B6D</a:ObjectID>
+<o:Column Id="o113">
+<a:ObjectID>543269CE-2D9C-42DA-A0EB-4E942F7202C9</a:ObjectID>
 <a:Name>idRayon</a:Name>
 <a:Code>IDRAYON</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {AE83F9B6-92AF-4B90-9C95-D0E19CBD0539},{82624F24-2709-4163-92AD-3BFED05C00E3}
-DAT 1588250054</a:History>
-<a:DataType>integer</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>NUMBER(6)</a:DataType>
+<a:Length>6</a:Length>
 </o:Column>
-<o:Column Id="o109">
-<a:ObjectID>DADA91C9-66B7-4902-A6C0-45DC13A67BA1</a:ObjectID>
+<o:Column Id="o114">
+<a:ObjectID>28F1B6F1-33F6-46B3-BB0B-2F470968F7F8</a:ObjectID>
 <a:Name>nomCategorie</a:Name>
 <a:Code>NOMCATEGORIE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {E0D823FE-6B73-46F4-9809-82E0C00E7EBD}
-DAT 1588250054</a:History>
-<a:DataType>varchar(25)</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>VARCHAR2(25)</a:DataType>
 <a:Length>25</a:Length>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o110">
-<a:ObjectID>110617C3-1421-4B06-B61C-7FDF8BEF171B</a:ObjectID>
+<o:Column Id="o115">
+<a:ObjectID>5634C92E-F9FC-46C9-9DFB-A37F7DDA607C</a:ObjectID>
 <a:Name>descriptionCategorie</a:Name>
 <a:Code>DESCRIPTIONCATEGORIE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {060464C3-6487-409A-95FC-43BCE4BD53B1}
-DAT 1588250054</a:History>
-<a:DataType>varchar(75)</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>VARCHAR2(75)</a:DataType>
 <a:Length>75</a:Length>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
 </c:Columns>
 <c:Keys>
-<o:Key Id="o111">
-<a:ObjectID>22F71B23-7D41-4249-B30D-4F0E180DA8C2</a:ObjectID>
+<o:Key Id="o116">
+<a:ObjectID>AE6F3EB4-23C9-4BAD-B4E8-5475F1780F01</a:ObjectID>
 <a:Name>PK_CATEGORIEPRODUIT</a:Name>
 <a:Code>PK_CATEGORIEPRODUIT</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {88157D49-27E2-4992-8C33-810DF188422C}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 <c:Key.Columns>
-<o:Column Ref="o107"/>
+<o:Column Ref="o111"/>
 </c:Key.Columns>
 </o:Key>
 </c:Keys>
 <c:Indexes>
-<o:Index Id="o112">
-<a:ObjectID>9E2C9A8F-DEA4-46EF-87DB-01101FC98497</a:ObjectID>
+<o:Index Id="o117">
+<a:ObjectID>05C7AF12-0277-42C6-8271-5AB899C9D249</a:ObjectID>
 <a:Name>CATEGORIEPRODUIT_PK</a:Name>
 <a:Code>CATEGORIEPRODUIT_PK</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:Unique>1</a:Unique>
 <c:LinkedObject>
-<o:Key Ref="o111"/>
+<o:Key Ref="o116"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o113">
-<a:ObjectID>45E2A8BB-66C1-4745-B0E9-B463B8D3156D</a:ObjectID>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:IndexColumn Id="o118">
+<a:ObjectID>1BB02C3D-4E96-4AE1-867B-84ED04FCDFEA</a:ObjectID>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:Column>
-<o:Column Ref="o107"/>
+<o:Column Ref="o111"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
-<o:Index Id="o114">
-<a:ObjectID>6190016B-CA2A-408B-BBB1-1CEBFEE4D0BF</a:ObjectID>
-<a:Name>ASSOCIATION_10_FK</a:Name>
-<a:Code>ASSOCIATION_10_FK</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:Index Id="o119">
+<a:ObjectID>E61B3748-F133-42B5-89D7-C3041B921838</a:ObjectID>
+<a:Name>POSSEDER_FK</a:Name>
+<a:Code>POSSEDER_FK</a:Code>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:LinkedObject>
 <o:Reference Ref="o19"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o115">
-<a:ObjectID>D9FAC384-E160-4D69-8A57-80DF895DD043</a:ObjectID>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:IndexColumn Id="o120">
+<a:ObjectID>56C6AD47-EAD2-4231-B107-617E8AD7ED39</a:ObjectID>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:Column>
-<o:Column Ref="o108"/>
+<o:Column Ref="o113"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
 </c:Indexes>
 <c:PrimaryKey>
-<o:Key Ref="o111"/>
+<o:Key Ref="o116"/>
 </c:PrimaryKey>
 </o:Table>
 <o:Table Id="o45">
-<a:ObjectID>42644E3B-03FA-46C5-892E-ADA82F932F9B</a:ObjectID>
+<a:ObjectID>D075299A-352E-4C24-9E2C-6026E919EC1E</a:ObjectID>
 <a:Name>Fournisseur</a:Name>
 <a:Code>FOURNISSEUR</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {8C77F1B0-133F-48C2-BEFE-14086BF67FB5}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 <a:TotalSavingCurrency/>
 <c:Columns>
-<o:Column Id="o116">
-<a:ObjectID>54EE3AEF-215B-4380-8332-B54EA3373321</a:ObjectID>
+<o:Column Id="o121">
+<a:ObjectID>2C6B195D-D21A-4F35-92C3-1B9F88A8A4C0</a:ObjectID>
 <a:Name>idFournisseur</a:Name>
 <a:Code>IDFOURNISSEUR</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {12BA471B-5D33-4D9E-8241-C818725E852E}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o117">
-<a:ObjectID>7A084B07-69D6-47F2-A109-A7CE5DBB3348</a:ObjectID>
+<o:Column Id="o122">
+<a:ObjectID>43226793-0AE4-4539-BB34-E6AFBA8B4781</a:ObjectID>
 <a:Name>idAdresse</a:Name>
 <a:Code>IDADRESSE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {0C3F5E37-81C4-4B40-AEEA-CD63B30CAB66},{D1C6C232-4AC1-4A0F-B8B8-2875DAD6DFBC}
-DAT 1588250054</a:History>
-<a:DataType>integer</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>NUMBER(6)</a:DataType>
+<a:Length>6</a:Length>
 </o:Column>
-<o:Column Id="o118">
-<a:ObjectID>9FB51A33-59D1-4FE8-BF78-93EC27EE9BBC</a:ObjectID>
+<o:Column Id="o123">
+<a:ObjectID>79B613F5-1928-4A42-927F-0BE3B02925B9</a:ObjectID>
 <a:Name>nomFournisseur</a:Name>
 <a:Code>NOMFOURNISSEUR</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {5362FB93-15FB-4182-900C-FE7B5B00BC67}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o119">
-<a:ObjectID>E6FC9191-D850-4F24-8582-493BF4F9BC66</a:ObjectID>
+<o:Column Id="o124">
+<a:ObjectID>8F137FAA-A5D8-4BDD-9DCA-34B6B96A49A3</a:ObjectID>
 <a:Name>mail</a:Name>
 <a:Code>MAIL</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {78B5A034-C45A-415B-B128-36401F17CB75}
-DAT 1588250054</a:History>
-<a:DataType>varchar(50)</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>VARCHAR2(50)</a:DataType>
 <a:Length>50</a:Length>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o120">
-<a:ObjectID>EC0E7E77-9681-49C2-83C8-1F8CD02E019C</a:ObjectID>
+<o:Column Id="o125">
+<a:ObjectID>D3A3B742-4B50-48AC-9E10-74F2A4FBE598</a:ObjectID>
 <a:Name>telephone</a:Name>
 <a:Code>TELEPHONE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {93FA0593-2C45-411A-92CF-56C4B7F8C902}
-DAT 1588250054</a:History>
-<a:DataType>varchar(10)</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>VARCHAR2(10)</a:DataType>
 <a:Length>10</a:Length>
 </o:Column>
-<o:Column Id="o121">
-<a:ObjectID>2B771D96-7ED0-4695-ADD9-A573371D282F</a:ObjectID>
+<o:Column Id="o126">
+<a:ObjectID>92A7AE71-BAB6-4443-9C54-8E92B2C86834</a:ObjectID>
 <a:Name>descriptionFournisseur</a:Name>
 <a:Code>DESCRIPTIONFOURNISSEUR</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {95C886AB-32A9-41DA-B161-F6CD82614F5F}
-DAT 1588250054</a:History>
-<a:DataType>varchar(75)</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>VARCHAR2(75)</a:DataType>
 <a:Length>75</a:Length>
 </o:Column>
 </c:Columns>
 <c:Keys>
-<o:Key Id="o122">
-<a:ObjectID>99CD6625-1DD1-4A22-8BB3-2532A1CACFEB</a:ObjectID>
+<o:Key Id="o127">
+<a:ObjectID>8CF8E0B6-06DD-4FA4-81A5-214024BA231A</a:ObjectID>
 <a:Name>PK_FOURNISSEUR</a:Name>
 <a:Code>PK_FOURNISSEUR</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {F39C5136-1EF8-405D-BD57-EA46718D28D4}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 <c:Key.Columns>
-<o:Column Ref="o116"/>
+<o:Column Ref="o121"/>
 </c:Key.Columns>
 </o:Key>
 </c:Keys>
 <c:Indexes>
-<o:Index Id="o123">
-<a:ObjectID>563CDB71-3F22-4C37-A3A3-28D4BD70D03A</a:ObjectID>
+<o:Index Id="o128">
+<a:ObjectID>6E08FF68-A158-4737-A16E-5B1A83F37F52</a:ObjectID>
 <a:Name>FOURNISSEUR_PK</a:Name>
 <a:Code>FOURNISSEUR_PK</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:Unique>1</a:Unique>
 <c:LinkedObject>
-<o:Key Ref="o122"/>
+<o:Key Ref="o127"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o124">
-<a:ObjectID>9B816277-3AC7-4303-8659-3021A2EB60BE</a:ObjectID>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:IndexColumn Id="o129">
+<a:ObjectID>125AD8F2-9145-44C1-BDAC-630F35DEE3ED</a:ObjectID>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:Column>
-<o:Column Ref="o116"/>
+<o:Column Ref="o121"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
-<o:Index Id="o125">
-<a:ObjectID>161A3F4A-89AC-4D92-9A7D-27FE29ECE4F5</a:ObjectID>
-<a:Name>ASSOCIATION_15_FK</a:Name>
-<a:Code>ASSOCIATION_15_FK</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:Index Id="o130">
+<a:ObjectID>C632F0ED-AE21-48CE-BFB9-597F52544D6E</a:ObjectID>
+<a:Name>LOCALISER_FK</a:Name>
+<a:Code>LOCALISER_FK</a:Code>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:LinkedObject>
 <o:Reference Ref="o29"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o126">
-<a:ObjectID>0DBFF290-B184-4EDE-8C3F-27148EC08951</a:ObjectID>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:IndexColumn Id="o131">
+<a:ObjectID>4C8CF263-B65D-478B-8C1B-24C64B7F5A7B</a:ObjectID>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:Column>
-<o:Column Ref="o117"/>
+<o:Column Ref="o122"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
 </c:Indexes>
 <c:PrimaryKey>
-<o:Key Ref="o122"/>
+<o:Key Ref="o127"/>
 </c:PrimaryKey>
 </o:Table>
 <o:Table Id="o46">
-<a:ObjectID>E67D67DF-E0FF-4AA5-876F-9E02E04427ED</a:ObjectID>
+<a:ObjectID>13B33766-2FE1-4370-A168-14D69BA08A59</a:ObjectID>
 <a:Name>Commande</a:Name>
 <a:Code>COMMANDE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {616DF54D-9399-4220-9D4B-E45F6E5A24FE}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 <a:TotalSavingCurrency/>
 <c:Columns>
-<o:Column Id="o127">
-<a:ObjectID>D3A2E630-292F-4E90-8702-73E97326D91A</a:ObjectID>
+<o:Column Id="o132">
+<a:ObjectID>F1115321-EC70-4000-A7A1-2321414ACE3E</a:ObjectID>
 <a:Name>idCommande</a:Name>
 <a:Code>IDCOMMANDE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {98248DBD-50A7-47B2-9653-18E3043FAEA9}
-DAT 1588250054</a:History>
-<a:DefaultValue>autoincrement</a:DefaultValue>
-<a:DataType>integer</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>NUMBER(6)</a:DataType>
+<a:Length>6</a:Length>
 <a:Mandatory>1</a:Mandatory>
+<c:Sequence>
+<o:Sequence Ref="o133"/>
+</c:Sequence>
 </o:Column>
-<o:Column Id="o128">
-<a:ObjectID>E5BE2F72-1A8C-4A8B-9E9B-E971BD1DD865</a:ObjectID>
+<o:Column Id="o134">
+<a:ObjectID>2723C530-A9C2-4709-BDE7-3AC295D3D33F</a:ObjectID>
 <a:Name>idEmploye</a:Name>
 <a:Code>IDEMPLOYE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {038CC2D5-5B93-4BE1-93C6-920F65975B32},{FA3A0D41-2804-4504-BBE9-35A1B0C03484}
-DAT 1588250054</a:History>
-<a:DataType>integer</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>NUMBER(6)</a:DataType>
+<a:Length>6</a:Length>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o129">
-<a:ObjectID>083F9D5D-F8B9-4EE9-A1CC-0E9051A7C4BB</a:ObjectID>
+<o:Column Id="o135">
+<a:ObjectID>B93D9750-79A0-4C75-BD32-0FD1D03E4067</a:ObjectID>
 <a:Name>idClient</a:Name>
 <a:Code>IDCLIENT</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {90E6C179-4443-4C1A-990A-DA97CD3F44F1},{4FB35C8D-FB3B-4BC6-8795-0AD7E3B82AB3}
-DAT 1588250054</a:History>
-<a:DataType>integer</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>NUMBER(6)</a:DataType>
+<a:Length>6</a:Length>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o130">
-<a:ObjectID>76343625-D819-4DA1-A891-A9F63063DE77</a:ObjectID>
+<o:Column Id="o136">
+<a:ObjectID>411B95C0-42E6-4B16-8BE3-2C486201A4C9</a:ObjectID>
 <a:Name>dateCommande</a:Name>
 <a:Code>DATECOMMANDE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {47C1D170-0812-4470-AB7A-129D3DC0BBDF}
-DAT 1588250054</a:History>
-<a:DataType>timestamp</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>DATE</a:DataType>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o131">
-<a:ObjectID>429802BE-5A17-4CE5-8012-F705955FA77B</a:ObjectID>
+<o:Column Id="o137">
+<a:ObjectID>5B0538C5-4AC2-45CD-8180-0F73DBCCDA2B</a:ObjectID>
 <a:Name>statutCommande</a:Name>
 <a:Code>STATUTCOMMANDE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {AFC1DB3C-D921-43D1-8711-473F1F5DBA94}
-DAT 1588250054</a:History>
-<a:DataType>varchar(30)</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>VARCHAR2(30)</a:DataType>
 <a:Length>30</a:Length>
 </o:Column>
 </c:Columns>
 <c:Keys>
-<o:Key Id="o132">
-<a:ObjectID>0E3839E5-E00A-4ABE-A47C-14238C400C21</a:ObjectID>
+<o:Key Id="o138">
+<a:ObjectID>A52A42B2-6F05-4B8C-8EE7-6CA03995EA5E</a:ObjectID>
 <a:Name>PK_COMMANDE</a:Name>
 <a:Code>PK_COMMANDE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {DDCD415D-BF01-472A-B667-FDBDD15323D6}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 <c:Key.Columns>
-<o:Column Ref="o127"/>
+<o:Column Ref="o132"/>
 </c:Key.Columns>
 </o:Key>
 </c:Keys>
 <c:Indexes>
-<o:Index Id="o133">
-<a:ObjectID>B9ABFC6E-6B67-4FC3-8895-64F818D3D0BD</a:ObjectID>
+<o:Index Id="o139">
+<a:ObjectID>F992B707-CADE-4B2E-9C0B-9A6927573AF3</a:ObjectID>
 <a:Name>COMMANDE_PK</a:Name>
 <a:Code>COMMANDE_PK</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:Unique>1</a:Unique>
 <c:LinkedObject>
-<o:Key Ref="o132"/>
+<o:Key Ref="o138"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o134">
-<a:ObjectID>46A03B7A-CDEC-4685-A775-75C361FD7F68</a:ObjectID>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:IndexColumn Id="o140">
+<a:ObjectID>E62DC14A-AC56-497C-8F15-1A9D79401DEB</a:ObjectID>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:Column>
-<o:Column Ref="o127"/>
+<o:Column Ref="o132"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
-<o:Index Id="o135">
-<a:ObjectID>AA8D75B9-E735-4CD2-AFCA-B78B4F88D6BD</a:ObjectID>
+<o:Index Id="o141">
+<a:ObjectID>01DDE47E-F37E-474F-ABF3-E334674EA966</a:ObjectID>
 <a:Name>PASSER_FK</a:Name>
 <a:Code>PASSER_FK</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:LinkedObject>
 <o:Reference Ref="o16"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o136">
-<a:ObjectID>19209BEE-A26C-4011-8124-9326FCDD63C9</a:ObjectID>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:IndexColumn Id="o142">
+<a:ObjectID>205DA4E9-BB8A-4E5C-AA97-2E9433FDB95F</a:ObjectID>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:Column>
-<o:Column Ref="o129"/>
+<o:Column Ref="o135"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
-<o:Index Id="o137">
-<a:ObjectID>0C39919C-9666-471D-B555-00F587287C7C</a:ObjectID>
-<a:Name>ASSOCIATION_8_FK</a:Name>
-<a:Code>ASSOCIATION_8_FK</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:Index Id="o143">
+<a:ObjectID>29CBAD71-7559-4E86-87F1-63A51BFAF017</a:ObjectID>
+<a:Name>ATTRIBUER_FK</a:Name>
+<a:Code>ATTRIBUER_FK</a:Code>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:LinkedObject>
 <o:Reference Ref="o22"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o138">
-<a:ObjectID>6209CCE9-A66C-4CDC-9096-BF3A8AFEBE3D</a:ObjectID>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:IndexColumn Id="o144">
+<a:ObjectID>5CBE5558-445D-4E27-9F97-5104C59BE9D7</a:ObjectID>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:Column>
-<o:Column Ref="o128"/>
+<o:Column Ref="o134"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
 </c:Indexes>
 <c:PrimaryKey>
-<o:Key Ref="o132"/>
+<o:Key Ref="o138"/>
 </c:PrimaryKey>
 </o:Table>
 <o:Table Id="o48">
-<a:ObjectID>F49D50B5-B625-4FBB-A207-28ADDFAACAB3</a:ObjectID>
+<a:ObjectID>E591D8C1-AAC9-4E39-A0AE-05D0923FB51D</a:ObjectID>
 <a:Name>Adresse</a:Name>
 <a:Code>ADRESSE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {B293DBD2-1F38-4D23-A376-6E5A15F95D1A}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 <a:TotalSavingCurrency/>
 <c:Columns>
-<o:Column Id="o139">
-<a:ObjectID>C8C2E3BF-10BC-424A-B283-02E8278A3998</a:ObjectID>
+<o:Column Id="o145">
+<a:ObjectID>BFDEEF24-C93A-4AA5-BE53-1DEA82AB4686</a:ObjectID>
 <a:Name>idAdresse</a:Name>
 <a:Code>IDADRESSE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {0C3F5E37-81C4-4B40-AEEA-CD63B30CAB66}
-DAT 1588250054</a:History>
-<a:DefaultValue>autoincrement</a:DefaultValue>
-<a:DataType>integer</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>NUMBER(6)</a:DataType>
+<a:Length>6</a:Length>
 <a:Mandatory>1</a:Mandatory>
+<c:Sequence>
+<o:Sequence Ref="o146"/>
+</c:Sequence>
 </o:Column>
-<o:Column Id="o140">
-<a:ObjectID>98A180D1-A391-4CF0-ACB1-74790DD97848</a:ObjectID>
+<o:Column Id="o147">
+<a:ObjectID>3A971D45-68C0-4B63-B250-301A52DC03CA</a:ObjectID>
 <a:Name>ligneAdresse1</a:Name>
 <a:Code>LIGNEADRESSE1</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {CE011C68-BF8B-426B-8A0E-ADA9144520E9}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o141">
-<a:ObjectID>784D74F2-1306-4E24-ABAE-5FE469E47F07</a:ObjectID>
+<o:Column Id="o148">
+<a:ObjectID>3E51F8C6-0E3C-41D9-8DCD-B33BAFA3EF4E</a:ObjectID>
 <a:Name>ligneAdresse2</a:Name>
 <a:Code>LIGNEADRESSE2</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {B9758103-B5AD-4411-AA42-095C4CC82E04}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 </o:Column>
-<o:Column Id="o142">
-<a:ObjectID>069BC4EE-ACF6-474F-A48C-70945FCB0A71</a:ObjectID>
+<o:Column Id="o149">
+<a:ObjectID>2972A387-9DD8-45E1-A1C0-740CC772AA57</a:ObjectID>
 <a:Name>ville</a:Name>
 <a:Code>VILLE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {6B4DF002-9529-41ED-A57C-CD4D7A85ECC4}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o143">
-<a:ObjectID>F38EED21-71BD-4817-9A44-47FC2E9E51C3</a:ObjectID>
+<o:Column Id="o150">
+<a:ObjectID>B2D41021-A88F-4CB6-8F87-EEEA03692C82</a:ObjectID>
 <a:Name>codePostal</a:Name>
 <a:Code>CODEPOSTAL</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {1A01F84D-D75A-4D17-9DB8-4B07B30EA904}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o144">
-<a:ObjectID>C82776E5-FF15-4BB8-AB6D-2F517B96CCD5</a:ObjectID>
+<o:Column Id="o151">
+<a:ObjectID>E3DE8F45-B9EF-4361-AD4D-CF1DE096A4DC</a:ObjectID>
 <a:Name>pays</a:Name>
 <a:Code>PAYS</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {C783F539-D035-48A4-B7F4-9DD1597F28F0}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 </o:Column>
 </c:Columns>
 <c:Keys>
-<o:Key Id="o145">
-<a:ObjectID>CC111D08-AAB5-42E2-A5F7-7123CD0DF16C</a:ObjectID>
+<o:Key Id="o152">
+<a:ObjectID>4EA472CB-265E-4042-8750-069C51ED9A5A</a:ObjectID>
 <a:Name>PK_ADRESSE</a:Name>
 <a:Code>PK_ADRESSE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {654C7E38-E506-4B6D-95CA-430C57531DCD}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 <c:Key.Columns>
-<o:Column Ref="o139"/>
+<o:Column Ref="o145"/>
 </c:Key.Columns>
 </o:Key>
 </c:Keys>
 <c:Indexes>
-<o:Index Id="o146">
-<a:ObjectID>D4F47438-CCB6-407D-B22D-FFD376ED7D6C</a:ObjectID>
+<o:Index Id="o153">
+<a:ObjectID>A465B699-D560-4153-B3C1-47D12C3F819C</a:ObjectID>
 <a:Name>ADRESSE_PK</a:Name>
 <a:Code>ADRESSE_PK</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:Unique>1</a:Unique>
 <c:LinkedObject>
-<o:Key Ref="o145"/>
+<o:Key Ref="o152"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o147">
-<a:ObjectID>59EF1FB5-C7BE-464E-A6C1-A59C8C75FB88</a:ObjectID>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:IndexColumn Id="o154">
+<a:ObjectID>E3A869D1-FB3A-406F-9C5E-50068CB09B04</a:ObjectID>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:Column>
-<o:Column Ref="o139"/>
+<o:Column Ref="o145"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
 </c:Indexes>
 <c:PrimaryKey>
-<o:Key Ref="o145"/>
+<o:Key Ref="o152"/>
 </c:PrimaryKey>
 </o:Table>
 <o:Table Id="o49">
-<a:ObjectID>E2F60962-DF3E-4BAF-99D0-3266C9698358</a:ObjectID>
+<a:ObjectID>B760BF70-ECE1-4D06-9149-54F037CAE9DB</a:ObjectID>
 <a:Name>CarteFidelite</a:Name>
 <a:Code>CARTEFIDELITE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {06BD1D25-02D4-4AAB-B681-754905DDB2C8}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 <a:TotalSavingCurrency/>
 <c:Columns>
-<o:Column Id="o148">
-<a:ObjectID>6D9AE00C-2F09-4081-9AE4-835A3D328A38</a:ObjectID>
+<o:Column Id="o155">
+<a:ObjectID>70D892BA-C7C3-44F1-B814-5EC6274613C8</a:ObjectID>
 <a:Name>idCarteFidelite</a:Name>
 <a:Code>IDCARTEFIDELITE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {47600DAF-9B47-41CB-BB9B-CF855DB9D10F}
-DAT 1588250054</a:History>
-<a:DefaultValue>autoincrement</a:DefaultValue>
-<a:DataType>integer</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>NUMBER(6)</a:DataType>
+<a:Length>6</a:Length>
 <a:Mandatory>1</a:Mandatory>
+<c:Sequence>
+<o:Sequence Ref="o156"/>
+</c:Sequence>
 </o:Column>
-<o:Column Id="o149">
-<a:ObjectID>20B06DB2-F634-48E8-803A-2E685B7FD051</a:ObjectID>
+<o:Column Id="o157">
+<a:ObjectID>E984D735-322E-417A-A713-FEFEF43A1090</a:ObjectID>
 <a:Name>idClient</a:Name>
 <a:Code>IDCLIENT</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {90E6C179-4443-4C1A-990A-DA97CD3F44F1},{D2B611B8-C7FA-497C-A0F3-2D9B63E5F635}
-DAT 1588250054</a:History>
-<a:DataType>integer</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>NUMBER(6)</a:DataType>
+<a:Length>6</a:Length>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o150">
-<a:ObjectID>1DFE4C13-6EA9-4C0C-8FD3-50B6ACE2F819</a:ObjectID>
+<o:Column Id="o158">
+<a:ObjectID>1AF0116C-BA5B-4059-A2AD-AA0E7A87ED84</a:ObjectID>
 <a:Name>nbPointsFidelite</a:Name>
 <a:Code>NBPOINTSFIDELITE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {3A20F2BF-0735-4B55-8256-79B35E0B5C8B}
-DAT 1588250054</a:History>
-<a:DataType>integer</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>INTEGER</a:DataType>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
 </c:Columns>
 <c:Keys>
-<o:Key Id="o151">
-<a:ObjectID>EC70FA64-9F9D-4610-B1DE-FC7DA56FDC2B</a:ObjectID>
+<o:Key Id="o159">
+<a:ObjectID>27755709-A573-4EFD-9F76-F04B620C30F2</a:ObjectID>
 <a:Name>PK_CARTEFIDELITE</a:Name>
 <a:Code>PK_CARTEFIDELITE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {39C25864-5E11-4031-9F2E-E26449135C4F}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 <c:Key.Columns>
-<o:Column Ref="o148"/>
+<o:Column Ref="o155"/>
 </c:Key.Columns>
 </o:Key>
 </c:Keys>
 <c:Indexes>
-<o:Index Id="o152">
-<a:ObjectID>9B3B3CD7-115A-450E-8F79-49ED0D8688DE</a:ObjectID>
+<o:Index Id="o160">
+<a:ObjectID>4D095D28-E891-451B-A4F3-45685CC865AA</a:ObjectID>
 <a:Name>CARTEFIDELITE_PK</a:Name>
 <a:Code>CARTEFIDELITE_PK</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:Unique>1</a:Unique>
 <c:LinkedObject>
-<o:Key Ref="o151"/>
+<o:Key Ref="o159"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o153">
-<a:ObjectID>0398E840-BA98-40D2-8446-5ADBD52C073B</a:ObjectID>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:IndexColumn Id="o161">
+<a:ObjectID>0D0BC19B-BB0F-4CB1-87F5-6101809FD3D5</a:ObjectID>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:Column>
-<o:Column Ref="o148"/>
+<o:Column Ref="o155"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
-<o:Index Id="o154">
-<a:ObjectID>47E71FD1-B43D-4EAC-938A-2E512D2E44B9</a:ObjectID>
-<a:Name>ASSOCIATION_13_FK</a:Name>
-<a:Code>ASSOCIATION_13_FK</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:Index Id="o162">
+<a:ObjectID>1E2F48E8-00A7-4396-AF3F-D7B4CA79CC32</a:ObjectID>
+<a:Name>DETENIR2_FK</a:Name>
+<a:Code>DETENIR2_FK</a:Code>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:LinkedObject>
 <o:Reference Ref="o37"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o155">
-<a:ObjectID>CBDA142A-9A70-4C89-B933-C05ADA572765</a:ObjectID>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:IndexColumn Id="o163">
+<a:ObjectID>A9954E4C-287B-48F1-BE8F-BCC173BBB699</a:ObjectID>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:Column>
-<o:Column Ref="o149"/>
+<o:Column Ref="o157"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
 </c:Indexes>
 <c:PrimaryKey>
-<o:Key Ref="o151"/>
+<o:Key Ref="o159"/>
 </c:PrimaryKey>
 </o:Table>
 <o:Table Id="o47">
-<a:ObjectID>C6DBD0EB-80C2-4533-B361-50809C5EE5FB</a:ObjectID>
+<a:ObjectID>B87F6606-F839-4F8D-AECB-56D4C0097146</a:ObjectID>
 <a:Name>LigneCommande</a:Name>
-<a:Code>ASSOCIATION_9</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:Code>LIGNECOMMANDE</a:Code>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {0FE871D8-910E-4A36-ABF2-2417B405DE84}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 <a:TotalSavingCurrency/>
 <c:Columns>
-<o:Column Id="o156">
-<a:ObjectID>D14C23DE-25EA-41EB-9E9F-B2E63009DE79</a:ObjectID>
+<o:Column Id="o164">
+<a:ObjectID>3DEF546B-2363-4748-9F70-C1E84726A603</a:ObjectID>
 <a:Name>idProduit</a:Name>
 <a:Code>IDPRODUIT</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {5EDEF0F1-85AB-4DE2-9B6E-ABE2AA7859D7},{08FB5E27-0994-4FB2-A793-E511375CBA92}
-DAT 1588250054</a:History>
-<a:DataType>integer</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>NUMBER(6)</a:DataType>
+<a:Length>6</a:Length>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o157">
-<a:ObjectID>BEE493BA-2CDD-4362-A45E-33A8A6EE7D88</a:ObjectID>
+<o:Column Id="o165">
+<a:ObjectID>6F784D40-50FC-4794-B575-8304A538C5D2</a:ObjectID>
 <a:Name>idCommande</a:Name>
 <a:Code>IDCOMMANDE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {98248DBD-50A7-47B2-9653-18E3043FAEA9},{1349BEC9-0937-4D40-90B1-EB4D13AC783A}
-DAT 1588250054</a:History>
-<a:DataType>integer</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>NUMBER(6)</a:DataType>
+<a:Length>6</a:Length>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o158">
-<a:ObjectID>DCA461CE-1130-45B4-A8A8-197F3A769156</a:ObjectID>
+<o:Column Id="o166">
+<a:ObjectID>FD6457B8-3A8D-411D-A4F4-BE3804994AFA</a:ObjectID>
 <a:Name>quantite</a:Name>
 <a:Code>QUANTITE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {CA207851-1908-44A4-935D-D633B3E995C5}
-DAT 1588250054</a:History>
-<a:DataType>integer</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>INTEGER</a:DataType>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o159">
-<a:ObjectID>4E08C8AA-B84B-4CC7-91EF-9D05F2F62128</a:ObjectID>
+<o:Column Id="o167">
+<a:ObjectID>B41BB982-8B5B-4AD2-865A-2857FD2B4D4B</a:ObjectID>
 <a:Name>prixVente</a:Name>
 <a:Code>PRIXVENTE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {42DD390E-C823-4743-A997-A11A59E0CD67}
-DAT 1588250054</a:History>
-<a:DataType>decimal(10,2)</a:DataType>
+DAT 1588252769</a:History>
+<a:DataType>NUMBER(10,2)</a:DataType>
 <a:Length>10</a:Length>
 <a:Precision>2</a:Precision>
 </o:Column>
 </c:Columns>
 <c:Keys>
-<o:Key Id="o160">
-<a:ObjectID>0B36D962-7FD1-4739-B04F-825E1DB09F7F</a:ObjectID>
+<o:Key Id="o168">
+<a:ObjectID>3AB28D48-F57D-47F8-9540-9151BD5DF60B</a:ObjectID>
 <a:Name>PK_COMMANDE</a:Name>
 <a:Code>PK_COMMANDE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {DDCD415D-BF01-472A-B667-FDBDD15323D6}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 <c:Key.Columns>
-<o:Column Ref="o156"/>
-<o:Column Ref="o157"/>
+<o:Column Ref="o164"/>
+<o:Column Ref="o165"/>
 </c:Key.Columns>
 </o:Key>
 </c:Keys>
 <c:Indexes>
-<o:Index Id="o161">
-<a:ObjectID>E1DEB607-F551-42BA-A375-A8A46A50338D</a:ObjectID>
-<a:Name>ASSOCIATION_9_PK</a:Name>
-<a:Code>ASSOCIATION_9_PK</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:Index Id="o169">
+<a:ObjectID>E083B221-B60C-4ACB-A923-60F923F48B71</a:ObjectID>
+<a:Name>LIGNECOMMANDE_PK</a:Name>
+<a:Code>LIGNECOMMANDE_PK</a:Code>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:Unique>1</a:Unique>
 <c:LinkedObject>
-<o:Key Ref="o160"/>
+<o:Key Ref="o168"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o162">
-<a:ObjectID>88AF0B71-CCAB-4F2A-9341-E0643A4BAD1E</a:ObjectID>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:IndexColumn Id="o170">
+<a:ObjectID>8E27DEF5-CC48-4F83-8CD5-931007BE2E21</a:ObjectID>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:Column>
-<o:Column Ref="o156"/>
+<o:Column Ref="o164"/>
 </c:Column>
 </o:IndexColumn>
-<o:IndexColumn Id="o163">
-<a:ObjectID>3B2D69B8-89E7-43E0-B082-1DFFE0AD1C8D</a:ObjectID>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:IndexColumn Id="o171">
+<a:ObjectID>896D0594-0222-4937-BD82-E4CC91D9A324</a:ObjectID>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:Column>
-<o:Column Ref="o157"/>
+<o:Column Ref="o165"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
-<o:Index Id="o164">
-<a:ObjectID>76A75269-E296-4E7E-A374-C0FF924F400F</a:ObjectID>
-<a:Name>ASSOCIATION_9_FK</a:Name>
-<a:Code>ASSOCIATION_9_FK</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:Index Id="o172">
+<a:ObjectID>D851AF72-4113-467C-B328-43818B824098</a:ObjectID>
+<a:Name>LIGNECOMMANDE_FK</a:Name>
+<a:Code>LIGNECOMMANDE_FK</a:Code>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:LinkedObject>
 <o:Reference Ref="o32"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o165">
-<a:ObjectID>CD8C97DE-5F05-40E9-8196-B59FB02765CC</a:ObjectID>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:IndexColumn Id="o173">
+<a:ObjectID>3FDECCEA-C2FC-4233-AAEB-500D3F78B8A9</a:ObjectID>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:Column>
-<o:Column Ref="o156"/>
+<o:Column Ref="o164"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
-<o:Index Id="o166">
-<a:ObjectID>35588D22-30E6-4E62-8BE3-94E6F99197CE</a:ObjectID>
-<a:Name>ASSOCIATION_16_FK</a:Name>
-<a:Code>ASSOCIATION_16_FK</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:Index Id="o174">
+<a:ObjectID>0093A984-48D4-4D50-89C4-5B49FBF95837</a:ObjectID>
+<a:Name>LIGNECOMMANDE2_FK</a:Name>
+<a:Code>LIGNECOMMANDE2_FK</a:Code>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:LinkedObject>
 <o:Reference Ref="o34"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o167">
-<a:ObjectID>C19DF11F-85B0-46D3-97D5-7768DB478E96</a:ObjectID>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:IndexColumn Id="o175">
+<a:ObjectID>DCBE6C1C-8E0E-4388-80DC-B3535D5CAF98</a:ObjectID>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:Column>
-<o:Column Ref="o157"/>
+<o:Column Ref="o165"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
 </c:Indexes>
 <c:PrimaryKey>
-<o:Key Ref="o160"/>
+<o:Key Ref="o168"/>
 </c:PrimaryKey>
-<c:ClusterObject>
-<o:Index Ref="o161"/>
-</c:ClusterObject>
 </o:Table>
 </c:Tables>
 <c:References>
 <o:Reference Id="o9">
-<a:ObjectID>2B96A037-F067-409C-AFDF-2B48DE6E8E1C</a:ObjectID>
+<a:ObjectID>D04B8D20-35A9-4750-A954-64C550C40446</a:ObjectID>
 <a:Name>contenir</a:Name>
-<a:Code>ASSOCIATION_6</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:Code>CONTENIR</a:Code>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {E89BFE46-2317-41CF-AD04-D0DE38FD6886}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 <a:Cardinality>0..*</a:Cardinality>
 <a:UpdateConstraint>1</a:UpdateConstraint>
 <a:DeleteConstraint>1</a:DeleteConstraint>
@@ -4015,34 +5456,34 @@ DAT 1588250054</a:History>
 <o:Table Ref="o40"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o111"/>
+<o:Key Ref="o116"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o168">
-<a:ObjectID>B14BB9D1-F711-4999-AFFC-4B105E9B8BE6</a:ObjectID>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:ReferenceJoin Id="o176">
+<a:ObjectID>FDCB555A-0522-459F-8D6B-EF2C6A908A76</a:ObjectID>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:Object1>
-<o:Column Ref="o107"/>
+<o:Column Ref="o111"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o53"/>
+<o:Column Ref="o54"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
 </o:Reference>
 <o:Reference Id="o12">
-<a:ObjectID>868CC914-BF1F-4E32-9943-9E0049AFB1E2</a:ObjectID>
+<a:ObjectID>E1B6C55E-AB5D-4635-A61D-C524F494DB78</a:ObjectID>
 <a:Name>vendre</a:Name>
-<a:Code>ASSOCIATION_7</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:Code>VENDRE</a:Code>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {0FB24434-E679-428B-839C-F70D185B8B80}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 <a:Cardinality>0..*</a:Cardinality>
 <a:UpdateConstraint>1</a:UpdateConstraint>
 <a:DeleteConstraint>1</a:DeleteConstraint>
@@ -4053,35 +5494,34 @@ DAT 1588250054</a:History>
 <o:Table Ref="o40"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o122"/>
+<o:Key Ref="o127"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o169">
-<a:ObjectID>B403B863-A199-4232-9689-CB592CB6ACF1</a:ObjectID>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:ReferenceJoin Id="o177">
+<a:ObjectID>EB5D5AAB-B1BF-4CBD-95AD-F5B3E8459BAB</a:ObjectID>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:Object1>
-<o:Column Ref="o116"/>
+<o:Column Ref="o121"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o52"/>
+<o:Column Ref="o53"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
 </o:Reference>
 <o:Reference Id="o16">
-<a:ObjectID>FF1E79E5-A79B-4E35-BA03-932A2DAAECE7</a:ObjectID>
+<a:ObjectID>EE0FEA0D-3E5C-4E65-BFE8-2B7B9445544A</a:ObjectID>
 <a:Name>Passer</a:Name>
 <a:Code>PASSER</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252864</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {4FB35C8D-FB3B-4BC6-8795-0AD7E3B82AB3}
-DAT 1588250054
-ATT MAND</a:History>
+DAT 1588252769</a:History>
 <a:Cardinality>0..*</a:Cardinality>
 <a:UpdateConstraint>1</a:UpdateConstraint>
 <a:DeleteConstraint>1</a:DeleteConstraint>
@@ -4092,34 +5532,34 @@ ATT MAND</a:History>
 <o:Table Ref="o46"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o100"/>
+<o:Key Ref="o104"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o170">
-<a:ObjectID>503C6B54-5B82-478D-9E6F-6D5F447B489F</a:ObjectID>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:ReferenceJoin Id="o178">
+<a:ObjectID>AE95A32F-45BC-4494-842E-E31867D17C8A</a:ObjectID>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:Object1>
-<o:Column Ref="o90"/>
+<o:Column Ref="o93"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o129"/>
+<o:Column Ref="o135"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
 </o:Reference>
 <o:Reference Id="o19">
-<a:ObjectID>721E63D7-9835-47A0-AC92-F4A19AACB575</a:ObjectID>
+<a:ObjectID>F7BE045D-0B9C-4AB2-A37B-E62E22192609</a:ObjectID>
 <a:Name>posseder</a:Name>
-<a:Code>ASSOCIATION_10</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:Code>POSSEDER</a:Code>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {82624F24-2709-4163-92AD-3BFED05C00E3}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 <a:Cardinality>0..*</a:Cardinality>
 <a:UpdateConstraint>1</a:UpdateConstraint>
 <a:DeleteConstraint>1</a:DeleteConstraint>
@@ -4130,35 +5570,34 @@ DAT 1588250054</a:History>
 <o:Table Ref="o44"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o73"/>
+<o:Key Ref="o75"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o171">
-<a:ObjectID>999A0DCC-3816-4CDC-B37C-8AC26D906EED</a:ObjectID>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:ReferenceJoin Id="o179">
+<a:ObjectID>0261C3EB-D2FF-46BE-851A-6CF6108FB319</a:ObjectID>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:Object1>
-<o:Column Ref="o70"/>
+<o:Column Ref="o71"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o108"/>
+<o:Column Ref="o113"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
 </o:Reference>
 <o:Reference Id="o22">
-<a:ObjectID>E02748E5-A0BC-4FDA-A62D-2F42E70CE52A</a:ObjectID>
+<a:ObjectID>33B1475B-39C5-4AED-9191-F2B51E337A4E</a:ObjectID>
 <a:Name>attribuer</a:Name>
-<a:Code>ASSOCIATION_8</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:Code>ATTRIBUER</a:Code>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252864</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {FA3A0D41-2804-4504-BBE9-35A1B0C03484}
-DAT 1588250054
-ATT MAND</a:History>
+DAT 1588252769</a:History>
 <a:Cardinality>0..*</a:Cardinality>
 <a:UpdateConstraint>1</a:UpdateConstraint>
 <a:DeleteConstraint>1</a:DeleteConstraint>
@@ -4169,34 +5608,34 @@ ATT MAND</a:History>
 <o:Table Ref="o46"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o85"/>
+<o:Key Ref="o88"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o172">
-<a:ObjectID>E23D7A4C-1707-480E-936F-1D19843158B3</a:ObjectID>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:ReferenceJoin Id="o180">
+<a:ObjectID>12A136CC-CD71-4610-BE74-11CF4A8D8D6F</a:ObjectID>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:Object1>
-<o:Column Ref="o76"/>
+<o:Column Ref="o78"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o128"/>
+<o:Column Ref="o134"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
 </o:Reference>
 <o:Reference Id="o25">
-<a:ObjectID>1051AA6D-5A10-4379-914D-F7A0A59CDBCE</a:ObjectID>
+<a:ObjectID>51DC5A83-A98A-4F6A-A33D-A402352BEE5D</a:ObjectID>
 <a:Name>habiter</a:Name>
-<a:Code>ASSOCIATION_11</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:Code>HABITER</a:Code>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {40ACC08D-790E-491B-A6AC-89C130342B1D}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 <a:Cardinality>0..*</a:Cardinality>
 <a:UpdateConstraint>1</a:UpdateConstraint>
 <a:DeleteConstraint>1</a:DeleteConstraint>
@@ -4207,34 +5646,34 @@ DAT 1588250054</a:History>
 <o:Table Ref="o43"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o145"/>
+<o:Key Ref="o152"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o173">
-<a:ObjectID>4389267D-07C5-4BAD-B7DB-FD5F63A333A5</a:ObjectID>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:ReferenceJoin Id="o181">
+<a:ObjectID>8B167099-454A-4AD7-9739-D77CA2CCEBD8</a:ObjectID>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:Object1>
-<o:Column Ref="o139"/>
+<o:Column Ref="o145"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o91"/>
+<o:Column Ref="o95"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
 </o:Reference>
 <o:Reference Id="o39">
-<a:ObjectID>CC1E05F4-8C41-4301-AB24-5DB046E35071</a:ObjectID>
+<a:ObjectID>149AD22E-3F6D-477C-8165-869AF916D175</a:ObjectID>
 <a:Name>detenir</a:Name>
-<a:Code>ASSOCIATION_12</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:Code>DETENIR</a:Code>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {7ACD9ED7-0C4B-4EF9-945F-B681452C318A}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 <a:Cardinality>1..1</a:Cardinality>
 <a:UpdateConstraint>1</a:UpdateConstraint>
 <a:DeleteConstraint>1</a:DeleteConstraint>
@@ -4245,35 +5684,34 @@ DAT 1588250054</a:History>
 <o:Table Ref="o43"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o151"/>
+<o:Key Ref="o159"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o174">
-<a:ObjectID>4A4BBA3A-7316-4E2E-AE00-880C60D9E82E</a:ObjectID>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:ReferenceJoin Id="o182">
+<a:ObjectID>37C398DF-A868-4B7A-AF6D-B52F85A4C7DE</a:ObjectID>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:Object1>
-<o:Column Ref="o148"/>
+<o:Column Ref="o155"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o92"/>
+<o:Column Ref="o96"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
 </o:Reference>
 <o:Reference Id="o37">
-<a:ObjectID>3C22E912-9E48-48C7-8762-06C05D99B7D1</a:ObjectID>
+<a:ObjectID>87885FC1-4196-4B08-93A8-3773BF21779B</a:ObjectID>
 <a:Name>detenir</a:Name>
-<a:Code>ASSOCIATION_13</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:Code>DETENIR2</a:Code>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252864</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {D2B611B8-C7FA-497C-A0F3-2D9B63E5F635}
-DAT 1588250054
-ATT MAND</a:History>
+DAT 1588252769</a:History>
 <a:Cardinality>0..1</a:Cardinality>
 <a:UpdateConstraint>1</a:UpdateConstraint>
 <a:DeleteConstraint>1</a:DeleteConstraint>
@@ -4284,34 +5722,34 @@ ATT MAND</a:History>
 <o:Table Ref="o49"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o100"/>
+<o:Key Ref="o104"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o175">
-<a:ObjectID>C63881E2-284E-4A0C-A700-5711F8E10E9F</a:ObjectID>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:ReferenceJoin Id="o183">
+<a:ObjectID>0747371A-E5E5-4552-A6C0-59A02D5A6444</a:ObjectID>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:Object1>
-<o:Column Ref="o90"/>
+<o:Column Ref="o93"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o149"/>
+<o:Column Ref="o157"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
 </o:Reference>
 <o:Reference Id="o27">
-<a:ObjectID>BB80C9CD-3F28-44EF-8FC1-107D2D292D00</a:ObjectID>
+<a:ObjectID>309C31FD-4984-42CA-9028-9EFC52110EE6</a:ObjectID>
 <a:Name>loger</a:Name>
-<a:Code>ASSOCIATION_14</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:Code>LOGER</a:Code>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {A8E02EEE-9645-48FD-BD9B-57EF43B6A663}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 <a:Cardinality>0..*</a:Cardinality>
 <a:UpdateConstraint>1</a:UpdateConstraint>
 <a:DeleteConstraint>1</a:DeleteConstraint>
@@ -4322,34 +5760,34 @@ DAT 1588250054</a:History>
 <o:Table Ref="o42"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o145"/>
+<o:Key Ref="o152"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o176">
-<a:ObjectID>912281C8-54F3-4A97-A074-E5DA516DA531</a:ObjectID>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:ReferenceJoin Id="o184">
+<a:ObjectID>AC07CA78-E09C-46D4-A673-AB3D7DEEA5A3</a:ObjectID>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:Object1>
-<o:Column Ref="o139"/>
+<o:Column Ref="o145"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o77"/>
+<o:Column Ref="o80"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
 </o:Reference>
 <o:Reference Id="o29">
-<a:ObjectID>BBAA48FD-6E74-402E-A0AB-3BECE3E19423</a:ObjectID>
+<a:ObjectID>86F410C2-008B-4522-915B-D9570305717A</a:ObjectID>
 <a:Name>localiser</a:Name>
-<a:Code>ASSOCIATION_15</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:Code>LOCALISER</a:Code>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {D1C6C232-4AC1-4A0F-B8B8-2875DAD6DFBC}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 <a:Cardinality>0..*</a:Cardinality>
 <a:UpdateConstraint>1</a:UpdateConstraint>
 <a:DeleteConstraint>1</a:DeleteConstraint>
@@ -4360,34 +5798,34 @@ DAT 1588250054</a:History>
 <o:Table Ref="o45"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o145"/>
+<o:Key Ref="o152"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o177">
-<a:ObjectID>DED937A8-2C24-4791-A382-C4FFAEB26C50</a:ObjectID>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:ReferenceJoin Id="o185">
+<a:ObjectID>6C701525-1BA3-4D9A-9CE6-CAC0DEBB8D32</a:ObjectID>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:Object1>
-<o:Column Ref="o139"/>
+<o:Column Ref="o145"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o117"/>
+<o:Column Ref="o122"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
 </o:Reference>
 <o:Reference Id="o32">
-<a:ObjectID>569BE69D-12A7-4D10-A6BA-12A9A3D3FD25</a:ObjectID>
+<a:ObjectID>E4C159E0-6984-4081-B84F-DAFCC06476DA</a:ObjectID>
 <a:Name>LigneCommande</a:Name>
-<a:Code>ASSOCIATION_9</a:Code>
+<a:Code>LIGNECOMMANDE</a:Code>
 <a:CreationDate>0</a:CreationDate>
 <a:Creator/>
 <a:ModificationDate>0</a:ModificationDate>
 <a:Modifier/>
 <a:History>ORG {08FB5E27-0994-4FB2-A793-E511375CBA92}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 <a:Cardinality>0..*</a:Cardinality>
 <a:UpdateConstraint>1</a:UpdateConstraint>
 <a:DeleteConstraint>1</a:DeleteConstraint>
@@ -4398,34 +5836,34 @@ DAT 1588250054</a:History>
 <o:Table Ref="o47"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o63"/>
+<o:Key Ref="o64"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o178">
-<a:ObjectID>2E7DEA3E-A5F8-402F-8717-BF02AE8B46B7</a:ObjectID>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:ReferenceJoin Id="o186">
+<a:ObjectID>D9DC9852-F12F-46D2-811B-D585DB8DB78B</a:ObjectID>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:Object1>
 <o:Column Ref="o51"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o156"/>
+<o:Column Ref="o164"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
 </o:Reference>
 <o:Reference Id="o34">
-<a:ObjectID>E36A893F-397A-49A2-B2C7-DA63CF8450BD</a:ObjectID>
+<a:ObjectID>5613F797-C33C-4C75-848D-28A1222F70C2</a:ObjectID>
 <a:Name>LigneCommande</a:Name>
-<a:Code>ASSOCIATION_16</a:Code>
+<a:Code>LIGNECOMMANDE2</a:Code>
 <a:CreationDate>0</a:CreationDate>
 <a:Creator/>
 <a:ModificationDate>0</a:ModificationDate>
 <a:Modifier/>
 <a:History>ORG {1349BEC9-0937-4D40-90B1-EB4D13AC783A}
-DAT 1588250054</a:History>
+DAT 1588252769</a:History>
 <a:Cardinality>0..*</a:Cardinality>
 <a:UpdateConstraint>1</a:UpdateConstraint>
 <a:DeleteConstraint>1</a:DeleteConstraint>
@@ -4436,59 +5874,149 @@ DAT 1588250054</a:History>
 <o:Table Ref="o47"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o132"/>
+<o:Key Ref="o138"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o179">
-<a:ObjectID>C98F842B-7B2B-48E1-A983-CE32409A4CE5</a:ObjectID>
-<a:CreationDate>1588250054</a:CreationDate>
+<o:ReferenceJoin Id="o187">
+<a:ObjectID>54B7A79F-32DB-48A8-B9E0-6B8E733F433A</a:ObjectID>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250054</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <c:Object1>
-<o:Column Ref="o127"/>
+<o:Column Ref="o132"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o157"/>
+<o:Column Ref="o165"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
 </o:Reference>
 </c:References>
+<c:Sequences>
+<o:Sequence Id="o52">
+<a:ObjectID>F7CD75ED-D870-42F7-A11F-92A31A6C15BC</a:ObjectID>
+<a:Name>S_Produit</a:Name>
+<a:Code>S_PRODUIT</a:Code>
+<a:CreationDate>0</a:CreationDate>
+<a:Creator/>
+<a:ModificationDate>0</a:ModificationDate>
+<a:Modifier/>
+<a:History>ORG {5EDEF0F1-85AB-4DE2-9B6E-ABE2AA7859D7}
+DAT 1588252769</a:History>
+</o:Sequence>
+<o:Sequence Id="o72">
+<a:ObjectID>A2F688FC-32D7-4590-AAD5-E693A27034EE</a:ObjectID>
+<a:Name>S_Rayon</a:Name>
+<a:Code>S_RAYON</a:Code>
+<a:CreationDate>0</a:CreationDate>
+<a:Creator/>
+<a:ModificationDate>0</a:ModificationDate>
+<a:Modifier/>
+<a:History>ORG {AE83F9B6-92AF-4B90-9C95-D0E19CBD0539}
+DAT 1588252769</a:History>
+</o:Sequence>
+<o:Sequence Id="o79">
+<a:ObjectID>143B2018-841C-4361-9C91-EC25D395736E</a:ObjectID>
+<a:Name>S_Employe</a:Name>
+<a:Code>S_EMPLOYE</a:Code>
+<a:CreationDate>0</a:CreationDate>
+<a:Creator/>
+<a:ModificationDate>0</a:ModificationDate>
+<a:Modifier/>
+<a:History>ORG {038CC2D5-5B93-4BE1-93C6-920F65975B32}
+DAT 1588252769</a:History>
+</o:Sequence>
+<o:Sequence Id="o94">
+<a:ObjectID>58A15EB2-D521-4BB0-9D90-BB70EAD9782E</a:ObjectID>
+<a:Name>S_Client</a:Name>
+<a:Code>S_CLIENT</a:Code>
+<a:CreationDate>0</a:CreationDate>
+<a:Creator/>
+<a:ModificationDate>0</a:ModificationDate>
+<a:Modifier/>
+<a:History>ORG {90E6C179-4443-4C1A-990A-DA97CD3F44F1}
+DAT 1588252769</a:History>
+</o:Sequence>
+<o:Sequence Id="o112">
+<a:ObjectID>497EC49E-9AB7-4AB2-A4DD-49E237FBF5E8</a:ObjectID>
+<a:Name>S_CategorieProduit</a:Name>
+<a:Code>S_CATEGORIEPRODUIT</a:Code>
+<a:CreationDate>0</a:CreationDate>
+<a:Creator/>
+<a:ModificationDate>0</a:ModificationDate>
+<a:Modifier/>
+<a:History>ORG {CCCAEEF3-DEEA-4435-853D-CEB57AF690BD}
+DAT 1588252769</a:History>
+</o:Sequence>
+<o:Sequence Id="o133">
+<a:ObjectID>E7A7741A-80DA-4009-8B62-02D62F005287</a:ObjectID>
+<a:Name>S_Commande</a:Name>
+<a:Code>S_COMMANDE</a:Code>
+<a:CreationDate>0</a:CreationDate>
+<a:Creator/>
+<a:ModificationDate>0</a:ModificationDate>
+<a:Modifier/>
+<a:History>ORG {98248DBD-50A7-47B2-9653-18E3043FAEA9}
+DAT 1588252769</a:History>
+</o:Sequence>
+<o:Sequence Id="o146">
+<a:ObjectID>D54AB0C7-44F2-4D62-B123-9DE8F2CD2D2B</a:ObjectID>
+<a:Name>S_Adresse</a:Name>
+<a:Code>S_ADRESSE</a:Code>
+<a:CreationDate>0</a:CreationDate>
+<a:Creator/>
+<a:ModificationDate>0</a:ModificationDate>
+<a:Modifier/>
+<a:History>ORG {0C3F5E37-81C4-4B40-AEEA-CD63B30CAB66}
+DAT 1588252769</a:History>
+</o:Sequence>
+<o:Sequence Id="o156">
+<a:ObjectID>DCE19E2E-D5D6-449C-B627-DCBB2360D3F0</a:ObjectID>
+<a:Name>S_CarteFidelite</a:Name>
+<a:Code>S_CARTEFIDELITE</a:Code>
+<a:CreationDate>0</a:CreationDate>
+<a:Creator/>
+<a:ModificationDate>0</a:ModificationDate>
+<a:Modifier/>
+<a:History>ORG {47600DAF-9B47-41CB-BB9B-CF855DB9D10F}
+DAT 1588252769</a:History>
+</o:Sequence>
+</c:Sequences>
 <c:DefaultGroups>
-<o:Group Id="o180">
-<a:ObjectID>216CC7AD-77A1-4BDE-A530-530AD4860B55</a:ObjectID>
+<o:Group Id="o188">
+<a:ObjectID>18383A25-696B-4D67-A0B1-8957DFF24C91</a:ObjectID>
 <a:Name>PUBLIC</a:Name>
 <a:Code>PUBLIC</a:Code>
-<a:CreationDate>1588250039</a:CreationDate>
+<a:CreationDate>1588252758</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250039</a:ModificationDate>
+<a:ModificationDate>1588252758</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 </o:Group>
 </c:DefaultGroups>
 <c:TargetModels>
-<o:TargetModel Id="o181">
-<a:ObjectID>AADA8230-0B99-4907-8A6A-D759D3F03EF4</a:ObjectID>
-<a:Name>Sybase SQL Anywhere 11</a:Name>
-<a:Code>SYASA11</a:Code>
-<a:CreationDate>1588250039</a:CreationDate>
+<o:TargetModel Id="o189">
+<a:ObjectID>F13C2722-1C9F-40C4-90AD-25295E85CCE3</a:ObjectID>
+<a:Name>ORACLE Version 11g</a:Name>
+<a:Code>ORA11GR1</a:Code>
+<a:CreationDate>1588252758</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250039</a:ModificationDate>
+<a:ModificationDate>1588252758</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
-<a:TargetModelURL>file:///%_DBMS%/syasa110.xdb</a:TargetModelURL>
-<a:TargetModelID>9C2029CC-5AF2-4828-AA6C-11C184EF93D8</a:TargetModelID>
+<a:TargetModelURL>file:///%_DBMS%/ora11g.xdb</a:TargetModelURL>
+<a:TargetModelID>BAE632F3-AC04-4059-9893-259ABA89351C</a:TargetModelID>
 <a:TargetModelClassID>4BA9F647-DAB1-11D1-9944-006097355D9B</a:TargetModelClassID>
 <c:SessionShortcuts>
 <o:Shortcut Ref="o4"/>
 </c:SessionShortcuts>
 </o:TargetModel>
-<o:TargetModel Id="o182">
-<a:ObjectID>964F0006-F50A-47C0-A422-1C41EE147ADD</a:ObjectID>
+<o:TargetModel Id="o190">
+<a:ObjectID>12E94A32-6F40-4024-BADE-F1936623CAA9</a:ObjectID>
 <a:Name>Modèle_Entité_Association_BDD_Supermarche</a:Name>
 <a:Code>MODELE_ENTITE_ASSOCIATION_BDD_SUPERMARCHE</a:Code>
-<a:CreationDate>1588250054</a:CreationDate>
+<a:CreationDate>1588252769</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588250087</a:ModificationDate>
+<a:ModificationDate>1588252769</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:TargetModelURL>file:///D|/dev/MIAGE/PARTIELBDD/Modèle_Entité_Association_BDD_Supermarche.mcd</a:TargetModelURL>
 <a:TargetModelID>61E75397-CA78-49FE-8B72-6D828623A65C</a:TargetModelID>
