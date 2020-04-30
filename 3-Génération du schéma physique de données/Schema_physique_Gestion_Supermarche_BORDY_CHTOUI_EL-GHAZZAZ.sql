@@ -3,6 +3,7 @@
 /* Date de création :  30/04/2020 15:21:16                      */
 /*==============================================================*/
 
+REM SUPPRESSION GLOBALE AVANT CREATION
 
 alter table CARTEFIDELITE
    drop constraint FK_CARTEFID_DETENIR2_CLIENT;
@@ -100,21 +101,55 @@ drop sequence S_PRODUIT;
 
 drop sequence S_RAYON;
 
-create sequence S_ADRESSE;
+REM CREATION TABLE, SEQUENCE, CONTRAINTE
 
-create sequence S_CARTEFIDELITE;
+create sequence S_ADRESSE
+MINVALUE 1
+START WITH 1
+INCREMENT BY 1
+CACHE 10;
 
-create sequence S_CATEGORIEPRODUIT;
+create sequence S_CARTEFIDELITE
+MINVALUE 1
+START WITH 1
+INCREMENT BY 1
+CACHE 10;
 
-create sequence S_CLIENT;
+create sequence S_CATEGORIEPRODUIT
+MINVALUE 1
+START WITH 1
+INCREMENT BY 1
+CACHE 10;
 
-create sequence S_COMMANDE;
+create sequence S_CLIENT
+MINVALUE 1
+START WITH 1
+INCREMENT BY 1
+CACHE 10;
 
-create sequence S_EMPLOYE;
+create sequence S_COMMANDE
+MINVALUE 1
+START WITH 1
+INCREMENT BY 1
+CACHE 10;
 
-create sequence S_PRODUIT;
+create sequence S_EMPLOYE
+MINVALUE 1
+START WITH 1
+INCREMENT BY 1
+CACHE 10;
 
-create sequence S_RAYON;
+create sequence S_PRODUIT
+MINVALUE 1
+START WITH 1
+INCREMENT BY 1
+CACHE 10;
+
+create sequence S_RAYON
+MINVALUE 1
+START WITH 1
+INCREMENT BY 1
+CACHE 10;
 
 /*==============================================================*/
 /* Table : ADRESSE                                              */
@@ -181,7 +216,7 @@ create table CLIENT
    TELEPHONE            VARCHAR2(10),
    MOTDEPASSE           VARCHAR2(25)         check (MOTDEPASSE > 8),
    GENRE                VARCHAR2(5),
-   constraint CLIENT_GENRE_CHECK check (GENRE IN("Homme","Femme","Autre")),
+   constraint CLIENT_GENRE_CHECK check (GENRE IN('Homme','Femme','Autre')),
    constraint PK_CLIENT primary key (IDCLIENT)
 );
 
@@ -209,7 +244,7 @@ create table COMMANDE
    IDCLIENT             NUMBER(6)            not null,
    DATECOMMANDE         DATE                 not null,
    STATUTCOMMANDE       VARCHAR2(30),
-   constraint STATUTCOMMANDE_CHECK check (STATUTCOMMANDE in ("En attente de traitement","En cours de traitement","En attente de recuperation","Livré","Annulé")),
+   constraint STATUTCOMMANDE_CHECK check (STATUTCOMMANDE in ('En attente de traitement','En cours de traitement','En attente de recuperation','Livré','Annulé')),
    constraint PK_COMMANDE primary key (IDCOMMANDE)
 );
 
@@ -230,6 +265,7 @@ create index ATTRIBUER_FK on COMMANDE (
 /*==============================================================*/
 /* Table : EMPLOYE                                              */
 /*==============================================================*/
+
 create table EMPLOYE 
 (
    IDEMPLOYE            NUMBER(6)            not null,
@@ -241,7 +277,7 @@ create table EMPLOYE
    SALAIRE              NUMBER(15,2),
    GENRE                VARCHAR2(5),
    DATENAISSANCE        DATE,
-   constraint EMPLOYE_GENRE_CHECK check (GENRE IN("Homme","Femme","Autre")),
+   constraint EMPLOYE_GENRE_CHECK check (GENRE IN('Homme','Femme','Autre')),
    constraint PK_EMPLOYE primary key (IDEMPLOYE)
 );
 
@@ -393,52 +429,5 @@ alter table PRODUIT
    add constraint FK_PRODUIT_VENDRE_FOURNISS foreign key (IDFOURNISSEUR)
       references FOURNISSEUR (IDFOURNISSEUR);
 
-CREATE SEQUENCE seq_client
-MINVALUE 1
-START WITH 1
-INCREMENT BY 1
-CACHE 10;
-
-CREATE SEQUENCE seq_adresse
-MINVALUE 1
-START WITH 1
-INCREMENT BY 1
-CACHE 10;
-
-CREATE SEQUENCE seq_produit
-MINVALUE 1
-START WITH 1
-INCREMENT BY 1
-CACHE 10;
-
-CREATE SEQUENCE seq_categorieProduit
-MINVALUE 1
-START WITH 1
-INCREMENT BY 1
-CACHE 10;
-
-CREATE SEQUENCE seq_employe
-MINVALUE 1
-START WITH 1
-INCREMENT BY 1
-CACHE 10;
-
-CREATE SEQUENCE seq_rayon
-MINVALUE 1
-START WITH 1
-INCREMENT BY 1
-CACHE 10;
-
-CREATE SEQUENCE seq_fournisseur
-MINVALUE 1
-START WITH 1
-INCREMENT BY 1
-CACHE 10;
-
-CREATE SEQUENCE seq_commande
-MINVALUE 1
-START WITH 1
-INCREMENT BY 1
-CACHE 10;
 
 
