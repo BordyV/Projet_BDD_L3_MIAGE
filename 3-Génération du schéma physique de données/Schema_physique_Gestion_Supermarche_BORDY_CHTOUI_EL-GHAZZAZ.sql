@@ -139,6 +139,12 @@ START WITH 1
 INCREMENT BY 1
 CACHE 10;
 
+create sequence S_FOURNISSEUR
+MINVALUE 1
+START WITH 1
+INCREMENT BY 1
+CACHE 10;
+
 create sequence S_PRODUIT
 MINVALUE 1
 START WITH 1
@@ -156,12 +162,12 @@ CACHE 10;
 /*==============================================================*/
 create table ADRESSE 
 (
-   IDADRESSE            INTEGER           not null,
-   LIGNEADRESSE1        VARCHAR2(50)        not null,
+   IDADRESSE            NUMBER(6)               not null,
+   LIGNEADRESSE1        VARCHAR2(50)            not null,
    LIGNEADRESSE2        VARCHAR2(50),
-   VILLE                VARCHAR2(20)        not null,
-   CODEPOSTAL           INTEGER             not null,
-   PAYS                 VARCHAR2(20),
+   VILLE                VARCHAR2(20)            not null,
+   CODEPOSTAL           VARCHAR2(5)             not null,
+   PAYS                 VARCHAR2(25),
    constraint PK_ADRESSE primary key (IDADRESSE)
 );
 
@@ -170,8 +176,8 @@ create table ADRESSE
 /*==============================================================*/
 create table CARTEFIDELITE 
 (
-   IDCARTEFIDELITE      INTEGER            not null,
-   IDCLIENT             INTEGER            not null,
+   IDCARTEFIDELITE      NUMBER(6)            not null,
+   IDCLIENT             NUMBER(6)            not null,
    NBPOINTSFIDELITE     INTEGER              not null,
    constraint PK_CARTEFIDELITE primary key (IDCARTEFIDELITE)
 );
@@ -188,8 +194,8 @@ create index DETENIR2_FK on CARTEFIDELITE (
 /*==============================================================*/
 create table CATEGORIEPRODUIT 
 (
-   IDCATEGORIE          INTEGER            not null,
-   IDRAYON              INTEGER,
+   IDCATEGORIE          NUMBER(6)            not null,
+   IDRAYON              NUMBER(6),
    NOMCATEGORIE         VARCHAR2(25)         not null,
    DESCRIPTIONCATEGORIE VARCHAR2(75)         not null,
    constraint PK_CATEGORIEPRODUIT primary key (IDCATEGORIE)
@@ -207,15 +213,16 @@ create index POSSEDER_FK on CATEGORIEPRODUIT (
 /*==============================================================*/
 create table CLIENT 
 (
-   IDCLIENT             INTEGER              not null,
-   IDADRESSE            INTEGER,
-   IDCARTEFIDELITE      INTEGER,
+   IDCLIENT             NUMBER(6)            not null,
+   IDADRESSE            NUMBER(6),
+   IDCARTEFIDELITE      NUMBER(6),
    NOM                  VARCHAR2(25)         not null,
    PRENOM               VARCHAR2(25)         not null,
    MAIL                 VARCHAR2(50)         not null,
    TELEPHONE            VARCHAR2(10),
    MOTDEPASSE           VARCHAR2(25)         not null,
    GENRE                VARCHAR2(5)          not null,
+   DATENAISSANCE        DATE,
    constraint CLIENT_MOTDEPASSE check (LENGTH(MOTDEPASSE) > 8),
    constraint CLIENT_TELEPHONE check (LENGTH(TELEPHONE) = 10),
    constraint CLIENT_MAIL_UNIQUE UNIQUE(MAIL),
@@ -242,9 +249,9 @@ create index DETENIR_FK on CLIENT (
 /*==============================================================*/
 create table COMMANDE 
 (
-   IDCOMMANDE           INTEGER            not null,
-   IDEMPLOYE            INTEGER            not null,
-   IDCLIENT             INTEGER            not null,
+   IDCOMMANDE           NUMBER(6)            not null,
+   IDEMPLOYE            NUMBER(6)            not null,
+   IDCLIENT             NUMBER(6)            not null,
    DATECOMMANDE         DATE                 not null,
    STATUTCOMMANDE       VARCHAR2(30),
    constraint STATUTCOMMANDE_CHECK check (STATUTCOMMANDE in ('En attente de traitement','En cours de traitement','En attente de recuperation','Livré','Annulé')),
@@ -271,8 +278,8 @@ create index ATTRIBUER_FK on COMMANDE (
 
 create table EMPLOYE 
 (
-   IDEMPLOYE            INTEGER              not null,
-   IDADRESSE            INTEGER,
+   IDEMPLOYE            NUMBER(6)            not null,
+   IDADRESSE            NUMBER(6),
    NOM                  VARCHAR2(25)         not null,
    PRENOM               VARCHAR2(25)         not null,
    MAIL                 VARCHAR2(50)         not null,
@@ -298,9 +305,9 @@ create index LOGER_FK on EMPLOYE (
 /*==============================================================*/
 create table FOURNISSEUR 
 (
-   IDFOURNISSEUR        INTEGER            not null,
-   IDADRESSE            INTEGER,
-   NOMFOURNISSEUR       VARCHAR2(25)             not null,
+   IDFOURNISSEUR        NUMBER(6)            not null,
+   IDADRESSE            NUMBER(6),
+   NOMFOURNISSEUR       VARCHAR2(25)         not null,
    MAIL                 VARCHAR2(50)         not null,
    TELEPHONE            VARCHAR2(10),
    DESCRIPTIONFOURNISSEUR VARCHAR2(75),
@@ -321,9 +328,9 @@ create index LOCALISER_FK on FOURNISSEUR (
 /*==============================================================*/
 create table LIGNECOMMANDE 
 (
-   IDPRODUIT            INTEGER             not null,
-   IDCOMMANDE           INTEGER             not null,
-   QUANTITE             INTEGER             not null,
+   IDPRODUIT            NUMBER(6)            not null,
+   IDCOMMANDE           NUMBER(6)            not null,
+   QUANTITE             INTEGER              not null,
    PRIXVENTE            NUMBER(10,2),
    constraint PK_LIGNECOMMANDE primary key (IDPRODUIT, IDCOMMANDE)
 );
@@ -347,9 +354,9 @@ create index LIGNECOMMANDE2_FK on LIGNECOMMANDE (
 /*==============================================================*/
 create table PRODUIT 
 (
-   IDPRODUIT            INTEGER              not null,
-   IDFOURNISSEUR        INTEGER,
-   IDCATEGORIE          INTEGER,
+   IDPRODUIT            NUMBER(6)            not null,
+   IDFOURNISSEUR        NUMBER(6),
+   IDCATEGORIE          NUMBER(6),
    NOMPRODUIT           VARCHAR2(25)         not null,
    POIDSPRODUIT         NUMBER(6,2),
    DESCRIPTIONPRODUIT   VARCHAR2(75),
@@ -382,7 +389,7 @@ create index VENDRE_FK on PRODUIT (
 /*==============================================================*/
 create table RAYON 
 (
-   IDRAYON              INTEGER              not null,
+   IDRAYON              NUMBER(6)            not null,
    NOMRAYON             VARCHAR2(25)         not null,
    DESCRIPTIONRAYON     VARCHAR2(75),
    constraint PK_RAYON primary key (IDRAYON)
