@@ -177,11 +177,11 @@ create table CLIENT
    IDCARTEFIDELITE      NUMBER(6),
    NOM                  VARCHAR2(25)         not null,
    PRENOM               VARCHAR2(25)         not null,
-   MAIL                 VARCHAR2(50)         not null,
+   MAIL                 VARCHAR2(50)         not null unique,
    TELEPHONE            VARCHAR2(10),
-   MOTDEPASSE           VARCHAR2(25),
+   MOTDEPASSE           VARCHAR2(25)         check (MOTDEPASSE > 8),
    GENRE                VARCHAR2(5),
-   DATENAISSANCE        DATE,
+   constraint CLIENT_GENRE_CHECK check (GENRE IN("Homme","Femme","Autre")),
    constraint PK_CLIENT primary key (IDCLIENT)
 );
 
@@ -209,6 +209,7 @@ create table COMMANDE
    IDCLIENT             NUMBER(6)            not null,
    DATECOMMANDE         DATE                 not null,
    STATUTCOMMANDE       VARCHAR2(30),
+   constraint STATUTCOMMANDE_CHECK check (STATUTCOMMANDE in ("En attente de traitement","En cours de traitement","En attente de recuperation","Livré","Annulé")),
    constraint PK_COMMANDE primary key (IDCOMMANDE)
 );
 
@@ -240,6 +241,7 @@ create table EMPLOYE
    SALAIRE              NUMBER(15,2),
    GENRE                VARCHAR2(5),
    DATENAISSANCE        DATE,
+   constraint EMPLOYE_GENRE_CHECK check (GENRE IN("Homme","Femme","Autre")),
    constraint PK_EMPLOYE primary key (IDEMPLOYE)
 );
 
@@ -314,6 +316,7 @@ create table PRODUIT
    STOCK                INTEGER              not null,
    STOCKMINI            INTEGER              not null,
    STOCKMAX             INTEGER              not null,
+   constraint TAUXTVA_CHECK check (TAUXTVA IN (0.055,0.20)),
    constraint PK_PRODUIT primary key (IDPRODUIT)
 );
 
@@ -389,4 +392,53 @@ alter table PRODUIT
 alter table PRODUIT
    add constraint FK_PRODUIT_VENDRE_FOURNISS foreign key (IDFOURNISSEUR)
       references FOURNISSEUR (IDFOURNISSEUR);
+
+CREATE SEQUENCE seq_client
+MINVALUE 1
+START WITH 1
+INCREMENT BY 1
+CACHE 10;
+
+CREATE SEQUENCE seq_adresse
+MINVALUE 1
+START WITH 1
+INCREMENT BY 1
+CACHE 10;
+
+CREATE SEQUENCE seq_produit
+MINVALUE 1
+START WITH 1
+INCREMENT BY 1
+CACHE 10;
+
+CREATE SEQUENCE seq_categorieProduit
+MINVALUE 1
+START WITH 1
+INCREMENT BY 1
+CACHE 10;
+
+CREATE SEQUENCE seq_employe
+MINVALUE 1
+START WITH 1
+INCREMENT BY 1
+CACHE 10;
+
+CREATE SEQUENCE seq_rayon
+MINVALUE 1
+START WITH 1
+INCREMENT BY 1
+CACHE 10;
+
+CREATE SEQUENCE seq_fournisseur
+MINVALUE 1
+START WITH 1
+INCREMENT BY 1
+CACHE 10;
+
+CREATE SEQUENCE seq_commande
+MINVALUE 1
+START WITH 1
+INCREMENT BY 1
+CACHE 10;
+
 
