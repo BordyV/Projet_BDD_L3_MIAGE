@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* Nom de SGBD :  ORACLE Version 11g                            */
-/* Date de création :  30/04/2020 15:15:09                      */
+/* Date de création :  30/04/2020 15:21:16                      */
 /*==============================================================*/
 
 
@@ -180,7 +180,7 @@ create table CLIENT
    MAIL                 VARCHAR2(50)         not null,
    TELEPHONE            VARCHAR2(10),
    MOTDEPASSE           VARCHAR2(25),
-   GENRE                CLOB,
+   GENRE                VARCHAR2(5),
    DATENAISSANCE        DATE,
    constraint PK_CLIENT primary key (IDCLIENT)
 );
@@ -238,7 +238,7 @@ create table EMPLOYE
    MAIL                 VARCHAR2(50)         not null,
    TELEPHONE            VARCHAR2(10),
    SALAIRE              NUMBER(15,2),
-   GENRE                CLOB,
+   GENRE                VARCHAR2(5),
    DATENAISSANCE        DATE,
    constraint PK_EMPLOYE primary key (IDEMPLOYE)
 );
