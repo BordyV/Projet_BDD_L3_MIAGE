@@ -20,6 +20,11 @@ insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, 
 	values(S_ADRESSE.nextval, '40  boulevard Aristide Briand', null, 'LE CANNET', '06110', 'France');
 insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, pays) 
 	values(S_ADRESSE.nextval, '38 boulevard du General de Gaulle', null, 'SAINT-JEAN-CAP-FERRAT', '06230', 'France');
+insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, pays) 
+	values(S_ADRESSE.nextval, 'Départemental 559', null, 'LES ISSAMBRES', '83380', 'France');
+insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, pays) 
+	values(S_ADRESSE.nextval, '515 rue de l\'industrie', null, 'Montpellier', '34070', 'France');
+
 
 
 REM Insertion des clients
@@ -72,17 +77,55 @@ insert into CarteFidelite(idCarteFidelite, idClient, nbPointsFidelite)
 REM Insertion des rayons
 
 insert into Rayon(idRayon, nomRayon, descriptionRayon) 
-	values(S_RAYON.nextval,);
+	values(S_RAYON.nextval, 'Produit Frais', 'Cremerie, Charcuterie, Fromages, Yaourts et traiteur');
+insert into Rayon(idRayon, nomRayon, descriptionRayon) 
+	values(S_RAYON.nextval, 'Fruits et Legumes', 'Fruits et legumes frais/sec, Salades, Jus de fruits frais et plantes');
+insert into Rayon(idRayon, nomRayon, descriptionRayon) 
+	values(S_RAYON.nextval, 'Surgeles', 'Legumes, viandes, poissons, plat cuisines, desserts');
+insert into Rayon(idRayon, nomRayon, descriptionRayon) 
+	values(S_RAYON.nextval, 'Boissons', 'Eaux, Jus de fruits, Softs, Vins, Bieres, Alcools');
+insert into Rayon(idRayon, nomRayon, descriptionRayon) 
+	values(S_RAYON.nextval, 'Marche', 'Pains, Patisseries, Boucherie, Poissons, Volailles');
+insert into Rayon(idRayon, nomRayon, descriptionRayon) 
+	values(S_RAYON.nextval, 'Epicerie salee', 'Aperitif, Conserves, Pates, Feculents, Condiments sauces');
+insert into Rayon(idRayon, nomRayon, descriptionRayon) 
+	values(S_RAYON.nextval,'Epicerie sucree', 'Boisson chaudes, Petit Dejeuner, Biscuits, Chocolats, Desserts');
+insert into Rayon(idRayon, nomRayon, descriptionRayon) 
+	values(S_RAYON.nextval, 'Hygiene', 'Dentaire, Corps, Cheveux, Visage, parapharmacie');
+insert into Rayon(idRayon, nomRayon, descriptionRayon) 
+	values(S_RAYON.nextval, 'Entretien', 'Papiers, Vaisselles, Nettoyage, Linge');
+insert into Rayon(idRayon, nomRayon, descriptionRayon) 
+	values(S_RAYON.nextval, 'Animalerie', 'Chats, Chiens, Autres animaux');
 
 REM Insertion des categories de produits
 
-insert into CategorieProduit(idCategorie, nomCategorie, descriptionCategorie) 
-	values(S_CATEGORIEPRODUIT.nextval, );
+insert into CategorieProduit(idCategorie, idRayon, nomCategorie, descriptionCategorie) 
+	values(S_CATEGORIEPRODUIT.nextval, 1, 'Cremerie', 'Laits, Oeufs, Beurres, Cremes');
+insert into CategorieProduit(idCategorie, idRayon, nomCategorie, descriptionCategorie) 
+	values(S_CATEGORIEPRODUIT.nextval, 2, 'Fruits et legumes sec', 'Amandes, Noix, Baies, Dattes, Raisins sec, etc');
+insert into CategorieProduit(idCategorie, idRayon, nomCategorie, descriptionCategorie) 
+	values(S_CATEGORIEPRODUIT.nextval, 3, 'Viandes et Poissons', 'Steaks, Nuggets, Volailles, Poissons panes, etc');
+insert into CategorieProduit(idCategorie, idRayon, nomCategorie, descriptionCategorie) 
+	values(S_CATEGORIEPRODUIT.nextval, 4, 'Softs et colas', 'Colas, Soda, Limonades, Thés glacés, Sirop, etc');
+insert into CategorieProduit(idCategorie, idRayon, nomCategorie, descriptionCategorie) 
+	values(S_CATEGORIEPRODUIT.nextval, 5, 'Boulangerie', 'Pains, viennoiseries, Brioches, Patisseries, Gateaux');
+insert into CategorieProduit(idCategorie, idRayon, nomCategorie, descriptionCategorie) 
+	values(S_CATEGORIEPRODUIT.nextval, 6, 'Aperitif', 'Chips, Biscuits sales, Cacahuetes, Amuse-bouches, etc');
+insert into CategorieProduit(idCategorie, idRayon, nomCategorie, descriptionCategorie) 
+	values(S_CATEGORIEPRODUIT.nextval, 7, 'Petit dejeuner', 'Cereales, Confitures, Miels, Biscottes, Pates à tartiner, etc');
+insert into CategorieProduit(idCategorie, idRayon, nomCategorie, descriptionCategorie) 
+	values(S_CATEGORIEPRODUIT.nextval, 8, 'Corps', 'Savons, Gels douche, Deodorants, Epilation, Solaires, etc');
+insert into CategorieProduit(idCategorie, idRayon, nomCategorie, descriptionCategorie) 
+	values(S_CATEGORIEPRODUIT.nextval, 9, 'Papiers', 'Papier-toilette, Essuie-tout, Mouchoirs');
+insert into CategorieProduit(idCategorie, idRayon, nomCategorie, descriptionCategorie) 
+	values(S_CATEGORIEPRODUIT.nextval, 10, 'Chats', 'Laits, Friandises, Sachets repas, Barquettes, Croquettes, etc');
 
 REM Insertion des fournisseurs
 
-insert into Fournisseur(idFournisseur, nomFournisseur, mail, telephone, descriptionFournisseur) 
-	values(S_FOURNISSEUR.nextval,);
+insert into Fournisseur(idFournisseur, idAdresse, nomFournisseur, mail, telephone, descriptionFournisseur) 
+	values(S_FOURNISSEUR.nextval, 11, 'NSDAfrance','nsda.france@orange.fr', '0494969455', 'Grossiste animalerie');
+insert into Fournisseur(idFournisseur, idAdresse, nomFournisseur, mail, telephone, descriptionFournisseur) 
+	values(S_FOURNISSEUR.nextval, 12, 'Hygiene Depot','contact@hygiene-depot.com', '0467578290', 'Grossiste hygiene et entretien');
 
 REM Insertion des produits
 
