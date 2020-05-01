@@ -69,34 +69,32 @@ insert into CarteFidelite(idCarteFidelite, idClient, nbPointsFidelite)
 insert into CarteFidelite(idCarteFidelite, idClient, nbPointsFidelite) 
 	values(S_CARTEFIDELITE.nextval, 1, 177);
 
+REM Insertion des rayons
 
+insert into Rayon(idRayon, nomRayon, descriptionRayon) 
+	values(S_RAYON.nextval,);
 
+REM Insertion des categories de produits
 
+insert into CategorieProduit(idCategorie, nomCategorie, descriptionCategorie) 
+	values(S_CATEGORIEPRODUIT.nextval, );
+
+REM Insertion des fournisseurs
+
+insert into Fournisseur(idFournisseur, nomFournisseur, mail, telephone, descriptionFournisseur) 
+	values(S_FOURNISSEUR.nextval,);
 
 REM Insertion des produits
 
 insert into Produit(idProduit, nomProduit, poidsProduit, descriptionProduit, prixHT, tauxTVA, prixTTC, stock, stockMini, stockMax) 
 	values(S_PRODUIT.nextval,);
 
-REM Insertion des categories de produits
-
-insert into CategorieProduit(idCategorie, nomCategorie, descriptionCategorie) 
-	values(S_CATEGORIEPRODUIT.nextval,);
 
 REM Insertion des employees
 
 insert into Employe(idEmploye, nom, prenom, mail, telephone, salaire, genre, dateNaissance) 
 	values(S_EMPLOYE.nextval,);
 
-REM Insertion des rayons
-
-insert into Rayon(idRayon, nomRayon, descriptionRayon) 
-	values(S_RAYON.nextval,);
-
-REM Insertion des fournisseurs
-
-insert into Fournisseur(idFournisseur, nomFournisseur, mail, telephone, descriptionFournisseur) 
-	values(S_FOURNISSEUR.nextval,);
 
 REM Insertion des commandes
 
