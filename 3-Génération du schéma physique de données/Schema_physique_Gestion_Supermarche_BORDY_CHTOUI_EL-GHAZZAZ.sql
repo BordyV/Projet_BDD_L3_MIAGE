@@ -167,7 +167,7 @@ create table ADRESSE
    IDADRESSE            NUMBER(6)               not null,
    LIGNEADRESSE1        VARCHAR2(50)            not null,
    LIGNEADRESSE2        VARCHAR2(50),
-   VILLE                VARCHAR2(20)            not null,
+   VILLE                VARCHAR2(30)            not null,
    CODEPOSTAL           VARCHAR2(5)             not null,
    PAYS                 VARCHAR2(25),
    constraint PK_ADRESSE primary key (IDADRESSE)
