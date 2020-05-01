@@ -1,15 +1,25 @@
 REM Insertion des clients
 
 insert into Client(idClient, nom, prenom, mail, telephone, motDePasse, genre, dateNaissance) 
-	values(S_CLIENT.nextval, 'White', 'Walter', 'walter.white@unice.fr', '0657125987', 'LosPollosHermanos', 'Homme', '07-SEP-1958');
+	values(S_CLIENT.nextval, 'White', 'Walter', 'walter.white@unice.fr', '0657125987', 'IAmHelsenberg', 'Homme', '07-SEP-1958');
 insert into Client(idClient, nom, prenom, mail, telephone, motDePasse, genre, dateNaissance) 
-	values(S_CLIENT.nextval, 'Bagwell', 'Theodore', 'theodore.bagwell@unice.fr', '0641658974', 'Prisonslave', 'Homme', '10-JUL-1968');
+	values(S_CLIENT.nextval, 'Bagwell', 'Theodore', 'theodore.bagwell@unice.fr', '0641658974', 'OhFateYouMysteriousBitch', 'Homme', '10-JUL-1968');
 insert into Client(idClient, nom, prenom, mail, telephone, motDePasse, genre, dateNaissance) 
-	values(S_CLIENT.nextval, 'Lothbrok', 'Ragnar', 'ragnar.lothbrok@unice.fr', '0678456942', 'Ithebestvikings', 'Homme', '03-DEC-1567');
+	values(S_CLIENT.nextval, 'Lothbrok', 'Ragnar', 'ragnar.lothbrok@unice.fr', '0678456942', 'WeLiveToFightAnotherDay', 'Homme', '03-DEC-1983');
 insert into Client(idClient, nom, prenom, mail, telephone, motDePasse, genre, dateNaissance) 
-	values(S_CLIENT.nextval, 'Targaryen', 'Daenery', 'daenerys.targaryen@unice.fr', '0632148975', 'Motherofdragons', 'Femme', '16-JUN-0284');
+	values(S_CLIENT.nextval, 'Targaryen', 'Daenery', 'daenerys.targaryen@unice.fr', '0632148975', 'MotherOfDragons', 'Femme', '16-JUN-1985');
 insert into Client(idClient, nom, prenom, mail, telephone, motDePasse, genre, dateNaissance) 
-	values(S_CLIENT.nextval, 'Stark', 'Arya', 'arya.stark@unice.fr', '0667894125', 'Valarmorghulis', 'Femme', '12-JAN-0289');
+	values(S_CLIENT.nextval, 'Stark', 'Arya', 'arya.stark@unice.fr', '0667894125', 'ValarMorghulis', 'Femme', '12-JAN-1997');
+insert into Client(idClient, nom, prenom, mail, telephone, motDePasse, genre, dateNaissance) 
+	values(S_CLIENT.nextval, 'Trager', 'Kyle', 'kyle.trager@unice.fr', '0714587962', 'Zzyzx781227', 'Homme', '17-FEB-1991');
+insert into Client(idClient, nom, prenom, mail, telephone, motDePasse, genre, dateNaissance) 
+	values(S_CLIENT.nextval, 'Roson', 'Carla', 'carla.roson@unice.fr', '0756841235', 'EliteNetflix', 'Femme', '26-JAN-2000');
+insert into Client(idClient, nom, prenom, mail, telephone, motDePasse, genre, dateNaissance) 
+	values(S_CLIENT.nextval, 'Winchester', 'Dean', 'dean.winchester@unice.fr', '0600324751', 'IAmBatman', 'Homme', '24-JAN-1979');
+insert into Client(idClient, nom, prenom, mail, telephone, motDePasse, genre, dateNaissance) 
+	values(S_CLIENT.nextval, 'Effiong', 'Eric', 'eric.effiong@unice.fr', '0798412650', 'YouDettyPig', 'Autre', '15-OCT-1992');
+insert into Client(idClient, nom, prenom, mail, telephone, motDePasse, genre, dateNaissance) 
+	values(S_CLIENT.nextval, 'Raid', 'Samourai', 'samourai.raid@unice.fr', '0667894126', 'CestSuperFraiche', 'Homme', '29-MAR-1989');
 
 REM Insertion des adresses
 

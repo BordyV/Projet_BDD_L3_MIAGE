@@ -97,6 +97,8 @@ drop sequence S_COMMANDE;
 
 drop sequence S_EMPLOYE;
 
+drop sequence S_FOURNISSEUR;
+
 drop sequence S_PRODUIT;
 
 drop sequence S_RAYON;
