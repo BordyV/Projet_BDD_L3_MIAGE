@@ -45,25 +45,25 @@ insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, 
 REM Insertion des clients
 
 insert into Client(idClient, idAdresse, nom, prenom, mail, telephone, motDePasse, genre, dateNaissance) 
-	values(S_CLIENT.nextval, 3, 'White', 'Walter', 'walter.white@unice.fr', '0657125987', 'IAmHelsenberg', 'Homme', '07-SEP-1958');
+	values(S_CLIENT.nextval, 3, 'White', 'Walter', 'walter.white@unice.fr', '0657125987', 'IAmHelsenberg', 'Homme', '07-09-1958');
 insert into Client(idClient, idAdresse, nom, prenom, mail, telephone, motDePasse, genre, dateNaissance) 
-	values(S_CLIENT.nextval, 6, 'Bagwell', 'Theodore', 'theodore.bagwell@unice.fr', '0641658974', 'OhFateYouMysteriousBitch', 'Homme', '10-JUL-1968');
+	values(S_CLIENT.nextval, 6, 'Bagwell', 'Theodore', 'theodore.bagwell@unice.fr', '0641658974', 'OhFateYouMysteriousBitch', 'Homme', '10-07-1968');
 insert into Client(idClient, idAdresse, nom, prenom, mail, telephone, motDePasse, genre, dateNaissance) 
-	values(S_CLIENT.nextval, 1, 'Lothbrok', 'Ragnar', 'ragnar.lothbrok@unice.fr', '0678456942', 'WeLiveToFightAnotherDay', 'Homme', '03-DEC-1983');
+	values(S_CLIENT.nextval, 1, 'Lothbrok', 'Ragnar', 'ragnar.lothbrok@unice.fr', '0678456942', 'WeLiveToFightAnotherDay', 'Homme', '03-12-1983');
 insert into Client(idClient, idAdresse, nom, prenom, mail, telephone, motDePasse, genre, dateNaissance) 
-	values(S_CLIENT.nextval, 8, 'Targaryen', 'Daenery', 'daenerys.targaryen@unice.fr', '0632148975', 'MotherOfDragons', 'Femme', '16-JUN-1985');
+	values(S_CLIENT.nextval, 8, 'Targaryen', 'Daenery', 'daenerys.targaryen@unice.fr', '0632148975', 'MotherOfDragons', 'Femme', '16-06-1985');
 insert into Client(idClient, idAdresse, nom, prenom, mail, telephone, motDePasse, genre, dateNaissance) 
-	values(S_CLIENT.nextval, 4, 'Stark', 'Arya', 'arya.stark@unice.fr', '0667894125', 'ValarMorghulis', 'Femme', '12-JAN-1997');
+	values(S_CLIENT.nextval, 4, 'Stark', 'Arya', 'arya.stark@unice.fr', '0667894125', 'ValarMorghulis', 'Femme', '12-01-1997');
 insert into Client(idClient, idAdresse, nom, prenom, mail, telephone, motDePasse, genre, dateNaissance) 
-	values(S_CLIENT.nextval, 10, 'Trager', 'Kyle', 'kyle.trager@unice.fr', '0714587962', 'Zzyzx781227', 'Homme', '17-FEB-1991');
+	values(S_CLIENT.nextval, 10, 'Trager', 'Kyle', 'kyle.trager@unice.fr', '0714587962', 'Zzyzx781227', 'Homme', '17-02-1991');
 insert into Client(idClient, idAdresse, nom, prenom, mail, telephone, motDePasse, genre, dateNaissance) 
-	values(S_CLIENT.nextval, 7, 'Roson', 'Carla', 'carla.roson@unice.fr', '0756841235', 'EliteNetflix', 'Femme', '26-JAN-2000');
+	values(S_CLIENT.nextval, 7, 'Roson', 'Carla', 'carla.roson@unice.fr', '0756841235', 'EliteNetflix', 'Femme', '26-01-2000');
 insert into Client(idClient, idAdresse, nom, prenom, mail, telephone, motDePasse, genre, dateNaissance) 
-	values(S_CLIENT.nextval, 2, 'Winchester', 'Dean', 'dean.winchester@unice.fr', '0600324751', 'IAmBatman', 'Homme', '24-JAN-1979');
+	values(S_CLIENT.nextval, 2, 'Winchester', 'Dean', 'dean.winchester@unice.fr', '0600324751', 'IAmBatman', 'Homme', '24-01-1979');
 insert into Client(idClient, idAdresse, nom, prenom, mail, telephone, motDePasse, genre, dateNaissance) 
-	values(S_CLIENT.nextval, 5, 'Effiong', 'Eric', 'eric.effiong@unice.fr', '0798412650', 'YouDettyPig', 'Autre', '15-OCT-1992');
+	values(S_CLIENT.nextval, 5, 'Effiong', 'Eric', 'eric.effiong@unice.fr', '0798412650', 'YouDettyPig', 'Autre', '15-10-1992');
 insert into Client(idClient, idAdresse, nom, prenom, mail, telephone, motDePasse, genre, dateNaissance) 
-	values(S_CLIENT.nextval, 9, 'Raid', 'Samourai', 'samourai.raid@unice.fr', '0667894126', 'CestSuperFraiche', 'Homme', '29-MAR-1989');
+	values(S_CLIENT.nextval, 9, 'Raid', 'Samourai', 'samourai.raid@unice.fr', '0667894126', 'CestSuperFraiche', 'Homme', '29-03-1989');
 
 
 REM Insertion des cartes de fidelite
@@ -189,8 +189,6 @@ insert into Employe(idEmploye, idAdresse, nom, prenom, mail, telephone, salaire,
 	values(S_CLIENT.nextval, 7, 'Roson', 'Carla', 'carla.roson@drive.fr', '0756841235', 19637.00, 'Femme', '26-JAN-2000');
 insert into Employe(idEmploye, idAdresse, nom, prenom, mail, telephone, salire, genre, dateNaissance) 
 	values(S_CLIENT.nextval, 10, 'Trager', 'Kyle', 'kyle.trager@drive.fr', '0714587962', 21947.18, 'Homme', '17-FEB-1991');
-insert into Employe(idEmploye, idAdresse, nom, prenom, mail, telephone, salire, genre, dateNaissance) 
-	values(S_CLIENT.nextval, , 'A. Morais', 'Marcus', 'marcus.morais@drive.fr', '0678942535', 20965.45, 'Homme', '22-DEC-1989');
 
 
 REM Insertion des commandes
