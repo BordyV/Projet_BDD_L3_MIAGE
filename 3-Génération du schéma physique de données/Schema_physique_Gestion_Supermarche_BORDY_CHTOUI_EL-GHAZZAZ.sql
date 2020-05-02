@@ -447,5 +447,32 @@ alter table PRODUIT
       
 
 
+      
+/*==============================================================*/
+/* Trigger : Produit                                            */
+/*==============================================================*/
+CREATE OR REPLACE TRIGGER trig_PrixTTC
+ BEFORE INSERT OR UPDATE ON PRODUIT
+ 
+FOR EACH ROW
+ BEGIN
+     :new.prixTTC := round((:new.prixHT + (:new.prixHT * :new.TAUXTVA)),2);
+ END;
+/
+
+/*==============================================================*/
+/* Trigger : LigneDeCommande                                    */
+/*==============================================================*/
+CREATE OR REPLACE TRIGGER trig_PrixVente
+BEFORE INSERT OR UPDATE ON LIGNECOMMANDE
+FOR EACH ROW
+DECLARE 
+    prixTTC FLOAT;
+   
+ BEGIN
+    SELECT PRIXTTC INTO PrixTTC FROM PRODUIT WHERE IDPRODUIT = :new.idproduit;  
+    :new.prixVente := round((:new.quantite * prixTTC),2);
+ END;
+/
 
 
