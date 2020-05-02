@@ -23,8 +23,23 @@ insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, 
 insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, pays) 
 	values(S_ADRESSE.nextval, 'Départemental 559', null, 'LES ISSAMBRES', '83380', 'France');
 insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, pays) 
-	values(S_ADRESSE.nextval, '515 rue de l\'industrie', null, 'Montpellier', '34070', 'France');
-
+	values(S_ADRESSE.nextval, '515 rue de l\'industrie', null, 'MONTPELIER', '34070', 'France');
+insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, pays) 
+	values(S_ADRESSE.nextval, '13 Rue Marx Dormoy 13', null, 'VENISSIEUX', '69200', 'France');
+insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, pays) 
+	values(S_ADRESSE.nextval, '26 Route de Paris', null, 'Pontault-Combault', '77340', 'France');
+insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, pays) 
+	values(S_ADRESSE.nextval, '480 Allée Des Cabedans', null, 'CAVAILLON', '84300', 'France');
+insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, pays) 
+	values(S_ADRESSE.nextval, '51 Boulevard de Strasbourg', null, 'PARIS', '75010', 'France');
+insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, pays) 
+	values(S_ADRESSE.nextval, '20 Route de la Justice', null, 'GAP', '05000', 'France');
+insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, pays) 
+	values(S_ADRESSE.nextval, '12, RUE ANSELME', null, 'SEINE-SAINT-DENIS', '93400', 'France');
+insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, pays) 
+	values(S_ADRESSE.nextval, 'Zone de la houssoye', null, 'BOIS-GRENIER', '59280', 'France');
+insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, pays) 
+	values(S_ADRESSE.nextval, '201, Avenue De L\'Ormea', null, 'MENTON', '06500', 'France');
 
 
 REM Insertion des clients
@@ -126,6 +141,23 @@ insert into Fournisseur(idFournisseur, idAdresse, nomFournisseur, mail, telephon
 	values(S_FOURNISSEUR.nextval, 11, 'NSDAfrance','nsda.france@orange.fr', '0494969455', 'Grossiste animalerie');
 insert into Fournisseur(idFournisseur, idAdresse, nomFournisseur, mail, telephone, descriptionFournisseur) 
 	values(S_FOURNISSEUR.nextval, 12, 'Hygiene Depot','contact@hygiene-depot.com', '0467578290', 'Grossiste hygiene et entretien');
+insert into Fournisseur(idFournisseur, idAdresse, nomFournisseur, mail, telephone, descriptionFournisseur) 
+	values(S_FOURNISSEUR.nextval, 13, 'AGIDRA','contact@agidra.com', '0478765656', 'Grossiste alimentaire');
+insert into Fournisseur(idFournisseur, idAdresse, nomFournisseur, mail, telephone, descriptionFournisseur) 
+	values(S_FOURNISSEUR.nextval, 14, 'MIAMLAND','contact@miamland.com', '0672409024', 'Grossiste alimentaire');
+insert into Fournisseur(idFournisseur, idAdresse, nomFournisseur, mail, telephone, descriptionFournisseur) 
+	values(S_FOURNISSEUR.nextval, 15, 'BERARD','contact@berard.com', '0490715574', 'Grossiste alimentaire');
+insert into Fournisseur(idFournisseur, idAdresse, nomFournisseur, mail, telephone, descriptionFournisseur) 
+	values(S_FOURNISSEUR.nextval, 16, 'DestockPlus','contact@destockplus.com', '0446952300', 'Grossiste general');
+insert into Fournisseur(idFournisseur, idAdresse, nomFournisseur, mail, telephone, descriptionFournisseur) 
+	values(S_FOURNISSEUR.nextval, 17, 'TRANSGOURMET','contact@dtransgouret.com', '0811656588', 'Grossiste alimentaire');
+insert into Fournisseur(idFournisseur, idAdresse, nomFournisseur, mail, telephone, descriptionFournisseur) 
+	values(S_FOURNISSEUR.nextval, 18, 'GRUPAK','contact@grupak.com', '0811656588', 'Grossiste non-alimentaire');
+insert into Fournisseur(idFournisseur, idAdresse, nomFournisseur, mail, telephone, descriptionFournisseur) 
+	values(S_FOURNISSEUR.nextval, 19, 'CHARLET','contact@charlet.com', '0811656588', 'Grossiste fruit & legumes');
+insert into Fournisseur(idFournisseur, idAdresse, nomFournisseur, mail, telephone, descriptionFournisseur) 
+	values(S_FOURNISSEUR.nextval, 20, 'LES PECHERIES','contact@lespecheries.com', '0493357138', 'Grossiste poissonnerie');
+
 
 REM Insertion des produits
 
