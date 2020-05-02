@@ -359,7 +359,7 @@ create table PRODUIT
    IDPRODUIT            NUMBER(6)            not null,
    IDFOURNISSEUR        NUMBER(6),
    IDCATEGORIE          NUMBER(6),
-   NOMPRODUIT           VARCHAR2(25)         not null,
+   NOMPRODUIT           VARCHAR2(50)         not null,
    POIDSPRODUIT         NUMBER(6,2),
    DESCRIPTIONPRODUIT   VARCHAR2(75),
    PRIXHT               NUMBER(5,2)          not null,
