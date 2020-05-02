@@ -21,9 +21,9 @@ insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, 
 insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, pays) 
 	values(S_ADRESSE.nextval, '38 boulevard du General de Gaulle', null, 'SAINT-JEAN-CAP-FERRAT', '06230', 'France');
 insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, pays) 
-	values(S_ADRESSE.nextval, 'Départemental 559', null, 'LES ISSAMBRES', '83380', 'France');
+	values(S_ADRESSE.nextval, 'Departemental 559', null, 'LES ISSAMBRES', '83380', 'France');
 insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, pays) 
-	values(S_ADRESSE.nextval, '515 rue de l\'industrie', null, 'MONTPELIER', '34070', 'France');
+	values(S_ADRESSE.nextval, '515 rue de lindustrie', null, 'MONTPELIER', '34070', 'France');
 insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, pays) 
 	values(S_ADRESSE.nextval, '13 Rue Marx Dormoy 13', null, 'VENISSIEUX', '69200', 'France');
 insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, pays) 
@@ -39,7 +39,7 @@ insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, 
 insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, pays) 
 	values(S_ADRESSE.nextval, 'Zone de la houssoye', null, 'BOIS-GRENIER', '59280', 'France');
 insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, pays) 
-	values(S_ADRESSE.nextval, '201, Avenue De L\'Ormea', null, 'MENTON', '06500', 'France');
+	values(S_ADRESSE.nextval, '201, Avenue De LOrmea', null, 'MENTON', '06500', 'France');
 
 
 REM Insertion des clients
@@ -154,7 +154,7 @@ insert into Fournisseur(idFournisseur, idAdresse, nomFournisseur, mail, telephon
 insert into Fournisseur(idFournisseur, idAdresse, nomFournisseur, mail, telephone, descriptionFournisseur) 
 	values(S_FOURNISSEUR.nextval, 18, 'GRUPAK','contact@grupak.com', '0811656588', 'Grossiste non-alimentaire');
 insert into Fournisseur(idFournisseur, idAdresse, nomFournisseur, mail, telephone, descriptionFournisseur) 
-	values(S_FOURNISSEUR.nextval, 19, 'CHARLET','contact@charlet.com', '0811656588', 'Grossiste fruit & legumes');
+	values(S_FOURNISSEUR.nextval, 19, 'CHARLET','contact@charlet.com', '0411656588', 'Grossiste fruit et legumes');
 insert into Fournisseur(idFournisseur, idAdresse, nomFournisseur, mail, telephone, descriptionFournisseur) 
 	values(S_FOURNISSEUR.nextval, 20, 'LES PECHERIES','contact@lespecheries.com', '0493357138', 'Grossiste poissonnerie');
 
