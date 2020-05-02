@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?PowerDesigner AppLocale="UTF16" ID="{710232EC-7ABC-4EEC-A56C-B90D1A8D3CB2}" Label="" LastModificationDate="1588269885" Name="Modèle_Logique_Données_BDD_Supermarche" Objects="168" Symbols="22" Target="ORACLE Version 11g" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" signature="PDM_DATA_MODEL_XML" version="15.1.0.2850"?>
+<?PowerDesigner AppLocale="UTF16" ID="{710232EC-7ABC-4EEC-A56C-B90D1A8D3CB2}" Label="" LastModificationDate="1588428248" Name="Modèle_Logique_Données_BDD_Supermarche" Objects="168" Symbols="24" Target="ORACLE Version 11g" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" signature="PDM_DATA_MODEL_XML" version="15.1.0.2850"?>
 <!-- Veuillez ne pas modifier ce fichier -->
 
 <Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
@@ -12,10 +12,10 @@
 <a:Code>MODELE_LOGIQUE_DONNEES_BDD_SUPERMARCHE</a:Code>
 <a:CreationDate>1588269831</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588269885</a:ModificationDate>
+<a:ModificationDate>1588428006</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {61E75397-CA78-49FE-8B72-6D828623A65C}
-DAT 1588269870
+DAT 1588428006
 ATT FOPT</a:History>
 <a:PackageOptionsText>[FolderOptions]
 
@@ -2538,9 +2538,9 @@ PhysOpts=</a:ModelOptionsText>
 <a:ObjectID>06FF6230-3471-421A-9E80-63E3539D6B98</a:ObjectID>
 <a:Name>Modèle_Entité_Association_BDD_Supermarche</a:Name>
 <a:Code>MODELE_ENTITE_ASSOCIATION_BDD_SUPERMARCHE</a:Code>
-<a:CreationDate>1588269870</a:CreationDate>
+<a:CreationDate>1588428006</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588269870</a:ModificationDate>
+<a:ModificationDate>1588428006</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:TargetStereotype/>
 <a:TargetID>61E75397-CA78-49FE-8B72-6D828623A65C</a:TargetID>
@@ -2568,7 +2568,7 @@ PhysOpts=</a:ModelOptionsText>
 <a:Code>DIAGRAMME_1</a:Code>
 <a:CreationDate>1588269869</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588269869</a:ModificationDate>
+<a:ModificationDate>1588428111</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {3FADB443-3E35-46E5-9470-DDEBA7EA1B6F}
 DAT 1588269870</a:History>
@@ -3172,6 +3172,7 @@ Shadow=0
 <a:PaperSource>15</a:PaperSource>
 <c:Symbols>
 <o:ReferenceSymbol Id="o6">
+<a:ModificationDate>1588428006</a:ModificationDate>
 <a:Rect>((-17718,11050), (4561,12088))</a:Rect>
 <a:ListOfPoints>((-17718,11050),(-6733,11050),(-6733,12088),(4561,12088))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
@@ -3192,8 +3193,9 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o10">
-<a:Rect>((-46949,11200), (-17568,13938))</a:Rect>
-<a:ListOfPoints>((-17568,11200),(-32043,11200),(-32043,13938),(-46949,13938))</a:ListOfPoints>
+<a:ModificationDate>1588428244</a:ModificationDate>
+<a:Rect>((-40874,11200), (-17568,12738))</a:Rect>
+<a:ListOfPoints>((-17568,11200),(-28556,11200),(-28556,12738),(-40874,12738))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>16744576</a:LineColor>
@@ -3212,6 +3214,7 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o13">
+<a:ModificationDate>1588428006</a:ModificationDate>
 <a:Rect>((-16383,33914), (16035,36699))</a:Rect>
 <a:ListOfPoints>((-16383,33914),(19,33914),(19,36699),(16035,36699))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
@@ -3232,8 +3235,9 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o17">
-<a:Rect>((4711,4882), (24362,12238))</a:Rect>
-<a:ListOfPoints>((4711,12238),(4711,4882),(24362,4882))</a:ListOfPoints>
+<a:ModificationDate>1588428248</a:ModificationDate>
+<a:Rect>((4711,5257), (17462,12238))</a:Rect>
+<a:ListOfPoints>((4711,12238),(4711,5257),(17462,5257))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>16744576</a:LineColor>
@@ -3252,8 +3256,9 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o20">
-<a:Rect>((-35069,25631), (-16233,34064))</a:Rect>
-<a:ListOfPoints>((-16233,34064),(-16233,25631),(-35069,25631))</a:ListOfPoints>
+<a:ModificationDate>1588428242</a:ModificationDate>
+<a:Rect>((-31319,22481), (-16233,34064))</a:Rect>
+<a:ListOfPoints>((-16233,34064),(-16233,22481),(-31319,22481))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>16744576</a:LineColor>
@@ -3272,6 +3277,7 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o23">
+<a:ModificationDate>1588428006</a:ModificationDate>
 <a:Rect>((-23338,36849), (16185,43021))</a:Rect>
 <a:ListOfPoints>((16185,36849),(16185,43021),(-23338,43021))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
@@ -3292,8 +3298,9 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o26">
-<a:Rect>((-34919,25781), (-23338,43021))</a:Rect>
-<a:ListOfPoints>((-34919,25781),(-23338,25781),(-23338,43021))</a:ListOfPoints>
+<a:ModificationDate>1588428242</a:ModificationDate>
+<a:Rect>((-32369,28631), (-23338,43021))</a:Rect>
+<a:ListOfPoints>((-32369,28631),(-32369,43021),(-23338,43021))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>16744576</a:LineColor>
@@ -3312,8 +3319,9 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o28">
-<a:Rect>((-46799,14088), (-23338,43021))</a:Rect>
-<a:ListOfPoints>((-46799,14088),(-23338,14088),(-23338,43021))</a:ListOfPoints>
+<a:ModificationDate>1588428244</a:ModificationDate>
+<a:Rect>((-40724,12888), (-24988,46696))</a:Rect>
+<a:ListOfPoints>((-40724,12888),(-40724,46696),(-24988,46696))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>16744576</a:LineColor>
@@ -3332,6 +3340,7 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o30">
+<a:ModificationDate>1588428006</a:ModificationDate>
 <a:Rect>((-11399,16369), (-7438,24451))</a:Rect>
 <a:ListOfPoints>((-7438,24451),(-7438,19942),(-11399,19942),(-11399,16369))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
@@ -3352,6 +3361,7 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o33">
+<a:ModificationDate>1588428006</a:ModificationDate>
 <a:Rect>((-13288,24601), (-7288,34918))</a:Rect>
 <a:ListOfPoints>((-7288,24601),(-7288,28939),(-13288,28939),(-13288,34918))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
@@ -3372,8 +3382,9 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o35">
-<a:Rect>((16035,20113), (20011,36699))</a:Rect>
-<a:ListOfPoints>((20011,20113),(20011,26961),(16035,26961),(16035,36699))</a:ListOfPoints>
+<a:ModificationDate>1588428203</a:ModificationDate>
+<a:Rect>((16035,20638), (17630,36699))</a:Rect>
+<a:ListOfPoints>((17630,20638),(17630,28836),(16035,28836),(16035,36699))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>16744576</a:LineColor>
@@ -3392,8 +3403,9 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o38">
-<a:Rect>((11905,20632), (19016,38818))</a:Rect>
-<a:ListOfPoints>((11905,38818),(11905,30470),(19016,30470),(19016,20632))</a:ListOfPoints>
+<a:ModificationDate>1588428205</a:ModificationDate>
+<a:Rect>((11905,21457), (13541,38818))</a:Rect>
+<a:ListOfPoints>((11905,38818),(11905,27320),(13541,27320),(13541,21457))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>16744576</a:LineColor>
@@ -3412,6 +3424,7 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:TableSymbol Id="o7">
+<a:ModificationDate>1588428006</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
 <a:Rect>((-25609,4420), (-9827,17680))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
@@ -3435,8 +3448,9 @@ LABL 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:TableSymbol>
 <o:TableSymbol Id="o18">
+<a:ModificationDate>1588428248</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
-<a:Rect>((16780,2635), (31944,7130))</a:Rect>
+<a:Rect>((9880,3010), (25044,7505))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
 <a:FillColor>16777136</a:FillColor>
 <a:ShadowColor>12632256</a:ShadowColor>
@@ -3458,8 +3472,9 @@ LABL 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:TableSymbol>
 <o:TableSymbol Id="o21">
+<a:ModificationDate>1588428242</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
-<a:Rect>((-42149,20462), (-27989,30801))</a:Rect>
+<a:Rect>((-38474,18362), (-24314,28701))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
 <a:FillColor>16777136</a:FillColor>
 <a:ShadowColor>12632256</a:ShadowColor>
@@ -3481,6 +3496,7 @@ LABL 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:TableSymbol>
 <o:TableSymbol Id="o15">
+<a:ModificationDate>1588428006</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
 <a:Rect>((8762,31043), (23308,42355))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
@@ -3504,6 +3520,7 @@ LABL 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:TableSymbol>
 <o:TableSymbol Id="o8">
+<a:ModificationDate>1588428006</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
 <a:Rect>((-3639,9354), (12761,14823))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
@@ -3527,8 +3544,9 @@ LABL 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:TableSymbol>
 <o:TableSymbol Id="o11">
+<a:ModificationDate>1588428244</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
-<a:Rect>((-55420,10230), (-38478,17647))</a:Rect>
+<a:Rect>((-49345,9030), (-32403,16447))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
 <a:FillColor>16777136</a:FillColor>
 <a:ShadowColor>12632256</a:ShadowColor>
@@ -3550,6 +3568,7 @@ LABL 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:TableSymbol>
 <o:TableSymbol Id="o14">
+<a:ModificationDate>1588428006</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
 <a:Rect>((-24043,30693), (-8723,37135))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
@@ -3573,6 +3592,7 @@ LABL 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:TableSymbol>
 <o:TableSymbol Id="o31">
+<a:ModificationDate>1588428006</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
 <a:Rect>((-14947,21717), (63,27185))</a:Rect>
 <a:AutoAdjustToText>0</a:AutoAdjustToText>
@@ -3597,6 +3617,7 @@ LABL 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:TableSymbol>
 <o:TableSymbol Id="o24">
+<a:ModificationDate>1588428006</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
 <a:Rect>((-30341,39313), (-16335,46730))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
@@ -3620,8 +3641,9 @@ LABL 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:TableSymbol>
 <o:TableSymbol Id="o36">
+<a:ModificationDate>1588428203</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
-<a:Rect>((12206,18385), (25826,22880))</a:Rect>
+<a:Rect>((10267,18910), (23115,23404))</a:Rect>
 <a:LineColor>11184640</a:LineColor>
 <a:FillColor>16777136</a:FillColor>
 <a:ShadowColor>12632256</a:ShadowColor>
@@ -3680,12 +3702,12 @@ DAT 1588269870</a:History>
 <a:Code>IDPRODUIT</a:Code>
 <a:CreationDate>1588269869</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588269869</a:ModificationDate>
+<a:ModificationDate>1588428164</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {5EDEF0F1-85AB-4DE2-9B6E-ABE2AA7859D7}
-DAT 1588269870</a:History>
-<a:DataType>NUMBER(6)</a:DataType>
-<a:Length>6</a:Length>
+DAT 1588269870
+ATT DTTP</a:History>
+<a:DataType>INTEGER</a:DataType>
 <a:Mandatory>1</a:Mandatory>
 <c:Sequence>
 <o:Sequence Ref="o52"/>
@@ -3697,12 +3719,12 @@ DAT 1588269870</a:History>
 <a:Code>IDFOURNISSEUR</a:Code>
 <a:CreationDate>1588269870</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588269870</a:ModificationDate>
+<a:ModificationDate>1588428164</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {12BA471B-5D33-4D9E-8241-C818725E852E},{0FB24434-E679-428B-839C-F70D185B8B80}
-DAT 1588269870</a:History>
-<a:DataType>NUMBER(6)</a:DataType>
-<a:Length>6</a:Length>
+DAT 1588269870
+ATT DTTP</a:History>
+<a:DataType>INTEGER</a:DataType>
 </o:Column>
 <o:Column Id="o54">
 <a:ObjectID>A3FD6F59-45F3-4625-ACCB-8AEAC64F16F8</a:ObjectID>
@@ -3710,12 +3732,12 @@ DAT 1588269870</a:History>
 <a:Code>IDCATEGORIE</a:Code>
 <a:CreationDate>1588269870</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588269870</a:ModificationDate>
+<a:ModificationDate>1588428164</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {CCCAEEF3-DEEA-4435-853D-CEB57AF690BD},{E89BFE46-2317-41CF-AD04-D0DE38FD6886}
-DAT 1588269870</a:History>
-<a:DataType>NUMBER(6)</a:DataType>
-<a:Length>6</a:Length>
+DAT 1588269870
+ATT DTTP</a:History>
+<a:DataType>INTEGER</a:DataType>
 </o:Column>
 <o:Column Id="o55">
 <a:ObjectID>6CDE2680-39EF-4149-9C91-FCB95630B6DE</a:ObjectID>
@@ -3737,13 +3759,11 @@ DAT 1588269870</a:History>
 <a:Code>POIDSPRODUIT</a:Code>
 <a:CreationDate>1588269869</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588269869</a:ModificationDate>
+<a:ModificationDate>1588428006</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {B6E1C464-3A2E-455D-A49D-DC4A78F03770}
 DAT 1588269870</a:History>
-<a:DataType>NUMBER(6,2)</a:DataType>
-<a:Length>6</a:Length>
-<a:Precision>2</a:Precision>
+<a:DataType>FLOAT</a:DataType>
 </o:Column>
 <o:Column Id="o57">
 <a:ObjectID>96638F97-9F48-45CE-AB62-0ED497FAA903</a:ObjectID>
@@ -3764,13 +3784,11 @@ DAT 1588269870</a:History>
 <a:Code>PRIXHT</a:Code>
 <a:CreationDate>1588269869</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588269869</a:ModificationDate>
+<a:ModificationDate>1588428006</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {1FB9E977-D837-44D5-8FD7-1578625E2A94}
 DAT 1588269870</a:History>
-<a:DataType>NUMBER(5,2)</a:DataType>
-<a:Length>5</a:Length>
-<a:Precision>2</a:Precision>
+<a:DataType>FLOAT</a:DataType>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
 <o:Column Id="o59">
@@ -3779,13 +3797,11 @@ DAT 1588269870</a:History>
 <a:Code>TAUXTVA</a:Code>
 <a:CreationDate>1588269869</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588269869</a:ModificationDate>
+<a:ModificationDate>1588428006</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {BEB11B71-D660-497E-B4F6-71EC64954148}
 DAT 1588269870</a:History>
-<a:DataType>NUMBER(1,3)</a:DataType>
-<a:Length>1</a:Length>
-<a:Precision>3</a:Precision>
+<a:DataType>FLOAT</a:DataType>
 </o:Column>
 <o:Column Id="o60">
 <a:ObjectID>5CE46F3F-1867-4580-A29F-E795B34B20C1</a:ObjectID>
@@ -3793,13 +3809,11 @@ DAT 1588269870</a:History>
 <a:Code>PRIXTTC</a:Code>
 <a:CreationDate>1588269869</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588269869</a:ModificationDate>
+<a:ModificationDate>1588428006</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {E92F1AB1-D6F7-4CC3-A52D-0CB1639ED56C}
 DAT 1588269870</a:History>
-<a:DataType>NUMBER(5,2)</a:DataType>
-<a:Length>5</a:Length>
-<a:Precision>2</a:Precision>
+<a:DataType>FLOAT</a:DataType>
 </o:Column>
 <o:Column Id="o61">
 <a:ObjectID>6FACA900-E34B-446C-9992-277390BBB8E3</a:ObjectID>
@@ -4058,12 +4072,12 @@ DAT 1588269870</a:History>
 <a:Code>IDEMPLOYE</a:Code>
 <a:CreationDate>1588269869</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588269869</a:ModificationDate>
+<a:ModificationDate>1588428217</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {038CC2D5-5B93-4BE1-93C6-920F65975B32}
-DAT 1588269870</a:History>
-<a:DataType>NUMBER(6)</a:DataType>
-<a:Length>6</a:Length>
+DAT 1588269870
+ATT DTTP</a:History>
+<a:DataType>INTEGER</a:DataType>
 <a:Mandatory>1</a:Mandatory>
 <c:Sequence>
 <o:Sequence Ref="o79"/>
@@ -4075,12 +4089,12 @@ DAT 1588269870</a:History>
 <a:Code>IDADRESSE</a:Code>
 <a:CreationDate>1588269870</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588269870</a:ModificationDate>
+<a:ModificationDate>1588428217</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {0C3F5E37-81C4-4B40-AEEA-CD63B30CAB66},{A8E02EEE-9645-48FD-BD9B-57EF43B6A663}
-DAT 1588269870</a:History>
-<a:DataType>NUMBER(6)</a:DataType>
-<a:Length>6</a:Length>
+DAT 1588269870
+ATT DTTP</a:History>
+<a:DataType>INTEGER</a:DataType>
 </o:Column>
 <o:Column Id="o81">
 <a:ObjectID>8A473F25-BB01-4F9A-A459-8D927A0D922D</a:ObjectID>
@@ -4143,13 +4157,11 @@ DAT 1588269870</a:History>
 <a:Code>SALAIRE</a:Code>
 <a:CreationDate>1588269869</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588269869</a:ModificationDate>
+<a:ModificationDate>1588428006</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {C6E9D15B-3C63-4AF2-9D2C-2E7A9AEF144B}
 DAT 1588269870</a:History>
-<a:DataType>NUMBER(15,2)</a:DataType>
-<a:Length>15</a:Length>
-<a:Precision>2</a:Precision>
+<a:DataType>FLOAT</a:DataType>
 </o:Column>
 <o:Column Id="o86">
 <a:ObjectID>4D99FB55-997A-43B1-B0BA-E3A6565B2F19</a:ObjectID>
@@ -4269,12 +4281,12 @@ DAT 1588269870</a:History>
 <a:Code>IDCLIENT</a:Code>
 <a:CreationDate>1588269869</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588269869</a:ModificationDate>
+<a:ModificationDate>1588428054</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {90E6C179-4443-4C1A-990A-DA97CD3F44F1}
-DAT 1588269870</a:History>
-<a:DataType>NUMBER(6)</a:DataType>
-<a:Length>6</a:Length>
+DAT 1588269870
+ATT DTTP</a:History>
+<a:DataType>INTEGER</a:DataType>
 <a:Mandatory>1</a:Mandatory>
 <c:Sequence>
 <o:Sequence Ref="o94"/>
@@ -4286,12 +4298,12 @@ DAT 1588269870</a:History>
 <a:Code>IDADRESSE</a:Code>
 <a:CreationDate>1588269870</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588269870</a:ModificationDate>
+<a:ModificationDate>1588428054</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {0C3F5E37-81C4-4B40-AEEA-CD63B30CAB66},{40ACC08D-790E-491B-A6AC-89C130342B1D}
-DAT 1588269870</a:History>
-<a:DataType>NUMBER(6)</a:DataType>
-<a:Length>6</a:Length>
+DAT 1588269870
+ATT DTTP</a:History>
+<a:DataType>INTEGER</a:DataType>
 </o:Column>
 <o:Column Id="o96">
 <a:ObjectID>3D380134-FEA5-4CD6-9571-8844C63414E1</a:ObjectID>
@@ -4299,12 +4311,12 @@ DAT 1588269870</a:History>
 <a:Code>IDCARTEFIDELITE</a:Code>
 <a:CreationDate>1588269870</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588269870</a:ModificationDate>
+<a:ModificationDate>1588428054</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {47600DAF-9B47-41CB-BB9B-CF855DB9D10F},{7ACD9ED7-0C4B-4EF9-945F-B681452C318A}
-DAT 1588269870</a:History>
-<a:DataType>NUMBER(6)</a:DataType>
-<a:Length>6</a:Length>
+DAT 1588269870
+ATT DTTP</a:History>
+<a:DataType>INTEGER</a:DataType>
 </o:Column>
 <o:Column Id="o97">
 <a:ObjectID>1DC08104-1E1B-408D-B507-92703D0EE01D</a:ObjectID>
@@ -4513,12 +4525,12 @@ DAT 1588269870</a:History>
 <a:Code>IDCATEGORIE</a:Code>
 <a:CreationDate>1588269869</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588269869</a:ModificationDate>
+<a:ModificationDate>1588428126</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {CCCAEEF3-DEEA-4435-853D-CEB57AF690BD}
-DAT 1588269870</a:History>
-<a:DataType>NUMBER(6)</a:DataType>
-<a:Length>6</a:Length>
+DAT 1588269870
+ATT DTTP</a:History>
+<a:DataType>INTEGER</a:DataType>
 <a:Mandatory>1</a:Mandatory>
 <c:Sequence>
 <o:Sequence Ref="o112"/>
@@ -4530,12 +4542,12 @@ DAT 1588269870</a:History>
 <a:Code>IDRAYON</a:Code>
 <a:CreationDate>1588269870</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588269870</a:ModificationDate>
+<a:ModificationDate>1588428126</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {AE83F9B6-92AF-4B90-9C95-D0E19CBD0539},{82624F24-2709-4163-92AD-3BFED05C00E3}
-DAT 1588269870</a:History>
-<a:DataType>NUMBER(6)</a:DataType>
-<a:Length>6</a:Length>
+DAT 1588269870
+ATT DTTP</a:History>
+<a:DataType>INTEGER</a:DataType>
 </o:Column>
 <o:Column Id="o114">
 <a:ObjectID>5A678F1D-9A4D-42DC-9170-C6A0041E9B9B</a:ObjectID>
@@ -4655,12 +4667,12 @@ DAT 1588269870</a:History>
 <a:Code>IDFOURNISSEUR</a:Code>
 <a:CreationDate>1588269869</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588269869</a:ModificationDate>
+<a:ModificationDate>1588428177</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {12BA471B-5D33-4D9E-8241-C818725E852E}
-DAT 1588269870</a:History>
-<a:DataType>NUMBER(6)</a:DataType>
-<a:Length>6</a:Length>
+DAT 1588269870
+ATT DTTP</a:History>
+<a:DataType>INTEGER</a:DataType>
 <a:Mandatory>1</a:Mandatory>
 <c:Sequence>
 <o:Sequence Ref="o122"/>
@@ -4672,12 +4684,12 @@ DAT 1588269870</a:History>
 <a:Code>IDADRESSE</a:Code>
 <a:CreationDate>1588269870</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588269870</a:ModificationDate>
+<a:ModificationDate>1588428177</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {0C3F5E37-81C4-4B40-AEEA-CD63B30CAB66},{D1C6C232-4AC1-4A0F-B8B8-2875DAD6DFBC}
-DAT 1588269870</a:History>
-<a:DataType>NUMBER(6)</a:DataType>
-<a:Length>6</a:Length>
+DAT 1588269870
+ATT DTTP</a:History>
+<a:DataType>INTEGER</a:DataType>
 </o:Column>
 <o:Column Id="o124">
 <a:ObjectID>4E803DC6-4F85-4503-8452-2D591C8DCB79</a:ObjectID>
@@ -4823,12 +4835,12 @@ DAT 1588269870</a:History>
 <a:Code>IDCOMMANDE</a:Code>
 <a:CreationDate>1588269869</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588269869</a:ModificationDate>
+<a:ModificationDate>1588428232</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {98248DBD-50A7-47B2-9653-18E3043FAEA9}
-DAT 1588269870</a:History>
-<a:DataType>NUMBER(6)</a:DataType>
-<a:Length>6</a:Length>
+DAT 1588269870
+ATT DTTP</a:History>
+<a:DataType>INTEGER</a:DataType>
 <a:Mandatory>1</a:Mandatory>
 <c:Sequence>
 <o:Sequence Ref="o134"/>
@@ -4840,12 +4852,12 @@ DAT 1588269870</a:History>
 <a:Code>IDEMPLOYE</a:Code>
 <a:CreationDate>1588269870</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588269870</a:ModificationDate>
+<a:ModificationDate>1588428232</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {038CC2D5-5B93-4BE1-93C6-920F65975B32},{FA3A0D41-2804-4504-BBE9-35A1B0C03484}
-DAT 1588269870</a:History>
-<a:DataType>NUMBER(6)</a:DataType>
-<a:Length>6</a:Length>
+DAT 1588269870
+ATT DTTP</a:History>
+<a:DataType>INTEGER</a:DataType>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
 <o:Column Id="o136">
@@ -4854,12 +4866,12 @@ DAT 1588269870</a:History>
 <a:Code>IDCLIENT</a:Code>
 <a:CreationDate>1588269870</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588269870</a:ModificationDate>
+<a:ModificationDate>1588428232</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {90E6C179-4443-4C1A-990A-DA97CD3F44F1},{4FB35C8D-FB3B-4BC6-8795-0AD7E3B82AB3}
-DAT 1588269870</a:History>
-<a:DataType>NUMBER(6)</a:DataType>
-<a:Length>6</a:Length>
+DAT 1588269870
+ATT DTTP</a:History>
+<a:DataType>INTEGER</a:DataType>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
 <o:Column Id="o137">
@@ -5002,12 +5014,12 @@ DAT 1588269870</a:History>
 <a:Code>IDADRESSE</a:Code>
 <a:CreationDate>1588269869</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588269869</a:ModificationDate>
+<a:ModificationDate>1588428034</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {0C3F5E37-81C4-4B40-AEEA-CD63B30CAB66}
-DAT 1588269870</a:History>
-<a:DataType>NUMBER(6)</a:DataType>
-<a:Length>6</a:Length>
+DAT 1588269870
+ATT DTTP</a:History>
+<a:DataType>INTEGER</a:DataType>
 <a:Mandatory>1</a:Mandatory>
 <c:Sequence>
 <o:Sequence Ref="o147"/>
@@ -5147,12 +5159,12 @@ DAT 1588269870</a:History>
 <a:Code>IDCARTEFIDELITE</a:Code>
 <a:CreationDate>1588269869</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588269869</a:ModificationDate>
+<a:ModificationDate>1588428070</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {47600DAF-9B47-41CB-BB9B-CF855DB9D10F}
-DAT 1588269870</a:History>
-<a:DataType>NUMBER(6)</a:DataType>
-<a:Length>6</a:Length>
+DAT 1588269870
+ATT DTTP</a:History>
+<a:DataType>INTEGER</a:DataType>
 <a:Mandatory>1</a:Mandatory>
 <c:Sequence>
 <o:Sequence Ref="o157"/>
@@ -5164,12 +5176,12 @@ DAT 1588269870</a:History>
 <a:Code>IDCLIENT</a:Code>
 <a:CreationDate>1588269870</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588269870</a:ModificationDate>
+<a:ModificationDate>1588428070</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {90E6C179-4443-4C1A-990A-DA97CD3F44F1},{D2B611B8-C7FA-497C-A0F3-2D9B63E5F635}
-DAT 1588269870</a:History>
-<a:DataType>NUMBER(6)</a:DataType>
-<a:Length>6</a:Length>
+DAT 1588269870
+ATT DTTP</a:History>
+<a:DataType>INTEGER</a:DataType>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
 <o:Column Id="o159">
@@ -5275,12 +5287,12 @@ DAT 1588269870</a:History>
 <a:Code>IDPRODUIT</a:Code>
 <a:CreationDate>1588269870</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588269870</a:ModificationDate>
+<a:ModificationDate>1588428147</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {5EDEF0F1-85AB-4DE2-9B6E-ABE2AA7859D7},{08FB5E27-0994-4FB2-A793-E511375CBA92}
-DAT 1588269870</a:History>
-<a:DataType>NUMBER(6)</a:DataType>
-<a:Length>6</a:Length>
+DAT 1588269870
+ATT DTTP</a:History>
+<a:DataType>INTEGER</a:DataType>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
 <o:Column Id="o166">
@@ -5289,12 +5301,12 @@ DAT 1588269870</a:History>
 <a:Code>IDCOMMANDE</a:Code>
 <a:CreationDate>1588269870</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588269870</a:ModificationDate>
+<a:ModificationDate>1588428147</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {98248DBD-50A7-47B2-9653-18E3043FAEA9},{1349BEC9-0937-4D40-90B1-EB4D13AC783A}
-DAT 1588269870</a:History>
-<a:DataType>NUMBER(6)</a:DataType>
-<a:Length>6</a:Length>
+DAT 1588269870
+ATT DTTP</a:History>
+<a:DataType>INTEGER</a:DataType>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
 <o:Column Id="o167">
@@ -5316,13 +5328,11 @@ DAT 1588269870</a:History>
 <a:Code>PRIXVENTE</a:Code>
 <a:CreationDate>1588269869</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588269869</a:ModificationDate>
+<a:ModificationDate>1588428006</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {42DD390E-C823-4743-A997-A11A59E0CD67}
 DAT 1588269870</a:History>
-<a:DataType>NUMBER(10,2)</a:DataType>
-<a:Length>10</a:Length>
-<a:Precision>2</a:Precision>
+<a:DataType>FLOAT</a:DataType>
 </o:Column>
 </c:Columns>
 <c:Keys>
@@ -5515,11 +5525,10 @@ DAT 1588269870</a:History>
 <a:Code>PASSER</a:Code>
 <a:CreationDate>1588269869</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588269869</a:ModificationDate>
+<a:ModificationDate>1588428006</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {4FB35C8D-FB3B-4BC6-8795-0AD7E3B82AB3}
-DAT 1588269870
-ATT MAND</a:History>
+DAT 1588269870</a:History>
 <a:Cardinality>0..*</a:Cardinality>
 <a:UpdateConstraint>1</a:UpdateConstraint>
 <a:DeleteConstraint>1</a:DeleteConstraint>
@@ -5592,11 +5601,10 @@ DAT 1588269870</a:History>
 <a:Code>ATTRIBUER</a:Code>
 <a:CreationDate>1588269869</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588269869</a:ModificationDate>
+<a:ModificationDate>1588428006</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {FA3A0D41-2804-4504-BBE9-35A1B0C03484}
-DAT 1588269870
-ATT MAND</a:History>
+DAT 1588269870</a:History>
 <a:Cardinality>0..*</a:Cardinality>
 <a:UpdateConstraint>1</a:UpdateConstraint>
 <a:DeleteConstraint>1</a:DeleteConstraint>
@@ -5707,11 +5715,10 @@ DAT 1588269870</a:History>
 <a:Code>DETENIR2</a:Code>
 <a:CreationDate>1588269869</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588269869</a:ModificationDate>
+<a:ModificationDate>1588428006</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
 <a:History>ORG {D2B611B8-C7FA-497C-A0F3-2D9B63E5F635}
-DAT 1588269870
-ATT MAND</a:History>
+DAT 1588269870</a:History>
 <a:Cardinality>0..1</a:Cardinality>
 <a:UpdateConstraint>1</a:UpdateConstraint>
 <a:DeleteConstraint>1</a:DeleteConstraint>

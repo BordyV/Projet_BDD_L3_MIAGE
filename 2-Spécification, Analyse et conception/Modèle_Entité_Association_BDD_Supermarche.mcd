@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?PowerDesigner AppLocale="UTF16" ID="{61E75397-CA78-49FE-8B72-6D828623A65C}" Label="" LastModificationDate="1588269878" Name="Modèle_Entité_Association_BDD_Supermarche" Objects="155" Symbols="39" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" signature="CDM_DATA_MODEL_XML" version="15.1.0.2850"?>
+<?PowerDesigner AppLocale="UTF16" ID="{61E75397-CA78-49FE-8B72-6D828623A65C}" Label="" LastModificationDate="1588427948" Name="Modèle_Entité_Association_BDD_Supermarche" Objects="155" Symbols="39" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" signature="CDM_DATA_MODEL_XML" version="15.1.0.2850"?>
 <!-- Veuillez ne pas modifier ce fichier -->
 
 <Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
@@ -1213,7 +1213,7 @@ Shadow=0</a:DisplayPreferences>
 <o:AssociationLinkSymbol Id="o8">
 <a:CreationDate>1587478088</a:CreationDate>
 <a:ModificationDate>1588171349</a:ModificationDate>
-<a:Rect>((-933,12062), (8847,17821))</a:Rect>
+<a:Rect>((-933,12062), (8809,17821))</a:Rect>
 <a:ListOfPoints>((8809,12062),(8809,17821),(-933,17821))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>0</a:ArrowStyle>
@@ -1339,7 +1339,7 @@ CARD 0 Arial,8,N</a:FontList>
 <o:AssociationLinkSymbol Id="o28">
 <a:CreationDate>1587479065</a:CreationDate>
 <a:ModificationDate>1588251890</a:ModificationDate>
-<a:Rect>((-13161,16369), (-7438,24451))</a:Rect>
+<a:Rect>((-13199,16369), (-7438,24451))</a:Rect>
 <a:ListOfPoints>((-11399,16369),(-11399,19942),(-7438,19942),(-7438,24451))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>0</a:ArrowStyle>
@@ -1444,7 +1444,7 @@ CARD 0 Arial,8,N</a:FontList>
 <o:AssociationLinkSymbol Id="o43">
 <a:CreationDate>1587480715</a:CreationDate>
 <a:ModificationDate>1588171508</a:ModificationDate>
-<a:Rect>((-20075,24053), (-17430,34481))</a:Rect>
+<a:Rect>((-20075,24053), (-17468,34481))</a:Rect>
 <a:ListOfPoints>((-19230,34481),(-19230,27913),(-20075,27913),(-20075,24053))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>0</a:ArrowStyle>
@@ -1528,7 +1528,7 @@ CARD 0 Arial,8,N</a:FontList>
 <o:AssociationLinkSymbol Id="o55">
 <a:CreationDate>1587481502</a:CreationDate>
 <a:ModificationDate>1588163363</a:ModificationDate>
-<a:Rect>((8942,25702), (13705,38818))</a:Rect>
+<a:Rect>((8942,25702), (13667,38818))</a:Rect>
 <a:ListOfPoints>((11905,38818),(11905,30470),(8942,30470),(8942,25702))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>0</a:ArrowStyle>
@@ -1550,8 +1550,8 @@ CARD 0 Arial,8,N</a:FontList>
 <a:CreationDate>1587481968</a:CreationDate>
 <a:ModificationDate>1588171312</a:ModificationDate>
 <a:SourceTextOffset>(975, 538)</a:SourceTextOffset>
-<a:Rect>((-32997,37465), (-18487,41114))</a:Rect>
-<a:ListOfPoints>((-19463,41114),(-20339,37608),(-32997,37608))</a:ListOfPoints>
+<a:Rect>((-32997,37428), (-17588,41114))</a:Rect>
+<a:ListOfPoints>((-19463,41114),(-19463,37608),(-32997,37608))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>0</a:ArrowStyle>
 <a:LineColor>16744576</a:LineColor>
@@ -1571,7 +1571,7 @@ CARD 0 Arial,8,N</a:FontList>
 <o:AssociationLinkSymbol Id="o60">
 <a:CreationDate>1587481968</a:CreationDate>
 <a:ModificationDate>1588171294</a:ModificationDate>
-<a:Rect>((-39124,22942), (-33072,35959))</a:Rect>
+<a:Rect>((-39086,22942), (-33072,35959))</a:Rect>
 <a:ListOfPoints>((-37324,22942),(-37324,32349),(-33072,32349),(-33072,35959))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>0</a:ArrowStyle>
@@ -2997,11 +2997,9 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>POIDSPRODUIT</a:Code>
 <a:CreationDate>1588164398</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588171125</a:ModificationDate>
+<a:ModificationDate>1588427885</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
-<a:DataType>DC6,2</a:DataType>
-<a:Length>6</a:Length>
-<a:Precision>2</a:Precision>
+<a:DataType>F</a:DataType>
 </o:DataItem>
 <o:DataItem Id="o95">
 <a:ObjectID>E3DB1548-91A9-442B-9EF0-8B7EF1196E00</a:ObjectID>
@@ -3020,11 +3018,9 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>PRIXHT</a:Code>
 <a:CreationDate>1588164398</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588171192</a:ModificationDate>
+<a:ModificationDate>1588427885</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
-<a:DataType>DC5,2</a:DataType>
-<a:Length>5</a:Length>
-<a:Precision>2</a:Precision>
+<a:DataType>F</a:DataType>
 </o:DataItem>
 <o:DataItem Id="o99">
 <a:ObjectID>4C8678C8-BB81-4AAB-8E03-4AE7EFAFC99A</a:ObjectID>
@@ -3032,11 +3028,9 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>TAUXTVA</a:Code>
 <a:CreationDate>1588164398</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588171192</a:ModificationDate>
+<a:ModificationDate>1588427867</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
-<a:DataType>DC1,3</a:DataType>
-<a:Length>1</a:Length>
-<a:Precision>3</a:Precision>
+<a:DataType>F</a:DataType>
 </o:DataItem>
 <o:DataItem Id="o101">
 <a:ObjectID>3C2D1A03-8728-45D9-9D82-9FD8FFF3A5E4</a:ObjectID>
@@ -3044,11 +3038,9 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>PRIXTTC</a:Code>
 <a:CreationDate>1588164398</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588171192</a:ModificationDate>
+<a:ModificationDate>1588427867</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
-<a:DataType>DC5,2</a:DataType>
-<a:Length>5</a:Length>
-<a:Precision>2</a:Precision>
+<a:DataType>F</a:DataType>
 </o:DataItem>
 <o:DataItem Id="o103">
 <a:ObjectID>2892C592-FCE5-4ECD-B1D8-A317C6044E1E</a:ObjectID>
@@ -3128,11 +3120,9 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>SALAIRE</a:Code>
 <a:CreationDate>1588165074</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588170528</a:ModificationDate>
+<a:ModificationDate>1588427930</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
-<a:DataType>DC15,2</a:DataType>
-<a:Length>15</a:Length>
-<a:Precision>2</a:Precision>
+<a:DataType>F</a:DataType>
 </o:DataItem>
 <o:DataItem Id="o110">
 <a:ObjectID>FAB81818-88EE-4424-BE11-A2707A08EEEF</a:ObjectID>
@@ -3240,11 +3230,9 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>PRIXVENTE</a:Code>
 <a:CreationDate>1588165493</a:CreationDate>
 <a:Creator>bordy</a:Creator>
-<a:ModificationDate>1588249945</a:ModificationDate>
+<a:ModificationDate>1588427948</a:ModificationDate>
 <a:Modifier>bordy</a:Modifier>
-<a:DataType>DC10,2</a:DataType>
-<a:Length>10</a:Length>
-<a:Precision>2</a:Precision>
+<a:DataType>F</a:DataType>
 </o:DataItem>
 <o:DataItem Id="o161">
 <a:ObjectID>B3B2E76B-84A9-458C-AC57-9277493A1528</a:ObjectID>
