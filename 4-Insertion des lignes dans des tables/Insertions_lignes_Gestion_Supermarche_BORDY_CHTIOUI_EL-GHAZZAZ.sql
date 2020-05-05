@@ -261,23 +261,23 @@ insert into Commande(idCommande, idEmploye, idClient, dateCommande, statutComman
 
 REM Insertion des lignes de commandes
 
-insert into LigneCommande(idProduit, idCommmande, quantite, prixVente) 
+insert into LigneCommande(idProduit, idCommande, quantite) 
 	values(4,1,3);
-insert into LigneCommande(idProduit, idCommmande, quantite, prixVente) 
+insert into LigneCommande(idProduit, idCommande, quantite) 
 	values(6,1,4);
-insert into LigneCommande(idProduit, idCommmande, quantite, prixVente) 
+insert into LigneCommande(idProduit, idCommande, quantite) 
 	values(10,2,2);
-insert into LigneCommande(idProduit, idCommmande, quantite, prixVente) 
+insert into LigneCommande(idProduit, idCommande, quantite) 
 	values(8,3,1);
-insert into LigneCommande(idProduit, idCommmande, quantite, prixVente) 
+insert into LigneCommande(idProduit, idCommande, quantite) 
 	values(1,4,5);
-insert into LigneCommande(idProduit, idCommmande, quantite, prixVente) 
+insert into LigneCommande(idProduit, idCommande, quantite) 
 	values(2,4,2);
-insert into LigneCommande(idProduit, idCommmande, quantite, prixVente) 
+insert into LigneCommande(idProduit, idCommande, quantite) 
 	values(3,4,3);
-insert into LigneCommande(idProduit, idCommmande, quantite, prixVente) 
+insert into LigneCommande(idProduit, idCommande, quantite) 
 	values(5,5,1);
-insert into LigneCommande(idProduit, idCommmande, quantite, prixVente) 
+insert into LigneCommande(idProduit, idCommande, quantite) 
 	values(7,6,1);
-insert into LigneCommande(idProduit, idCommmande, quantite, prixVente) 
+insert into LigneCommande(idProduit, idCommande, quantite) 
 	values(9,7,3);
