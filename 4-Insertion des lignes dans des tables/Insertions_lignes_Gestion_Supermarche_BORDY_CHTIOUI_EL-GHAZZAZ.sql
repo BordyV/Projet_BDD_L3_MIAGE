@@ -208,25 +208,25 @@ insert into Produit(idProduit, idFournisseur, idCategorie, nomProduit, poidsProd
 REM Insertion des employees
 
 insert into Employe(idEmploye, idAdresse, nom, prenom, mail, telephone, salaire, genre, dateNaissance) 
-	values(S_CLIENT.nextval, 21, 'Roson', 'Carla', 'carla.roson@drive.fr', '0756841235', 19637.00, 'Femme', '26-01-1998');
+	values(S_Employe.nextval, 21, 'Roson', 'Carla', 'carla.roson@drive.fr', '0756841235', 19637.00, 'Femme', '26-01-1998');
 insert into Employe(idEmploye, idAdresse, nom, prenom, mail, telephone, salaire, genre, dateNaissance) 
-	values(S_CLIENT.nextval, 22, 'Trager', 'Kyle', 'kyle.trager@drive.fr', '0714587962', 21947.18, 'Homme', '17-02-1991');
+	values(S_Employe.nextval, 22, 'Trager', 'Kyle', 'kyle.trager@drive.fr', '0714587962', 21947.18, 'Homme', '17-02-1991');
 insert into Employe(idEmploye, idAdresse, nom, prenom, mail, telephone, salaire, genre, dateNaissance) 
-	values(S_CLIENT.nextval, 23, 'Queen', 'Oliver', 'oliver.queen@drive.fr', '0714587982', 21947.18, 'Homme', '28-04-1985');
+	values(S_Employe.nextval, 23, 'Queen', 'Oliver', 'oliver.queen@drive.fr', '0714587982', 21947.18, 'Homme', '28-04-1985');
 insert into Employe(idEmploye, idAdresse, nom, prenom, mail, telephone, salaire, genre, dateNaissance) 
-	values(S_CLIENT.nextval, 24, 'Joestar', 'Joseph', 'joseph.joestar@drive.fr', '0615582962', 21947.18, 'Homme', '10-12-1971');
+	values(S_Employe.nextval, 24, 'Joestar', 'Joseph', 'joseph.joestar@drive.fr', '0615582962', 21947.18, 'Homme', '10-12-1971');
 insert into Employe(idEmploye, idAdresse, nom, prenom, mail, telephone, salaire, genre, dateNaissance) 
-	values(S_CLIENT.nextval, 25, 'Montana', 'Hannah', 'hannah.montana@drive.fr', '0714787362', 19637.00, 'Femme', '20-08-1994');
+	values(S_Employe.nextval, 25, 'Montana', 'Hannah', 'hannah.montana@drive.fr', '0714787362', 19637.00, 'Femme', '20-08-1994');
 insert into Employe(idEmploye, idAdresse, nom, prenom, mail, telephone, salaire, genre, dateNaissance) 
-	values(S_CLIENT.nextval, 26, 'Cooper', 'Lilie', 'lilie.cooper@drive.fr', '0644287962', 19637.00, 'Femme', '27-05-1981');
+	values(S_Employe.nextval, 26, 'Cooper', 'Lilie', 'lilie.cooper@drive.fr', '0644287962', 19637.00, 'Femme', '27-05-1981');
 insert into Employe(idEmploye, idAdresse, nom, prenom, mail, telephone, salaire, genre, dateNaissance) 
-	values(S_CLIENT.nextval, 27, 'Hofstadter', 'Howard', 'howard.hofstadter@drive.fr', '0718599962', 21947.18, 'Homme', '11-01-1985');
+	values(S_Employe.nextval, 27, 'Hofstadter', 'Howard', 'howard.hofstadter@drive.fr', '0718599962', 21947.18, 'Homme', '11-01-1985');
 insert into Employe(idEmploye, idAdresse, nom, prenom, mail, telephone, salaire, genre, dateNaissance) 
-	values(S_CLIENT.nextval, 28, 'Fara-Fowler', 'Amy', 'amy.fara@drive.fr', '0619594932', 19637.00, 'Femme', '18-10-1983');
+	values(S_Employe.nextval, 28, 'Fara-Fowler', 'Amy', 'amy.fara@drive.fr', '0619594932', 19637.00, 'Femme', '18-10-1983');
 insert into Employe(idEmploye, idAdresse, nom, prenom, mail, telephone, salaire, genre, dateNaissance) 
-	values(S_CLIENT.nextval, 29, 'Koothrapoli', 'Rajesh', 'rajesh.koothrapoli@drive.fr', '0619594932', 21947.18, 'Homme', '03-11-1984');
+	values(S_Employe.nextval, 29, 'Koothrapoli', 'Rajesh', 'rajesh.koothrapoli@drive.fr', '0619594932', 21947.18, 'Homme', '03-11-1984');
 insert into Employe(idEmploye, idAdresse, nom, prenom, mail, telephone, salaire, genre, dateNaissance) 
-	values(S_CLIENT.nextval, 30, 'McKenzie', 'Emma', 'emma.mckenzie@drive.fr', '0779594212', 19637.00, 'Femme', '13-07-1987');
+	values(S_Employe.nextval, 30, 'McKenzie', 'Emma', 'emma.mckenzie@drive.fr', '0779594212', 19637.00, 'Femme', '13-07-1987');
 
 
 
