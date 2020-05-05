@@ -21,7 +21,7 @@ insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, 
 insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, pays) 
 	values(S_ADRESSE.nextval, '40  boulevard Aristide Briand', null, 'LE CANNET', '06110', 'France');
 insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, pays) 
-	values(S_ADRESSE.nextval, '38 boulevard du General de Gaulle', null, 'SAINT-JEAN-CAP-FERRAT', '06230', 'France');
+	values(S_ADRESSE.nextval, '38 boulevard du General de Gaulle', null, 'SAINT-JEAN-CAP-FERRAT', '06230', 'France');    
 insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, pays) 
 	values(S_ADRESSE.nextval, 'Departemental 559', null, 'LES ISSAMBRES', '83380', 'France');
 insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, pays) 
@@ -41,7 +41,27 @@ insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, 
 insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, pays) 
 	values(S_ADRESSE.nextval, 'Zone de la houssoye', null, 'BOIS-GRENIER', '59280', 'France');
 insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, pays) 
-	values(S_ADRESSE.nextval, '201, Avenue De LOrmea', null, 'MENTON', '06500', 'France');
+	values(S_ADRESSE.nextval, '201, Avenue De LOrmea', null, 'MENTON', '06500', 'France');    
+insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, pays) 
+	values(S_ADRESSE.nextval, '4 avenue denis semeria', null, 'NICE', '06200', 'France');
+insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, pays) 
+	values(S_ADRESSE.nextval, '2 avenue du château', null, 'LA TRINITE', '06340', 'France');
+insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, pays) 
+	values(S_ADRESSE.nextval, '13 Rue Laurendeau', null, 'SAINT-LAURENT-DU-VAR', '06700', 'France');
+insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, pays) 
+	values(S_ADRESSE.nextval, '21 Route de Napoleon', null, 'VILLEFRANCE-SUR-MER', '06230', 'France');
+insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, pays) 
+	values(S_ADRESSE.nextval, '230 forêt de peyniblou', null, 'TOURETTE-LEVENS', '06990', 'France');
+insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, pays) 
+	values(S_ADRESSE.nextval, '51 Boulevard Saint Roch', null, 'NICE', '06100', 'France');
+insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, pays) 
+	values(S_ADRESSE.nextval, '48 avenue de la bornala', null, 'NICE', '06300', 'France');
+insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, pays) 
+	values(S_ADRESSE.nextval, '3 rue des grillons', null, 'LA TRINITE', '06340', 'France');
+insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, pays) 
+	values(S_ADRESSE.nextval, '22 chemin des launes', null, 'CARROS', '06510', 'France');
+insert into Adresse(idAdresse, ligneAdresse1, ligneAdresse2, ville, codePostal, pays) 
+	values(S_ADRESSE.nextval, '6 rue des oeillets', null, 'NICE', '06000', 'France');
 
 
 REM Insertion des clients
@@ -188,17 +208,76 @@ insert into Produit(idProduit, idFournisseur, idCategorie, nomProduit, poidsProd
 REM Insertion des employees
 
 insert into Employe(idEmploye, idAdresse, nom, prenom, mail, telephone, salaire, genre, dateNaissance) 
-	values(S_CLIENT.nextval, 7, 'Roson', 'Carla', 'carla.roson@drive.fr', '0756841235', 19637.00, 'Femme', '26-JAN-2000');
-insert into Employe(idEmploye, idAdresse, nom, prenom, mail, telephone, salire, genre, dateNaissance) 
-	values(S_CLIENT.nextval, 10, 'Trager', 'Kyle', 'kyle.trager@drive.fr', '0714587962', 21947.18, 'Homme', '17-FEB-1991');
+	values(S_CLIENT.nextval, 21, 'Roson', 'Carla', 'carla.roson@drive.fr', '0756841235', 19637.00, 'Femme', '26-01-1998');
+insert into Employe(idEmploye, idAdresse, nom, prenom, mail, telephone, salaire, genre, dateNaissance) 
+	values(S_CLIENT.nextval, 22, 'Trager', 'Kyle', 'kyle.trager@drive.fr', '0714587962', 21947.18, 'Homme', '17-02-1991');
+insert into Employe(idEmploye, idAdresse, nom, prenom, mail, telephone, salaire, genre, dateNaissance) 
+	values(S_CLIENT.nextval, 23, 'Queen', 'Oliver', 'oliver.queen@drive.fr', '0714587982', 21947.18, 'Homme', '28-04-1985');
+insert into Employe(idEmploye, idAdresse, nom, prenom, mail, telephone, salaire, genre, dateNaissance) 
+	values(S_CLIENT.nextval, 24, 'Joestar', 'Joseph', 'joseph.joestar@drive.fr', '0615582962', 21947.18, 'Homme', '10-12-1971');
+insert into Employe(idEmploye, idAdresse, nom, prenom, mail, telephone, salaire, genre, dateNaissance) 
+	values(S_CLIENT.nextval, 25, 'Montana', 'Hannah', 'hannah.montana@drive.fr', '0714787362', 19637.00, 'Femme', '20-08-1994');
+insert into Employe(idEmploye, idAdresse, nom, prenom, mail, telephone, salaire, genre, dateNaissance) 
+	values(S_CLIENT.nextval, 26, 'Cooper', 'Lilie', 'lilie.cooper@drive.fr', '0644287962', 19637.00, 'Femme', '27-05-1981');
+insert into Employe(idEmploye, idAdresse, nom, prenom, mail, telephone, salaire, genre, dateNaissance) 
+	values(S_CLIENT.nextval, 27, 'Hofstadter', 'Howard', 'howard.hofstadter@drive.fr', '0718599962', 21947.18, 'Homme', '11-01-1985');
+insert into Employe(idEmploye, idAdresse, nom, prenom, mail, telephone, salaire, genre, dateNaissance) 
+	values(S_CLIENT.nextval, 28, 'Fara-Fowler', 'Amy', 'amy.fara@drive.fr', '0619594932', 19637.00, 'Femme', '18-10-1983');
+insert into Employe(idEmploye, idAdresse, nom, prenom, mail, telephone, salaire, genre, dateNaissance) 
+	values(S_CLIENT.nextval, 29, 'Koothrapoli', 'Rajesh', 'rajesh.koothrapoli@drive.fr', '0619594932', 21947.18, 'Homme', '03-11-1984');
+insert into Employe(idEmploye, idAdresse, nom, prenom, mail, telephone, salaire, genre, dateNaissance) 
+	values(S_CLIENT.nextval, 30, 'McKenzie', 'Emma', 'emma.mckenzie@drive.fr', '0779594212', 19637.00, 'Femme', '13-07-1987');
+
 
 
 REM Insertion des commandes
 
-insert into Commande(idCommande, idClient, idEmploye, dateCommande, statutCommande) 
-	values(S_COMMANDE.nextval,);
+insert into Commande(idCommande, idEmploye, idClient, dateCommande, statutCommande) 
+	values(S_COMMANDE.nextval, 1, 1, '02-05-2020','En attente de traitement');
+insert into Commande(idCommande, idEmploye, idClient, dateCommande, statutCommande) 
+	values(S_COMMANDE.nextval, 2, 2, '03-05-2020','En cours de traitement');
+insert into Commande(idCommande, idEmploye, idClient, dateCommande, statutCommande) 
+	values(S_COMMANDE.nextval, 3, 3, '04-05-2020','En attente de recuperation');
+insert into Commande(idCommande, idEmploye, idClient, dateCommande, statutCommande)  
+	values(S_COMMANDE.nextval, 4, 4, '05-05-2020','En attente de recuperation');
+insert into Commande(idCommande, idEmploye, idClient, dateCommande, statutCommande) 
+	values(S_COMMANDE.nextval, 5, 5, '05-05-2020','Livré');
+insert into Commande(idCommande, idEmploye, idClient, dateCommande, statutCommande)  
+	values(S_COMMANDE.nextval, 6, 6, '06-05-2020','En attente de traitement');
+insert into Commande(idCommande, idEmploye, idClient, dateCommande, statutCommande)  
+	values(S_COMMANDE.nextval, 7, 7, '07-05-2020','En attente de recuperation');
+insert into Commande(idCommande, idEmploye, idClient, dateCommande, statutCommande) 
+	values(S_COMMANDE.nextval, 8, 8, '08-05-2020','En attente de traitement');
+insert into Commande(idCommande, idEmploye, idClient, dateCommande, statutCommande)  
+	values(S_COMMANDE.nextval, 9, 9, '09-05-2020','Livré');
+insert into Commande(idCommande, idEmploye, idClient, dateCommande, statutCommande) 
+	values(S_COMMANDE.nextval, 10, 10, '14-05-2020','En cours de traitement');
+insert into Commande(idCommande, idEmploye, idClient, dateCommande, statutCommande) 
+	values(S_COMMANDE.nextval, 3, 1, '20-05-2020','Annulé');
+insert into Commande(idCommande, idEmploye, idClient, dateCommande, statutCommande) 
+	values(S_COMMANDE.nextval, 4, 8, '25-05-2020','En attente de traitement');
+    
+
 
 REM Insertion des lignes de commandes
 
-insert into LigneCommande(quantite, prixVente) 
-	values();
+insert into LigneCommande(idProduit, idCommmande, quantite, prixVente) 
+	values(4,1,3);
+insert into LigneCommande(idProduit, idCommmande, quantite, prixVente) 
+	values(6,1,4);
+insert into LigneCommande(idProduit, idCommmande, quantite, prixVente) 
+	values(10,2,2);
+insert into LigneCommande(idProduit, idCommmande, quantite, prixVente) 
+	values(8,3,1);
+insert into LigneCommande(idProduit, idCommmande, quantite, prixVente) 
+	values(1,4,5);
+insert into LigneCommande(idProduit, idCommmande, quantite, prixVente) 
+	values(2,4,2);
+insert into LigneCommande(idProduit, idCommmande, quantite, prixVente) 
+	values(3,4,3);
+insert into LigneCommande(idProduit, idCommmande, quantite, prixVente) 
+	values(5,5,1);
+insert into LigneCommande(idProduit, idCommmande, quantite, prixVente) 
+	values(7,6,1);
+insert into LigneCommande(idProduit, idCommmande, quantite, prixVente) 
+	values(9,7,3);
