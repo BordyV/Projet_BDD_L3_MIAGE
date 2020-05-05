@@ -280,4 +280,18 @@ insert into LigneCommande(idProduit, idCommande, quantite)
 insert into LigneCommande(idProduit, idCommande, quantite) 
 	values(7,6,1);
 insert into LigneCommande(idProduit, idCommande, quantite) 
-	values(9,7,3);
+	values(9,6,3);
+insert into LigneCommande(idProduit, idCommande, quantite) 
+	values(10,7,5);
+insert into LigneCommande(idProduit, idCommande, quantite) 
+	values(4,8,1);
+insert into LigneCommande(idProduit, idCommande, quantite) 
+	values(9,9,3);
+insert into LigneCommande(idProduit, idCommande, quantite) 
+	values(2,9,3);
+insert into LigneCommande(idProduit, idCommande, quantite) 
+	values(6,10,8);
+insert into LigneCommande(idProduit, idCommande, quantite) 
+	values(9,11,2);
+insert into LigneCommande(idProduit, idCommande, quantite) 
+	values(1,12,3);
