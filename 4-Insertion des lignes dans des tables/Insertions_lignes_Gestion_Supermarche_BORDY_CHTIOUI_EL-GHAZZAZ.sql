@@ -86,6 +86,8 @@ insert into Client(idClient, idAdresse, nom, prenom, mail, telephone, motDePasse
 	values(S_CLIENT.nextval, 5, 'Effiong', 'Eric', 'eric.effiong@unice.fr', '0798412650', 'YouDettyPig', 'Autre', '15-10-1992');
 insert into Client(idClient, idAdresse, nom, prenom, mail, telephone, motDePasse, genre, dateNaissance) 
 	values(S_CLIENT.nextval, 9, 'Raid', 'Samourai', 'samourai.raid@unice.fr', '0667894126', 'CestSuperFraiche', 'Homme', '29-03-1989');
+insert into Client(idClient, idAdresse, nom, prenom, mail, telephone, motDePasse, genre, dateNaissance) 
+	values(S_CLIENT.nextval, 9, 'Kenny', 'Kairi', 'TheKairi78.stream@gmail.fr', '0667894456', 'Ramadan2018', 'Autre', '27-10-1999');
 
 
 REM Insertion des cartes de fidelite

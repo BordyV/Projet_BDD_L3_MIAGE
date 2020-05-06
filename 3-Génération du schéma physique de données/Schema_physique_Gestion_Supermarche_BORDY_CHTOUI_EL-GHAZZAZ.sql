@@ -476,3 +476,18 @@ DECLARE
 /
 
 
+/*==============================================================*/
+/* Trigger : CarteFidelite                                      */
+/*==============================================================*/
+CREATE OR REPLACE TRIGGER trig_CarteFidelite
+AFTER INSERT ON CARTEFIDELITE
+
+FOR EACH ROW
+ BEGIN
+    update CLIENT SET IDCARTEFIDELITE = :new.idcartefidelite where IdClient = :new.IdClient;
+ END;
+/
+
+
+
+
