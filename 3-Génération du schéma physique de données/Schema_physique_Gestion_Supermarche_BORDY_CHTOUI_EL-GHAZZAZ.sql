@@ -256,7 +256,7 @@ create table COMMANDE
    IDCLIENT             INTEGER            not null,
    DATECOMMANDE         DATE                 not null,
    STATUTCOMMANDE       VARCHAR2(30),
-   constraint STATUTCOMMANDE_CHECK check (STATUTCOMMANDE in ('En attente de traitement','En cours de traitement','En attente de recuperation','Livré','Annulé')),
+   constraint STATUTCOMMANDE_CHECK check (STATUTCOMMANDE in ('En attente de traitement','En cours de traitement','En attente de recuperation','Livree','Annulee')),
    constraint PK_COMMANDE primary key (IDCOMMANDE)
 );
 

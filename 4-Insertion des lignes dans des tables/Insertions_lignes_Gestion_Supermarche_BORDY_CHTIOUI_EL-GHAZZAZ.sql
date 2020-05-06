@@ -243,7 +243,7 @@ insert into Commande(idCommande, idEmploye, idClient, dateCommande, statutComman
 insert into Commande(idCommande, idEmploye, idClient, dateCommande, statutCommande)  
 	values(S_COMMANDE.nextval, 4, 4, '05-05-2020','En attente de recuperation');
 insert into Commande(idCommande, idEmploye, idClient, dateCommande, statutCommande) 
-	values(S_COMMANDE.nextval, 5, 5, '05-05-2020','Livré');
+	values(S_COMMANDE.nextval, 5, 5, '05-05-2020','Livree');
 insert into Commande(idCommande, idEmploye, idClient, dateCommande, statutCommande)  
 	values(S_COMMANDE.nextval, 6, 6, '06-05-2020','En attente de traitement');
 insert into Commande(idCommande, idEmploye, idClient, dateCommande, statutCommande)  
@@ -251,11 +251,11 @@ insert into Commande(idCommande, idEmploye, idClient, dateCommande, statutComman
 insert into Commande(idCommande, idEmploye, idClient, dateCommande, statutCommande) 
 	values(S_COMMANDE.nextval, 8, 8, '08-05-2020','En attente de traitement');
 insert into Commande(idCommande, idEmploye, idClient, dateCommande, statutCommande)  
-	values(S_COMMANDE.nextval, 9, 9, '09-05-2020','Livré');
+	values(S_COMMANDE.nextval, 9, 9, '09-05-2020','Livree');
 insert into Commande(idCommande, idEmploye, idClient, dateCommande, statutCommande) 
 	values(S_COMMANDE.nextval, 10, 10, '14-05-2020','En cours de traitement');
 insert into Commande(idCommande, idEmploye, idClient, dateCommande, statutCommande) 
-	values(S_COMMANDE.nextval, 3, 1, '20-05-2020','Annulé');
+	values(S_COMMANDE.nextval, 3, 1, '20-05-2020','Annulee');
 insert into Commande(idCommande, idEmploye, idClient, dateCommande, statutCommande) 
 	values(S_COMMANDE.nextval, 4, 8, '25-05-2020','En attente de traitement');
     
