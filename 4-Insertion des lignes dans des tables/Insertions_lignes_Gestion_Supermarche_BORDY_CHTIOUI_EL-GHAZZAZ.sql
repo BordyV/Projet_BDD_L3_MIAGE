@@ -183,26 +183,26 @@ insert into Fournisseur(idFournisseur, idAdresse, nomFournisseur, mail, telephon
 
 REM Insertion des produits
 
-insert into Produit(idProduit, idFournisseur, idCategorie, nomProduit, poidsProduit, descriptionProduit, prixHT, tauxTVA, prixTTC, stock, stockMini, stockMax) 
-	values(S_PRODUIT.nextval, 3, 1, 'Lait demi-ecreme UHT 6x1L', 6000, 'Lait demi-ecreme sterilise UHT', 4.72, 0.055, 4.98, 400, 200, 800);
-insert into Produit(idProduit, idFournisseur, idCategorie, nomProduit, poidsProduit, descriptionProduit, prixHT, tauxTVA, prixTTC, stock, stockMini, stockMax) 
-	values(S_PRODUIT.nextval, 9, 2, 'Noix seches bio', 500, 'Noix de Grenoble - Noix seches', 4.26, 0.055, 4.49, 120, 100, 300);
-insert into Produit(idProduit, idFournisseur, idCategorie, nomProduit, poidsProduit, descriptionProduit, prixHT, tauxTVA, prixTTC, stock, stockMini, stockMax) 
-	values(S_PRODUIT.nextval, 6, 3, 'Charal Hache 15% M.G', 800, 'Preparation surgelee à 80 % de viande de boeuf hachee', 6, 0.055, 6.33, 178, 100, 500);
-insert into Produit(idProduit, idFournisseur, idCategorie, nomProduit, poidsProduit, descriptionProduit, prixHT, tauxTVA, prixTTC, stock, stockMini, stockMax) 
-	values(S_PRODUIT.nextval, 7, 4, 'Coca cola Boisson gazeuse 6x1,75l', 10500, 'Boisson rafraichissante aux extraits vegetaux', 10.35, 0.055, 10.92, 310, 250, 550);
-insert into Produit(idProduit, idFournisseur, idCategorie, nomProduit, poidsProduit, descriptionProduit, prixHT, tauxTVA, prixTTC, stock, stockMini, stockMax) 
-	values(S_PRODUIT.nextval, 3, 5, 'Croissant pur beurre x4', 180, 'Boisson rafraichissante aux extraits vegetaux', 2.08, 0.055, 2.19, 30, 20, 50);
-insert into Produit(idProduit, idFournisseur, idCategorie, nomProduit, poidsProduit, descriptionProduit, prixHT, tauxTVA, prixTTC, stock, stockMini, stockMax) 
-	values(S_PRODUIT.nextval, 5, 6, 'Doritos Tortillas chips gout nature', 230, 'Tortilla chips de mais gout nature', 2.02, 0.055, 2.13, 53, 50, 98);
-insert into Produit(idProduit, idFournisseur, idCategorie, nomProduit, poidsProduit, descriptionProduit, prixHT, tauxTVA, prixTTC, stock, stockMini, stockMax) 
-	values(S_PRODUIT.nextval, 5, 7, 'Tresor Cereales au chocolat noir', 620, 'Cereales fourrées au chocolat noir, enrichies en vitamines et en fer', 3.61, 0.055, 2.81, 68, 40, 80);
-insert into Produit(idProduit, idFournisseur, idCategorie, nomProduit, poidsProduit, descriptionProduit, prixHT, tauxTVA, prixTTC, stock, stockMini, stockMax) 
-	values(S_PRODUIT.nextval, 2, 8, 'Cosmia gel douche lait vanille', 250, 'COSMIA lait de douche vanille 250 ml', 1.01, 0.20, 1.21, 38, 20, 60);
-insert into Produit(idProduit, idFournisseur, idCategorie, nomProduit, poidsProduit, descriptionProduit, prixHT, tauxTVA, prixTTC, stock, stockMini, stockMax) 
-	values(S_PRODUIT.nextval, 8, 9, 'Florex Papier toilette blanc en rouleaux x18', null, 'Papier Toilette Florex Blanc 18 rouleaux 2 épaisseurs FSC', 2.41, 0.20, 2.89, 58, 40, 100);
-insert into Produit(idProduit, idFournisseur, idCategorie, nomProduit, poidsProduit, descriptionProduit, prixHT, tauxTVA, prixTTC, stock, stockMini, stockMax) 
-	values(S_PRODUIT.nextval, 1, 10, 'Friskies Croquettes au saumon', 1500, 'Aliment complet pour chats adultes', 3.03, 0.055, 3.2, 25, 20, 50);
+insert into Produit(idProduit, idFournisseur, idCategorie, nomProduit, poidsProduit, descriptionProduit, prixHT, tauxTVA, stock, stockMini, stockMax) 
+	values(S_PRODUIT.nextval, 3, 1, 'Lait demi-ecreme UHT 6x1L', 6000, 'Lait demi-ecreme sterilise UHT', 4.72, 0.055, 400, 200, 800);
+insert into Produit(idProduit, idFournisseur, idCategorie, nomProduit, poidsProduit, descriptionProduit, prixHT, tauxTVA, stock, stockMini, stockMax) 
+	values(S_PRODUIT.nextval, 9, 2, 'Noix seches bio', 500, 'Noix de Grenoble - Noix seches', 4.26, 0.055, 120, 100, 300);
+insert into Produit(idProduit, idFournisseur, idCategorie, nomProduit, poidsProduit, descriptionProduit, prixHT, tauxTVA, stock, stockMini, stockMax) 
+	values(S_PRODUIT.nextval, 6, 3, 'Charal Hache 15% M.G', 800, 'Preparation surgelee à 80 % de viande de boeuf hachee', 6, 0.055, 178, 100, 500);
+insert into Produit(idProduit, idFournisseur, idCategorie, nomProduit, poidsProduit, descriptionProduit, prixHT, tauxTVA, stock, stockMini, stockMax) 
+	values(S_PRODUIT.nextval, 7, 4, 'Coca cola Boisson gazeuse 6x1,75l', 10500, 'Boisson rafraichissante aux extraits vegetaux', 10.35, 0.055, 310, 250, 550);
+insert into Produit(idProduit, idFournisseur, idCategorie, nomProduit, poidsProduit, descriptionProduit, prixHT, tauxTVA, stock, stockMini, stockMax) 
+	values(S_PRODUIT.nextval, 3, 5, 'Croissant pur beurre x4', 180, 'Boisson rafraichissante aux extraits vegetaux', 2.08, 0.055, 30, 20, 50);
+insert into Produit(idProduit, idFournisseur, idCategorie, nomProduit, poidsProduit, descriptionProduit, prixHT, tauxTVA, stock, stockMini, stockMax) 
+	values(S_PRODUIT.nextval, 5, 6, 'Doritos Tortillas chips gout nature', 230, 'Tortilla chips de mais gout nature', 2.02, 0.055, 53, 50, 98);
+insert into Produit(idProduit, idFournisseur, idCategorie, nomProduit, poidsProduit, descriptionProduit, prixHT, tauxTVA, stock, stockMini, stockMax) 
+	values(S_PRODUIT.nextval, 5, 7, 'Tresor Cereales au chocolat noir', 620, 'Cereales fourrées au chocolat noir, enrichies en vitamines et en fer', 3.61, 0.055, 68, 40, 80);
+insert into Produit(idProduit, idFournisseur, idCategorie, nomProduit, poidsProduit, descriptionProduit, prixHT, tauxTVA, stock, stockMini, stockMax) 
+	values(S_PRODUIT.nextval, 2, 8, 'Cosmia gel douche lait vanille', 250, 'COSMIA lait de douche vanille 250 ml', 1.01, 0.20, 38, 20, 60);
+insert into Produit(idProduit, idFournisseur, idCategorie, nomProduit, poidsProduit, descriptionProduit, prixHT, tauxTVA, stock, stockMini, stockMax) 
+	values(S_PRODUIT.nextval, 8, 9, 'Florex Papier toilette blanc en rouleaux x18', null, 'Papier Toilette Florex Blanc 18 rouleaux 2 épaisseurs FSC', 2.41, 0.20, 58, 40, 100);
+insert into Produit(idProduit, idFournisseur, idCategorie, nomProduit, poidsProduit, descriptionProduit, prixHT, tauxTVA, stock, stockMini, stockMax) 
+	values(S_PRODUIT.nextval, 1, 10, 'Friskies Croquettes au saumon', 1500, 'Aliment complet pour chats adultes', 3.03, 0.055, 25, 20, 50);
 
 
 REM Insertion des employees
