@@ -211,7 +211,8 @@ insert into Produit(idProduit, idFournisseur, idCategorie, nomProduit, poidsProd
 	values(S_PRODUIT.nextval, 5, 6, 'Bretzel', 150, 'l original de Bretzel dans cette boite !', 1.55, 0.055, 25, 10, 50);
 insert into Produit(idProduit, idFournisseur, idCategorie, nomProduit, poidsProduit, descriptionProduit, prixHT, tauxTVA, stock, stockMini, stockMax) 
 	values(S_PRODUIT.nextval, 5, 6, 'Chips 3D paprika', 100, 'Chips 3D paprika a partager entre amis', 1.45, 0.055, 20, 10, 50);
-
+insert into Produit(idProduit, idFournisseur, nomProduit, poidsProduit, descriptionProduit, prixHT, tauxTVA, stock, stockMini, stockMax) 
+	values(S_PRODUIT.nextval, 5, '3x Pile AAA', 400, '3 piles AAA de 200KWH', 15, 0.055, 30, 40, 70);
 
 REM Insertion des employees
 
