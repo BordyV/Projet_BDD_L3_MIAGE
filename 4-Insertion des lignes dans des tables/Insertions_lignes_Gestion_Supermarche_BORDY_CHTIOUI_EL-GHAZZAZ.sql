@@ -229,7 +229,8 @@ insert into Employe(idEmploye, idAdresse, nom, prenom, mail, telephone, salaire,
 	values(S_Employe.nextval, 29, 'Koothrapoli', 'Rajesh', 'rajesh.koothrapoli@drive.fr', '0619594932', 21947.18, 'Homme', '03-11-1984');
 insert into Employe(idEmploye, idAdresse, nom, prenom, mail, telephone, salaire, genre, dateNaissance) 
 	values(S_Employe.nextval, 30, 'McKenzie', 'Emma', 'emma.mckenzie@drive.fr', '0779594212', 19637.00, 'Femme', '13-07-1987');
-
+insert into Employe(idEmploye, idAdresse, nom, prenom, mail, telephone, salaire, genre, dateNaissance) 
+	values(S_Employe.nextval, 21, 'Joha', 'Proots', 'joha.proots@drive.fr', '0767574268', 20000.00, 'Autre', '13-07-1997');
 
 
 REM Insertion des commandes
