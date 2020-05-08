@@ -205,6 +205,12 @@ insert into Produit(idProduit, idFournisseur, idCategorie, nomProduit, poidsProd
 	values(S_PRODUIT.nextval, 8, 9, 'Florex Papier toilette blanc en rouleaux x18', null, 'Papier Toilette Florex Blanc 18 rouleaux 2 épaisseurs FSC', 2.41, 0.20, 58, 40, 100);
 insert into Produit(idProduit, idFournisseur, idCategorie, nomProduit, poidsProduit, descriptionProduit, prixHT, tauxTVA, stock, stockMini, stockMax) 
 	values(S_PRODUIT.nextval, 1, 10, 'Friskies Croquettes au saumon', 1500, 'Aliment complet pour chats adultes', 3.03, 0.055, 25, 20, 50);
+insert into Produit(idProduit, idFournisseur, idCategorie, nomProduit, poidsProduit, descriptionProduit, prixHT, tauxTVA, stock, stockMini, stockMax) 
+	values(S_PRODUIT.nextval, 5, 6, 'Chips 3D nature', 100, 'Chips 3D nature a partager entre amis', 1.40, 0.055, 45, 10, 50);
+insert into Produit(idProduit, idFournisseur, idCategorie, nomProduit, poidsProduit, descriptionProduit, prixHT, tauxTVA, stock, stockMini, stockMax) 
+	values(S_PRODUIT.nextval, 5, 6, 'Bretzel', 150, 'l original de Bretzel dans cette boite !', 1.55, 0.055, 25, 10, 50);
+insert into Produit(idProduit, idFournisseur, idCategorie, nomProduit, poidsProduit, descriptionProduit, prixHT, tauxTVA, stock, stockMini, stockMax) 
+	values(S_PRODUIT.nextval, 5, 6, 'Chips 3D paprika', 100, 'Chips 3D paprika a partager entre amis', 1.45, 0.055, 20, 10, 50);
 
 
 REM Insertion des employees
