@@ -443,7 +443,7 @@ alter table PRODUIT
 
 alter table PRODUIT
    add constraint FK_PRODUIT_VENDRE_FOURNISS foreign key (IDFOURNISSEUR)
-      references FOURNISSEUR (IDFOURNISSEUR)ON DELETE CASCADE;
+      references FOURNISSEUR (IDFOURNISSEUR) ON DELETE CASCADE;
       
 
 

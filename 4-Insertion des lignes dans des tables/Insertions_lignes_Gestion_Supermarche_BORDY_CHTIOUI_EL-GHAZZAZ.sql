@@ -305,3 +305,4 @@ insert into LigneCommande(idProduit, idCommande, quantite)
 	values(9,11,2);
 insert into LigneCommande(idProduit, idCommande, quantite) 
 	values(1,12,3);
+	commit;
