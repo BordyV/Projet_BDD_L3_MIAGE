@@ -55,7 +55,7 @@ REM DELETE
 
 
 REM CONSULTATION
-REM Requête impliquant une table:
+--Requête impliquant une table:
 --Sélectionne le nom du produit et son prix TTC et le tri par ordre croissant. (order by)
 select nomProduit, prixTTC from produit order by(prixTTC) ASC;
 
@@ -73,7 +73,7 @@ select count(idemploye) as nbEmploye , salaire from employe group by salaire;
 --Sélectionne le nombre de rayon que nous avons dans le drive.
 select count(idrayon)as nbRayon from rayon;
 
-REM Requête impliquant deux tables:
+--Requête impliquant deux tables:
 --Sélectionne toutes les commandes passés(id de la commande et la date), ainsi que l’id du client, le nom et le prénom trié par date décroissante. (order by)
 select client.idclient, client.nom,client.prenom,commande.IDCOMMANDE, commande.DATECOMMANDE from client, commande where CLIENT.IDCLIENT = COMMANDE.IDCLIENT order by dateCommande DESC;
 
@@ -90,7 +90,7 @@ Select nomCategorie, descriptionCategorie from categorieproduit, rayon where ray
 --Sélectionne le nom, prixHT et la description produits vendus par le fournisseur "BERARD"
 Select p.nomproduit, p.prixHT, p.descriptionProduit, f.nomfournisseur from produit p, fournisseur f where f.idfournisseur = p.idfournisseur and f.nomfournisseur = 'BERARD';
 
-REM Requête impliquant plus de deux tables:
+--Requête impliquant plus de deux tables:
 --Sélectionne le nom, prénom du client ainsi que le prix total de la commande numéro qui a l'id numéro 1.
 Select CLIENT.nom, prenom, (Select sum(PrixVente) from LIGNECOMMANDE L group by L.idcommande HAVING IDCOMMANDE='1') as prixCommande from client, COMMANDE
 WHERE COMMANDE.IDCLIENT = CLIENT.IDCLIENT AND COMMANDE.IDCOMMANDE='1' GROUP BY CLIENT.NOM, CLIENT.PRENOM, prenom;
