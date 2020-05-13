@@ -399,51 +399,51 @@ create table RAYON
 
 alter table CARTEFIDELITE
    add constraint FK_CARTEFID_DETENIR2_CLIENT foreign key (IDCLIENT)
-      references CLIENT (IDCLIENT);
+      references CLIENT (IDCLIENT) ON DELETE CASCADE;
 
 alter table CATEGORIEPRODUIT
    add constraint FK_CATEGORI_POSSEDER_RAYON foreign key (IDRAYON)
-      references RAYON (IDRAYON);
+      references RAYON (IDRAYON) ON DELETE CASCADE;
 
 alter table CLIENT
    add constraint FK_CLIENT_DETENIR_CARTEFID foreign key (IDCARTEFIDELITE)
-      references CARTEFIDELITE (IDCARTEFIDELITE);
+      references CARTEFIDELITE (IDCARTEFIDELITE) ON DELETE CASCADE;
 
 alter table CLIENT
    add constraint FK_CLIENT_HABITER_ADRESSE foreign key (IDADRESSE)
-      references ADRESSE (IDADRESSE);
+      references ADRESSE (IDADRESSE) ON DELETE CASCADE;
 
 alter table COMMANDE
    add constraint FK_COMMANDE_ATTRIBUER_EMPLOYE foreign key (IDEMPLOYE)
-      references EMPLOYE (IDEMPLOYE);
+      references EMPLOYE (IDEMPLOYE) ON DELETE CASCADE;
 
 alter table COMMANDE
    add constraint FK_COMMANDE_PASSER_CLIENT foreign key (IDCLIENT)
-      references CLIENT (IDCLIENT);
+      references CLIENT (IDCLIENT) ON DELETE CASCADE;
 
 alter table EMPLOYE
    add constraint FK_EMPLOYE_LOGER_ADRESSE foreign key (IDADRESSE)
-      references ADRESSE (IDADRESSE);
+      references ADRESSE (IDADRESSE) ON DELETE CASCADE;
 
 alter table FOURNISSEUR
    add constraint FK_FOURNISS_LOCALISER_ADRESSE foreign key (IDADRESSE)
-      references ADRESSE (IDADRESSE);
+      references ADRESSE (IDADRESSE) ON DELETE CASCADE;
 
 alter table LIGNECOMMANDE
    add constraint FK_LIGNECOM_LIGNECOMM_PRODUIT foreign key (IDPRODUIT)
-      references PRODUIT (IDPRODUIT);
+      references PRODUIT (IDPRODUIT) ON DELETE CASCADE;
 
 alter table LIGNECOMMANDE
    add constraint FK_LIGNECOM_LIGNECOMM_COMMANDE foreign key (IDCOMMANDE)
-      references COMMANDE (IDCOMMANDE);
+      references COMMANDE (IDCOMMANDE) ON DELETE CASCADE;
 
 alter table PRODUIT
    add constraint FK_PRODUIT_CONTENIR_CATEGORI foreign key (IDCATEGORIE)
-      references CATEGORIEPRODUIT (IDCATEGORIE);
+      references CATEGORIEPRODUIT (IDCATEGORIE) ON DELETE CASCADE;
 
 alter table PRODUIT
    add constraint FK_PRODUIT_VENDRE_FOURNISS foreign key (IDFOURNISSEUR)
-      references FOURNISSEUR (IDFOURNISSEUR);
+      references FOURNISSEUR (IDFOURNISSEUR)ON DELETE CASCADE;
       
 
 
