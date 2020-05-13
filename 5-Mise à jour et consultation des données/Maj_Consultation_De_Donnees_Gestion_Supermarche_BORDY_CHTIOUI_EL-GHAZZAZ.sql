@@ -46,16 +46,5 @@ UPDATE (SELECT cf.*
                  WHERE cf.idClient = cli.idClient
                  AND lc.prixVente > 10)) y
         SET y.nbPointsFidelite = y.nbPointsFidelite + 10;
-        
-SELECT lc.*
-                 FROM ligneCommande lc
-                 INNER JOIN commande c ON lc.idCommande = c.idCommande
-                 INNER JOIN client cli ON c.idClient = cli.idClient
-                 INNER JOIN carteFidelite cf ON cf.idClient = cli.idClient
-                 AND lc.prixVente > 10;
-                 
-SELECT lc.*
-FROM ligneCommande lc
-WHERE lc.prixVente > 10;
 
 rollback;
