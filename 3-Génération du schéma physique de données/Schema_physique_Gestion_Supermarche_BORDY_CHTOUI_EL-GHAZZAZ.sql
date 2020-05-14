@@ -468,18 +468,11 @@ BEFORE INSERT OR UPDATE ON LIGNECOMMANDE
 FOR EACH ROW
 DECLARE 
     prixTTC FLOAT;
-   
  BEGIN
-    IF INSERTING THEN
     SELECT PRIXTTC INTO PrixTTC FROM PRODUIT WHERE IDPRODUIT = :new.idproduit;  
     :new.prixVente := round((:new.quantite * prixTTC),2);
-    END IF;
-    IF (UPDATING AND :old.prixVente = :new.prixVente) THEN
-     return;
-    END IF;
  END;
 /
-
 
 /*==============================================================*/
 /* Trigger : CarteFidelite                                      */
