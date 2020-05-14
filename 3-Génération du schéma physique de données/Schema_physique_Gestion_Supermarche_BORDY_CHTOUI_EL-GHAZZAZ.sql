@@ -468,29 +468,13 @@ BEFORE INSERT OR UPDATE ON LIGNECOMMANDE
 FOR EACH ROW
 DECLARE 
     prixTTC FLOAT;
-    mailClient VARCHAR2(50);
-    mailEmploye VARCHAR2(50);
+   
  BEGIN
-   SELECT produit.PRIXTTC, client.mail INTO PrixTTC, mailClient 
-   FROM PRODUIT, EMPLOYE, CLIENT, LIGNECOMMANDE, COMMANDE
-   WHERE produit.IDPRODUIT = LIGNECOMMANDE.IDPRODUIT
-   AND LIGNECOMMANDE.IDCOMMANDE = COMMANDE.IDCOMMANDE
-   AND COMMANDE.IDCLIENT = CLIENT.IDCLIENT
-   AND produit.IDPRODUIT = :new.idproduit; 
-   
-   SELECT count(*) into mailEmploye 
-   FROM EMPLOYE
-   WHERE mail = mailClient;
-
-   
-   :new.prixVente := round((:new.quantite * prixTTC),2);
-
-
-   IF mailEmploye = 1 THEN 
-    :new.prixVente := round(((:new.quantite * prixTTC)*0.9),2);
-   END IF; 
+    SELECT PRIXTTC INTO PrixTTC FROM PRODUIT WHERE IDPRODUIT = :new.idproduit;  
+    :new.prixVente := round((:new.quantite * prixTTC),2);
  END;
 /
+
 
 /*==============================================================*/
 /* Trigger : CarteFidelite                                      */
