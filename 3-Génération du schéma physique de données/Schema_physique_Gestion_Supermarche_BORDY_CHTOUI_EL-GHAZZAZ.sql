@@ -478,7 +478,7 @@ DECLARE
    AND COMMANDE.IDCLIENT = CLIENT.IDCLIENT
    AND produit.IDPRODUIT = :new.idproduit; 
    
-   SELECT cout(mail) into mailEmploye 
+   SELECT count(mail) into mailEmploye 
    FROM EMPLOYE
    WHERE mail = mailClient;
 
