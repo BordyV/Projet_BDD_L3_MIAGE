@@ -5,11 +5,6 @@ create or replace package pack_employe is
 
 TYPE refCursorTyp IS REF CURSOR;
 
--- bad_salaire EXCEPTION;
--- pragma exception_init(bad_salaire, -2290);
--- null_not_allowed EXCEPTION;
--- pragma exception_init(bad_salaire, -01400);
-
 no_data_updated EXCEPTION;
 pragma exception_init(no_data_updated, -20001);
 
