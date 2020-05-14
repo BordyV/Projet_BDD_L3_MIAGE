@@ -2,14 +2,14 @@ REM MISE A JOUR
 
 -- 2 requetes impliquant 1 table
 
--- Mise a jour du genre et de la date de naissance d’un client
+-- Mise a jour du genre et de la date de naissance d un client
 UPDATE client
 SET genre = 'Autre', dateNaissance= '12-12-1958'
 WHERE idClient = 1;
 
 rollback;
 
---Mise a jour du statut (par exemple en ‘Livrée’) d’une commande
+--Mise a jour du statut (par exemple en Livree) d une commande
 UPDATE commande
 SET statutCommande = 'Livree'
 WHERE idCommande = 2;
@@ -18,7 +18,7 @@ rollback;
 
 -- 2 requetes impliquant 2 tables
    
--- Mise a jour du taux de TVA a 20% de tous les produits ayant pour une catégorie donnée     
+-- Mise a jour du taux de TVA a 20% de tous les produits ayant pour une categorie donnee     
 UPDATE (SELECT p.* 
              FROM produit p 
              INNER JOIN categorieProduit cp ON p.idCategorie = cp.idCategorie
@@ -27,7 +27,7 @@ SET t.tauxTVA = 0.2;
 
 rollback;
        
--- Mise a jour du stock de produit par rapport aux quantités de produit des lignes de commande 
+-- Mise a jour du stock de produit par rapport aux quantites de produit des lignes de commande 
 CREATE OR REPLACE VIEW quantite_produit AS       
 SELECT lc.idProduit, SUM(lc.quantite) as qte
 FROM ligneCommande lc
@@ -41,8 +41,8 @@ rollback;
 
 -- 2 requetes impliquant plus de 2 tables
         
--- Mise a jour du nombre de points de fidélité des clients pour chaque lignes de commandes 
--- dont le prix de vente est supérieur a 10
+-- Mise a jour du nombre de points de fidelite des clients pour chaque lignes de commandes 
+-- dont le prix de vente est superieur a 10
 CREATE OR REPLACE VIEW cf_client AS       
 SELECT cf.idClient, COUNT(cf.idClient) as nb
 FROM carteFidelite cf
@@ -70,24 +70,24 @@ REM SUPPRESSION
 
 -- 2 requetes simlples
 
--- Supprime un produit par rapport à son nom “Chips 3D nature”
+-- Supprime un produit par rapport a son nom Chips 3D nature
 DELETE FROM produit p
 WHERE p.NOMPRODUIT='Chips 3D nature';
 rollback;
 
--- Supprime un produit par rapport à son numéro ID
+-- Supprime un produit par rapport a son numero ID
 DELETE FROM produit
 WHERE idproduit=12;
 rollback;
 
--- 2 requêtes de 2 tables 
+-- 2 requetes de 2 tables 
 
--- Supprime tous les clients habitant à Nice
+-- Supprime tous les clients habitant a Nice
 delete from client
 where idadresse in (select a.idadresse from adresse a where a.ville='NICE');
 rollback;
 
--- Supprime un fournisseur fournissant un produit en particulier par rapport à son nom
+-- Supprime un fournisseur fournissant un produit en particulier par rapport a son nom
 delete from fournisseur
 where idfournisseur in (select p.idfournisseur from produit p where p.nomproduit='3x Pile AAA');
 rollback;
@@ -95,12 +95,12 @@ rollback;
 
 -- 2 requetes de  plus de 2 tables   
 
--- Supprime le rayon du magasin contenant le nom d’un produit qui est “Chips 3D paprika” 
+-- Supprime le rayon du magasin contenant le nom d un produit qui est Chips 3D paprika 
 delete from rayon
 where idrayon in (select idrayon from categorieproduit cp INNER JOIN produit p on cp.idcategorie=p.idcategorie where p.nomproduit='Chips 3D paprika');
 rollback;
 
--- Supprime les commandes contenant des produits qui ont un prix inférieur à 3
+-- Supprime les commandes contenant des produits qui ont un prix infrieur a 3
 delete from commande
 where idcommande in (select idcommande from lignecommande lc INNER JOIN produit p on lc.idproduit=p.idproduit where p.prixht < 3);
 rollback;
@@ -144,7 +144,7 @@ Select nomCategorie, descriptionCategorie from categorieproduit, rayon where ray
 Select p.nomproduit, p.prixHT, p.descriptionProduit, f.nomfournisseur from produit p, fournisseur f where f.idfournisseur = p.idfournisseur and f.nomfournisseur = 'BERARD';
 
 --Requete impliquant plus de deux tables:
---Selectionne le nom, prenom du client ainsi que le prix total de la commande numero qui a l'id numero 1.
+--Selectionne le nom, prenom du client ainsi que le prix total de la commande numero qui a l id numero 1.
 Select CLIENT.nom, prenom, (Select sum(PrixVente) from LIGNECOMMANDE L group by L.idcommande HAVING IDCOMMANDE='1') as prixCommande from client, COMMANDE
 WHERE COMMANDE.IDCLIENT = CLIENT.IDCLIENT AND COMMANDE.IDCOMMANDE='1' GROUP BY CLIENT.NOM, CLIENT.PRENOM, prenom;
 
@@ -152,7 +152,7 @@ WHERE COMMANDE.IDCLIENT = CLIENT.IDCLIENT AND COMMANDE.IDCOMMANDE='1' GROUP BY C
 SELECT PRODUIT.NOMPRODUIT, PRODUIT.DESCRIPTIONPRODUIT, PRODUIT.PRIXHT, RAYON.NOMRAYON, RAYON.DESCRIPTIONRAYON FROM PRODUIT, CATEGORIEPRODUIT, RAYON 
 WHERE PRODUIT.IDCATEGORIE = CATEGORIEPRODUIT.IDCATEGORIE(+) AND CATEGORIEPRODUIT.IDRAYON = RAYON.IDRAYON(+);
 
---Selectionne le nombre de commande, lâ€™adresse et le nom et prenom des employes qui se sont occupes de 2 commande ou plus et le trier par le nombre de commande de faÃ§on croissante.
+--Selectionne le nombre de commande, l adresse et le nom et prenom des employes qui se sont occupes de 2 commande ou plus et le trier par le nombre de commande de facon croissante.
 select a.ligneadresse1, a.ligneadresse2, a.ville, a.codepostal, a.pays, e.nom as nomEmploye, e.prenom as PrenomEmploye, count(c.IDCOMMANDE) as NbCommandeTraitee from adresse a, commande c, employe e
 where a.idadresse = e.idadresse and c.idemploye = e.idemploye GROUP BY e.nom, e.prenom, a.ligneadresse1, a.ligneadresse2, a.ville, 
 a.codepostal, a.pays HAVING count(c.IDCOMMANDE) >= 2 ORDER BY COUNT(c.IDCOMMANDE) ASC; 
