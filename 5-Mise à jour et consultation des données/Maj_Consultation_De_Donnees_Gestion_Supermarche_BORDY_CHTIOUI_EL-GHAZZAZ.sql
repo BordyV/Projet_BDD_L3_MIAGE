@@ -62,6 +62,37 @@ rollback;
 
 REM SUPPRESSION
 
+-- 2 requetes simlples
+DELETE FROM produit p
+WHERE p.NOMPRODUIT='Chips 3D nature';
+rollback;
+
+DELETE FROM produit
+WHERE idproduit=12;
+rollback;
+
+-- 2 requêtes de 2 tables 
+
+delete from client
+where idadresse in (select a.idadresse from adresse a where a.ville='NICE');
+rollback;
+
+delete from fournisseur
+where idfournisseur in (select p.idfournisseur from produit p where p.nomproduit='3x Pile AAA');
+rollback;
+
+
+-- 2 requetes de  plus de 2 tables   
+
+
+delete from rayon
+where idrayon in (select idrayon from categorieproduit cp INNER JOIN produit p on cp.idcategorie=p.idcategorie where p.nomproduit='Chips 3D paprika');
+rollback;
+
+delete from commande
+where idcommande in (select idcommande from lignecommande lc INNER JOIN produit p on lc.idproduit=p.idproduit where p.prixht < 3);
+rollback;
+
 
 
 REM CONSULTATION
