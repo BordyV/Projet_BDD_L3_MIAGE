@@ -23,6 +23,14 @@ mess  varchar2(1000);
 -- la traitera au final l'erreur
 function getEmployeByID(idemp IN number) return Employe%rowtype;
 
+-- Cette fonction permet de rechercher un Employe connaissant 
+-- en cherchant par un idCommande.
+-- Si ce Employe existe l'enregistrement le concernant est retourne.
+-- Si ce Employe n'existe pas une erreur No_data_found est 
+-- attrapee et relevee. Le programme appelant cette fonction 
+-- la traitera au final l'erreur
+function getEmployeByIDComm(idCom IN number) return Employe%rowtype;
+
 -- Cette fonction permet de rechercher tout les employes
 function getAllEmploye return pack_employe.refCursorTyp;
 
@@ -86,6 +94,28 @@ EXCEPTION
 	WHEN OTHERS THEN
 		raise;
 end getEmployeByID;
+
+--fonction getEmployeByIDComm qui permet de connaitre un employe en fonction de la commande
+function getEmployeByIDComm(idCom IN number) return Employe%rowtype IS
+
+ligneEmploye Employe%rowtype;
+
+begin
+-- select qui ramene 1 ligne
+select employe.* INTO ligneEmploye
+from Employe, commande
+where employe.idemploye = commande.idemploye
+and idcommande=idCom;
+
+return ligneEmploye;
+
+EXCEPTION 
+	WHEN NO_DATA_FOUND THEN
+		raise;
+
+	WHEN OTHERS THEN
+		raise;
+end getEmployeByIDComm;
 
 
 --get All occurence
@@ -233,6 +263,7 @@ begin
 	lp:=pack_employe.getEmployeByID(idem);
 
 	-- Affichier les informations sur le Employe extrait du curseur
+	DBMS_OUTPUT.PUT_LINE('TEST GETEMPLOYEBYID');
 	DBMS_OUTPUT.PUT_LINE('Numero Employe           ='||lp.idEmploye);
     DBMS_OUTPUT.PUT_LINE('numero adresse Employe   ='||lp.idadresse); 
 	DBMS_OUTPUT.PUT_LINE('Nom Employe              ='||lp.nom); 
@@ -257,6 +288,45 @@ begin
 
 end;
 /
+
+
+
+-- test de la fonction employe.getEmployeByIDComm
+
+declare
+idcom Commande.idCommande%type:=1; -- 1
+lp    Employe%rowtype;
+begin
+	lp:=pack_employe.getEmployeByIDComm(idcom);
+
+	-- Affichier les informations sur le Employe extrait du curseur
+	DBMS_OUTPUT.PUT_LINE('TEST GETEMPLOYEBYIDCOMM');
+	DBMS_OUTPUT.PUT_LINE('Numero Employe           ='||lp.idEmploye);
+    DBMS_OUTPUT.PUT_LINE('numero adresse Employe   ='||lp.idadresse); 
+	DBMS_OUTPUT.PUT_LINE('Nom Employe              ='||lp.nom); 
+	DBMS_OUTPUT.PUT_LINE('Prenom                   ='||lp.prenom); 
+	DBMS_OUTPUT.PUT_LINE('Mail Employe             ='||lp.mail);	
+    DBMS_OUTPUT.PUT_LINE('Telephone Employe        ='||lp.telephone);
+	DBMS_OUTPUT.PUT_LINE('Salaire Employe          ='||lp.salaire);
+    DBMS_OUTPUT.PUT_LINE('Genre Employe            ='||lp.genre);
+    DBMS_OUTPUT.PUT_LINE('Date Naissance Employe   ='||lp.dateNaissance);
+
+
+	
+	EXCEPTION 
+		WHEN NO_DATA_FOUND THEN
+			DBMS_OUTPUT.PUT_LINE('La commande nr  ' || idcom || ' n''existe pas');		
+			dbms_output.put_line('sqlcode='|| sqlcode);
+			dbms_output.put_line('sqlerrm='|| sqlerrm);
+
+		WHEN OTHERS THEN
+			dbms_output.put_line('sqlcode='|| sqlcode);
+			dbms_output.put_line('sqlerrm='|| sqlerrm);
+
+end;
+/
+
+
 
 
 -- test de la procedure employe.getAllEmploye ...
