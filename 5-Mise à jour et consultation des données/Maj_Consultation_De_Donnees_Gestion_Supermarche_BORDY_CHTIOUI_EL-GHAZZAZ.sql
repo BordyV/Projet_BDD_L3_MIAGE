@@ -69,20 +69,25 @@ rollback;
 REM SUPPRESSION
 
 -- 2 requetes simlples
+
+-- Supprime un produit par rapport à son nom “Chips 3D nature”
 DELETE FROM produit p
 WHERE p.NOMPRODUIT='Chips 3D nature';
 rollback;
 
+-- Supprime un produit par rapport à son numéro ID
 DELETE FROM produit
 WHERE idproduit=12;
 rollback;
 
 -- 2 requêtes de 2 tables 
 
+-- Supprime tous les clients habitant à Nice
 delete from client
 where idadresse in (select a.idadresse from adresse a where a.ville='NICE');
 rollback;
 
+-- Supprime un fournisseur fournissant un produit en particulier par rapport à son nom
 delete from fournisseur
 where idfournisseur in (select p.idfournisseur from produit p where p.nomproduit='3x Pile AAA');
 rollback;
@@ -90,11 +95,12 @@ rollback;
 
 -- 2 requetes de  plus de 2 tables   
 
-
+-- Supprime le rayon du magasin contenant le nom d’un produit qui est “Chips 3D paprika” 
 delete from rayon
 where idrayon in (select idrayon from categorieproduit cp INNER JOIN produit p on cp.idcategorie=p.idcategorie where p.nomproduit='Chips 3D paprika');
 rollback;
 
+-- Supprime les commandes contenant des produits qui ont un prix inférieur à 3
 delete from commande
 where idcommande in (select idcommande from lignecommande lc INNER JOIN produit p on lc.idproduit=p.idproduit where p.prixht < 3);
 rollback;
