@@ -471,14 +471,14 @@ DECLARE
     mailClient VARCHAR2(50);
     mailEmploye VARCHAR2(50);
  BEGIN
-   SELECT produit.PRIXTTC, client.mail INTO PrixTTC, mailClient, mailEmploye 
+   SELECT produit.PRIXTTC, client.mail INTO PrixTTC, mailClient 
    FROM PRODUIT, EMPLOYE, CLIENT, LIGNECOMMANDE, COMMANDE
    WHERE produit.IDPRODUIT = LIGNECOMMANDE.IDPRODUIT
    AND LIGNECOMMANDE.IDCOMMANDE = COMMANDE.IDCOMMANDE
    AND COMMANDE.IDCLIENT = CLIENT.IDCLIENT
    AND produit.IDPRODUIT = :new.idproduit; 
    
-   SELECT count(mail) into mailEmploye 
+   SELECT count(*) into mailEmploye 
    FROM EMPLOYE
    WHERE mail = mailClient;
 
