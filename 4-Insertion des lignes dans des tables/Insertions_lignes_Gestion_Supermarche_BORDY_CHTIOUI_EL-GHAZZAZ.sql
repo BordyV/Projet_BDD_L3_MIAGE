@@ -79,7 +79,7 @@ insert into Client(idClient, idAdresse, nom, prenom, mail, telephone, motDePasse
 insert into Client(idClient, idAdresse, nom, prenom, mail, telephone, motDePasse, genre, dateNaissance) 
 	values(S_CLIENT.nextval, 10, 'Trager', 'Kyle', 'kyle.trager@unice.fr', '0714587962', 'Zzyzx781227', 'Homme', '17-02-1991');
 insert into Client(idClient, idAdresse, nom, prenom, mail, telephone, motDePasse, genre, dateNaissance) 
-	values(S_CLIENT.nextval, 7, 'Roson', 'Carla', 'carla.roson@drive.fr', '0756841235', 'EliteNetflix', 'Femme', '26-01-2000');
+	values(S_CLIENT.nextval, 7, 'Roson', 'Carla', 'carla.roson@unice.fr', '0756841235', 'EliteNetflix', 'Femme', '26-01-2000');
 insert into Client(idClient, idAdresse, nom, prenom, mail, telephone, motDePasse, genre, dateNaissance) 
 	values(S_CLIENT.nextval, 2, 'Winchester', 'Dean', 'dean.winchester@unice.fr', '0600324751', 'IAmBatman', 'Homme', '24-01-1979');
 insert into Client(idClient, idAdresse, nom, prenom, mail, telephone, motDePasse, genre, dateNaissance) 
@@ -158,6 +158,9 @@ insert into CategorieProduit(idCategorie, idRayon, nomCategorie, descriptionCate
 	values(S_CATEGORIEPRODUIT.nextval, 9, 'Papiers', 'Papier-toilette, Essuie-tout, Mouchoirs');
 insert into CategorieProduit(idCategorie, idRayon, nomCategorie, descriptionCategorie) 
 	values(S_CATEGORIEPRODUIT.nextval, 10, 'Chats', 'Laits, Friandises, Sachets repas, Barquettes, Croquettes, etc');
+insert into CategorieProduit(idCategorie, idRayon, nomCategorie, descriptionCategorie) 
+	values(S_CATEGORIEPRODUIT.nextval, 1, 'Charcuterie', 'Jambons, lardons, bacon, foies gras etc');
+
 
 REM Insertion des fournisseurs
 
@@ -213,6 +216,9 @@ insert into Produit(idProduit, idFournisseur, idCategorie, nomProduit, poidsProd
 	values(S_PRODUIT.nextval, 5, 6, 'Chips 3D paprika', 100, 'Chips 3D paprika a partager entre amis', 1.45, 0.055, 20, 10, 50);
 insert into Produit(idProduit, idFournisseur, nomProduit, poidsProduit, descriptionProduit, prixHT, tauxTVA, stock, stockMini, stockMax) 
 	values(S_PRODUIT.nextval, 5, '3x Pile AAA', 400, '3 piles AAA de 200KWH', 15, 0.055, 30, 40, 70);
+insert into Produit(idProduit, idFournisseur, idCategorie, nomProduit, poidsProduit, descriptionProduit, prixHT, tauxTVA, stock, stockMini, stockMax) 
+	values(S_PRODUIT.nextval, 7, 11, 'Herta Lardons nature', 200, 'Lardons de qualité supérieure', 2.10, 0.055, 130, 125, 250);
+
 
 REM Insertion des employees
 

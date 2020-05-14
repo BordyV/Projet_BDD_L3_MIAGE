@@ -27,12 +27,15 @@ SET t.tauxTVA = 0.2;
 
 rollback;
        
--- Mise a jour du fournisseur d’un produit
-UPDATE (SELECT p.* 
-             FROM produit p
-             INNER JOIN fournisseur f ON p.idFournisseur = f.idFournisseur
-             WHERE f.nomFournisseur = 'AGIDRA') x
-SET x.idFournisseur = 4;  
+-- Mise a jour du stock de produit par rapport aux quantités de produit des lignes de commande 
+CREATE OR REPLACE VIEW quantite_produit AS       
+SELECT lc.idProduit, SUM(lc.quantite) as qte
+FROM ligneCommande lc
+GROUP BY lc.idProduit;
+
+UPDATE produit pdt
+SET pdt.stock = pdt.stock-(SELECT quantite_produit.qte FROM quantite_produit WHERE quantite_produit.idProduit = pdt.idProduit)
+WHERE EXISTS (SELECT quantite_produit.qte FROM quantite_produit WHERE quantite_produit.idProduit = pdt.idProduit);  
 
 rollback;
 
@@ -54,28 +57,14 @@ WHERE EXISTS (SELECT cf_client.nb FROM cf_client WHERE cf_client.idClient = cf.i
 
 rollback;
 
--- CONSULTATION pour verifier l'update precedent 
-SELECT cf.*
-FROM carteFidelite cf
-INNER JOIN commande c ON cf.idClient = c.idClient
-INNER JOIN ligneCommande lc ON c.idCommande = lc.idCommande
-WHERE lc.prixVente > 10;
-
-
-UPDATE (SELECT lc.* 
-             FROM ligneCommande lc
-             INNER JOIN commande c ON lc.idCommande = c.idCommande
-             INNER JOIN client cli ON c.idClient = cli.idClient
-             INNER JOIN employe emp ON c.idemploye = emp.idEmploye
-             WHERE cli.mail = emp.mail)z
-SET z.prixVente = z.prixVente*0.9;
+-- Mise a jour du stock minimum de produits dont le nom de rayon est 'Produit Frais'
+UPDATE (SELECT p.* FROM produit p
+        INNER JOIN categorieproduit cp ON p.idcategorie = cp.idcategorie
+        INNER JOIN rayon r ON cp.idrayon = r.idrayon
+        WHERE r.nomrayon = 'Produit Frais') z
+SET z.stockmini = 50;
 
 rollback;
-
--- CONSULTATION pour verifier l'update précedent 
-SELECT lc.* 
-FROM ligneCommande lc;
-
 
 REM SUPPRESSION
 
