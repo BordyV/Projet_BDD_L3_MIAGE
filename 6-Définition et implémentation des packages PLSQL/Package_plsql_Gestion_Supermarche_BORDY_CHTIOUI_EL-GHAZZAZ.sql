@@ -221,7 +221,7 @@ end;
 end pack_employe; 
 /
 
-
+commit;
 
 
 -- test de la fonction employe.getEmployeByID
@@ -517,3 +517,4 @@ end;
 /
 
 select * from Employe where idEmploye=2;
+rollback;
