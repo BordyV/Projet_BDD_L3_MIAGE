@@ -79,7 +79,7 @@ insert into Client(idClient, idAdresse, nom, prenom, mail, telephone, motDePasse
 insert into Client(idClient, idAdresse, nom, prenom, mail, telephone, motDePasse, genre, dateNaissance) 
 	values(S_CLIENT.nextval, 10, 'Trager', 'Kyle', 'kyle.trager@unice.fr', '0714587962', 'Zzyzx781227', 'Homme', '17-02-1991');
 insert into Client(idClient, idAdresse, nom, prenom, mail, telephone, motDePasse, genre, dateNaissance) 
-	values(S_CLIENT.nextval, 7, 'Roson', 'Carla', 'carla.roson@unice.fr', '0756841235', 'EliteNetflix', 'Femme', '26-01-2000');
+	values(S_CLIENT.nextval, 7, 'Roson', 'Carla', 'carla.roson@drive.fr', '0756841235', 'EliteNetflix', 'Femme', '26-01-2000');
 insert into Client(idClient, idAdresse, nom, prenom, mail, telephone, motDePasse, genre, dateNaissance) 
 	values(S_CLIENT.nextval, 2, 'Winchester', 'Dean', 'dean.winchester@unice.fr', '0600324751', 'IAmBatman', 'Homme', '24-01-1979');
 insert into Client(idClient, idAdresse, nom, prenom, mail, telephone, motDePasse, genre, dateNaissance) 
@@ -243,7 +243,7 @@ insert into Employe(idEmploye, idAdresse, nom, prenom, mail, telephone, salaire,
 REM Insertion des commandes
 
 insert into Commande(idCommande, idEmploye, idClient, dateCommande, statutCommande) 
-	values(S_COMMANDE.nextval, 1, 1, '02-05-2020','En attente de traitement');
+	values(S_COMMANDE.nextval, 1, 7, '02-05-2020','En attente de traitement');
 insert into Commande(idCommande, idEmploye, idClient, dateCommande, statutCommande) 
 	values(S_COMMANDE.nextval, 2, 2, '03-05-2020','En cours de traitement');
 insert into Commande(idCommande, idEmploye, idClient, dateCommande, statutCommande) 

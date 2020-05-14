@@ -45,6 +45,18 @@ INNER JOIN commande c ON cf.idClient = c.idClient
 INNER JOIN ligneCommande lc ON c.idCommande = lc.idCommande
 WHERE lc.prixVente > 10;
 
+UPDATE (SELECT lc.* 
+             FROM ligneCommande lc
+             INNER JOIN commande c ON lc.idCommande = c.idCommande
+             INNER JOIN client cli ON c.idClient = cli.idClient
+             INNER JOIN employe emp ON c.idemploye = emp.idEmploye
+             WHERE cli.mail = emp.mail)z
+SET z.prixVente = z.prixVente*0.9;
+
+-- CONSULTATION pour verifier l'update précedent 
+SELECT lc.* 
+FROM ligneCommande lc;
+
 rollback;
 
 
