@@ -471,18 +471,22 @@ DECLARE
     mailClient VARCHAR2(50);
     mailEmploye VARCHAR2(50);
  BEGIN
-   SELECT produit.PRIXTTC, client.mail, employe.mail INTO PrixTTC, mailClient, mailEmploye 
+   SELECT produit.PRIXTTC, client.mail INTO PrixTTC, mailClient, mailEmploye 
    FROM PRODUIT, EMPLOYE, CLIENT, LIGNECOMMANDE, COMMANDE
    WHERE produit.IDPRODUIT = LIGNECOMMANDE.IDPRODUIT
    AND LIGNECOMMANDE.IDCOMMANDE = COMMANDE.IDCOMMANDE
-   AND EMPLOYE.IDEMPLOYE = COMMANDE.IDEMPLOYE 
    AND COMMANDE.IDCLIENT = CLIENT.IDCLIENT
-   AND produit.IDPRODUIT = :new.idproduit;  
+   AND produit.IDPRODUIT = :new.idproduit; 
+   
+   SELECT cout(mail) into mailEmploye 
+   FROM EMPLOYE
+   WHERE mail = mailClient;
+
    
    :new.prixVente := round((:new.quantite * prixTTC),2);
 
 
-   IF mailClient = mailEmploye THEN 
+   IF mailEmploye = 1 THEN 
     :new.prixVente := round(((:new.quantite * prixTTC)*0.9),2);
    END IF; 
  END;
