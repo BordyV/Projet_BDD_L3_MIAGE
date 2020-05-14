@@ -2,41 +2,57 @@ REM MISE A JOUR
 
 -- 2 requetes impliquant 1 table
 
+-- Mise a jour du genre et de la date de naissance d’un client
 UPDATE client
-    SET genre = 'Autre', dateNaissance= '12-12-1958'
-    WHERE idClient = 1;
+SET genre = 'Autre', dateNaissance= '12-12-1958'
+WHERE idClient = 1;
 
+rollback;
+
+--Mise a jour du statut (par exemple en ‘Livrée’) d’une commande
 UPDATE commande
-    SET statutCommande = 'Livree'
-    WHERE idCommande = 2;
+SET statutCommande = 'Livree'
+WHERE idCommande = 2;
+
+rollback;
 
 -- 2 requetes impliquant 2 tables
-            
+   
+-- Mise a jour du taux de TVA a 20% de tous les produits ayant pour une catégorie donnée     
 UPDATE (SELECT p.* 
              FROM produit p 
              INNER JOIN categorieProduit cp ON p.idCategorie = cp.idCategorie
              WHERE cp.nomCategorie = 'Cremerie') t
 SET t.tauxTVA = 0.2;
+
+rollback;
        
+-- Mise a jour du fournisseur d’un produit
 UPDATE (SELECT p.* 
              FROM produit p
              INNER JOIN fournisseur f ON p.idFournisseur = f.idFournisseur
              WHERE f.nomFournisseur = 'AGIDRA') x
 SET x.idFournisseur = 4;  
 
+rollback;
+
 -- 2 requetes impliquant plus de 2 tables
         
+-- Mise a jour du nombre de points de fidélité des clients pour chaque lignes de commandes 
+-- dont le prix de vente est supérieur a 10
 CREATE OR REPLACE VIEW cf_client AS       
-    SELECT cf.idClient, COUNT(cf.idClient) as nb
-    FROM carteFidelite cf
-    INNER JOIN commande c ON cf.idClient = c.idClient
-    INNER JOIN ligneCommande lc ON c.idCommande = lc.idCommande
-    WHERE lc.prixVente > 10
-    GROUP BY cf.idClient;
+SELECT cf.idClient, COUNT(cf.idClient) as nb
+FROM carteFidelite cf
+INNER JOIN commande c ON cf.idClient = c.idClient
+INNER JOIN ligneCommande lc ON c.idCommande = lc.idCommande
+WHERE lc.prixVente > 10
+GROUP BY cf.idClient;
 
 UPDATE carteFidelite cf
-    SET cf.nbPointsFidelite = cf.nbPointsFidelite + (SELECT cf_client.nb FROM cf_client WHERE cf_client.idClient = cf.idClient)*10
-    WHERE EXISTS (SELECT cf_client.nb FROM cf_client WHERE cf_client.idClient = cf.idClient);
+SET cf.nbPointsFidelite = cf.nbPointsFidelite + (SELECT cf_client.nb FROM cf_client WHERE cf_client.idClient = cf.idClient)*10
+WHERE EXISTS (SELECT cf_client.nb FROM cf_client WHERE cf_client.idClient = cf.idClient);
+
+rollback;
 
 -- CONSULTATION pour verifier l'update precedent 
 SELECT cf.*
@@ -44,6 +60,7 @@ FROM carteFidelite cf
 INNER JOIN commande c ON cf.idClient = c.idClient
 INNER JOIN ligneCommande lc ON c.idCommande = lc.idCommande
 WHERE lc.prixVente > 10;
+
 
 UPDATE (SELECT lc.* 
              FROM ligneCommande lc
@@ -53,11 +70,11 @@ UPDATE (SELECT lc.*
              WHERE cli.mail = emp.mail)z
 SET z.prixVente = z.prixVente*0.9;
 
+rollback;
+
 -- CONSULTATION pour verifier l'update précedent 
 SELECT lc.* 
 FROM ligneCommande lc;
-
-rollback;
 
 
 REM SUPPRESSION
